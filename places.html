@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Places Map</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmpiQfvgs7xnT9yAi9jG0LSf-47v44XZA&callback=initMap"
+      async
+      defer
+    ></script>
+    <script>
+      async function fetchPlaces() {
+        const response = await fetch('places_with_lat_lng.json');
+        const places = await response.json();
+        return places;
+      }
+
+      async function initMap() {
+        const places = await fetchPlaces();
+
+        const bounds = new google.maps.LatLngBounds();
+
+        const mapOptions = {
+          zoom: 13,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        };
+
+        const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        for (const category in places) {
+          for (const placeName in places[category]) {
+            const place = places[category][placeName];
+            if (!place.latLng) continue;
+            const position = new google.maps.LatLng(place.latLng.lat, place.latLng.lng);
+            bounds.extend(position);
+
+            const marker = new google.maps.Marker({
+              position,
+              title: placeName,
+              map,
+            });
+
+            const infoWindow = new google.maps.InfoWindow({
+              content: placeName,
+            });
+
+            marker.addListener('click', () => {
+              infoWindow.open(map, marker);
+            });
+          }
+        }
+
+        map.fitBounds(bounds);
+      }
+    </script>
+    <style>
+      #map {
+        height: 100%;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
