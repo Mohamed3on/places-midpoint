@@ -1,4070 +1,4442 @@
 {
-  "Restaurants": {
-    "Best Gemüse Kebap": {
-      "address": "Boddinstraße 1",
-      "latLng": {
-        "lat": 52.4810743,
-        "lng": 13.4346183
-      }
-    },
-    "Fischtheke Berlin": {
-      "address": "Flughafenstraße 35",
-      "latLng": {
-        "lat": 52.48108329999999,
-        "lng": 13.4284599
-      }
-    },
-    "Tuana Turkish Deli": {
-      "address": "Kolonnenstraße 12",
-      "latLng": {
-        "lat": 52.4856123,
-        "lng": 13.3621565
-      }
-    },
-    "Bistro Albero": {
-      "address": "Lehrter Str. 24b",
-      "latLng": {
-        "lat": 52.5314454,
-        "lng": 13.3621927
-      }
-    },
-    "Buya Ramen Factory": {
-      "address": "Reichenberger Str. 36 Backyard",
-      "latLng": {
-        "lat": 52.4971335,
-        "lng": 13.4233648
-      }
-    },
-    "Cancún Kaiserdamm": {
-      "address": "Kaiserdamm 24",
-      "latLng": {
-        "lat": 52.5103831,
-        "lng": 13.2827941
-      }
-    },
-    "Marafina": {
-      "address": "Wühlischstraße 17",
-      "latLng": {
-        "lat": 52.5087091,
-        "lng": 13.4619876
-      }
-    },
-    "Falafel in berlin.de": {
-      "address": "Skalitzer Str. 102",
-      "latLng": {
-        "lat": 52.49947239999999,
-        "lng": 13.4281026
-      }
-    },
-    "KÖFTECİ ÖZEN": {
-      "address": "Frankfurter Allee 80",
-      "latLng": {
-        "lat": 52.5140888,
-        "lng": 13.4684774
-      }
-    },
-    "Sadhu Prenzlauer Berg": {
-      "address": "Stargarder Str. 60",
-      "latLng": {
-        "lat": 52.5453541,
-        "lng": 13.4214104
-      }
-    },
-    "FALCO´SLICE": {
-      "address": "Falckensteinstraße 33",
-      "latLng": {
-        "lat": 52.4978689,
-        "lng": 13.4419715
-      }
-    },
-    "MOM’S Creation": {
-      "address": "Elsenstraße 27",
-      "latLng": {
-        "lat": 52.4889749,
-        "lng": 13.4536057
-      }
-    },
-    "HIMMEL 8": {
-      "address": "Ritterstraße 8",
-      "latLng": {
-        "lat": 52.5011219,
-        "lng": 13.4118891
-      }
-    },
-    "Berta Restaurant": {
-      "address": "Stresemannstraße 99",
-      "latLng": {
-        "lat": 52.50585,
-        "lng": 13.38018
-      }
-    },
-    "Wurstbar Berlin": {
-      "address": "Ecke, Stresemannstr, Niederkirchnerstraße 120",
-      "latLng": {
-        "lat": 52.50718209999999,
-        "lng": 13.3792968
-      }
-    },
-    "Oliveto · Ristorante & Pizzeria": {
-      "address": "Pannierstraße 9a",
-      "latLng": {
-        "lat": 52.4872282,
-        "lng": 13.4316353
-      }
-    },
-    "Anh Em Restaurant": {
-      "address": "Hermannstraße 154",
-      "latLng": {
-        "lat": 52.4661592,
-        "lng": 13.4323586
-      }
-    },
-    "Bistro Aleksandra-Polnisches Spezialitätenbistro": {
-      "address": "Schloßstraße 33",
-      "latLng": {
-        "lat": 52.5121709,
-        "lng": 13.2976425
-      }
-    },
-    "Osteria Maria / Cremeria Maria": {
-      "address": "Leydenallee 79",
-      "latLng": {
-        "lat": 52.453227,
-        "lng": 13.3245278
-      }
-    },
-    "Hako Ramen Prenzlauer Berg": {
-      "address": "Kastanienallee 16",
-      "latLng": {
-        "lat": 52.538508,
-        "lng": 13.40932
-      }
-    },
-    "PHO - Noodlebar (Mitte)": {
-      "address": "Linienstraße 134",
-      "latLng": {
-        "lat": 52.5264943,
-        "lng": 13.3878687
-      }
-    },
-    "Lemongrass": {
-      "address": "Simon-Dach-Straße 2",
-      "latLng": {
-        "lat": 52.512542,
-        "lng": 13.4571294
-      }
-    },
-    "Night Kitchen": {
-      "address": "Heckmann Höfe, Oranienburger Str. 32",
-      "latLng": {
-        "lat": 52.5255777,
-        "lng": 13.3939795
-      }
-    },
-    "Curry-Keule": {
-      "address": "Müllerstraße 47A",
-      "latLng": {
-        "lat": 52.55196910000001,
-        "lng": 13.3498702
-      }
-    },
-    "Hackethal's": {
-      "address": "Pflugstraße 11",
-      "latLng": {
-        "lat": 52.53640859999999,
-        "lng": 13.3795799
-      }
-    },
-    "Nefis Gemüse Kebap": {
-      "address": "Kottbusser Damm 34",
-      "latLng": {
-        "lat": 52.4886948,
-        "lng": 13.4244107
-      }
-    },
-    "Restaurant YUUMI": {
-      "address": "Emanuelstraße 1",
-      "latLng": {
-        "lat": 52.5015385,
-        "lng": 13.4907844
-      }
-    },
-    "Mater | Pizzeria Verace in Berlin": {
-      "address": "Weichselstraße 17",
-      "latLng": {
-        "lat": 52.48576,
-        "lng": 13.43529
-      }
-    },
-    "Turtle Pizza": {
-      "address": "Kottbusser Damm 88",
-      "latLng": {
-        "lat": 52.4927775,
-        "lng": 13.4225229
-      }
-    },
-    "Valentine": {
-      "address": "Hermannstraße 126",
-      "latLng": {
-        "lat": 52.46429,
-        "lng": 13.43281
-      }
-    },
-    "Rüya Gemüse Kebap": {
-      "address": "Otto-Suhr-Allee 19",
-      "latLng": {
-        "lat": 52.51380839999999,
-        "lng": 13.316974
-      }
-    },
-    "Curry 61": {
-      "address": "Oranienburger Str. 6",
-      "latLng": {
-        "lat": 52.523725,
-        "lng": 13.4007139
-      }
-    },
-    "La Mirada Restaurant": {
-      "address": "Richardstraße 107",
-      "latLng": {
-        "lat": 52.4780711,
-        "lng": 13.4396571
-      }
-    },
-    "LoveBurger": {
-      "address": "Treptower Str. 90",
-      "latLng": {
-        "lat": 52.4790188,
-        "lng": 13.4490972
-      }
-    },
-    "Akatsuki Sushi": {
-      "address": "Schönleinstraße 8",
-      "latLng": {
-        "lat": 52.4920048,
-        "lng": 13.4204968
-      }
-    },
-    "The Klub Kitchen West": {
-      "address": "Uhlandstraße 175",
-      "latLng": {
-        "lat": 52.50160529999999,
-        "lng": 13.3255733
-      }
-    },
-    "SubHero Berlin": {
-      "address": "Revaler Str. 11",
-      "latLng": {
-        "lat": 52.5081745,
-        "lng": 13.4540479
-      }
-    },
-    "ROLLS Asian Street Food": {
-      "address": "Prenzlauer Allee 176",
-      "latLng": {
-        "lat": 52.5455475,
-        "lng": 13.4272749
-      }
-    },
-    "Fdeitah": {
-      "address": "Seestraße 57",
-      "latLng": {
-        "lat": 52.5517474,
-        "lng": 13.3552989
-      }
-    },
-    "Picoteo": {
-      "address": "Erkelenzdamm 47",
-      "latLng": {
-        "lat": 52.4977692,
-        "lng": 13.4131188
-      }
-    },
-    "Scheers Schnitzel": {
-      "address": "Warschauer Pl. 18",
-      "latLng": {
-        "lat": 52.50281520000001,
-        "lng": 13.4473839
-      }
-    },
-    "Lasan Restaurant": {
-      "address": "Adalbertstraße 96",
-      "latLng": {
-        "lat": 52.50010469999999,
-        "lng": 13.4178976
-      }
-    },
-    "House of Burgerz": {
-      "address": "Schützenstraße 2",
-      "latLng": {
-        "lat": 52.5083299,
-        "lng": 13.3905082
-      }
-    },
-    "OLIVIO Pizza Pasta Bar": {
-      "address": "Olivio Pizza Pasta Bar, Schönleinstraße 29",
-      "latLng": {
-        "lat": 52.491984,
-        "lng": 13.4212594
-      }
-    },
-    "Darfur Sudanesische Imbiss": {
-      "address": "Reichenberger Str. 57",
-      "latLng": {
-        "lat": 52.49582110000001,
-        "lng": 13.4285986
-      }
-    },
-    "Sicula Bar": {
-      "address": "Scharnweberstraße 46",
-      "latLng": {
-        "lat": 52.512609,
-        "lng": 13.4664522
-      }
-    },
-    "Jemenitisches Restaurant المطعم اليمني": {
-      "address": "Huttenstraße 7",
-      "latLng": {
-        "lat": 52.5278824,
-        "lng": 13.3261096
-      }
-    },
-    "Jemenitisches Restaurant": {
-      "address": "Karl-Marx-Straße 172",
-      "latLng": {
-        "lat": 52.4746399,
-        "lng": 13.4397637
-      }
-    },
-    "Casalot Restaurant": {
-      "address": "Claire-Waldoff-Straße 5",
-      "latLng": {
-        "lat": 52.5245422,
-        "lng": 13.3863424
-      }
-    },
-    "Cheers Kiez Pizza": {
-      "address": "Choriner Str. 37",
-      "latLng": {
-        "lat": 52.5366732,
-        "lng": 13.4109091
-      }
-    },
-    "Döner Kebab Restaurant TERAS Berlin": {
-      "address": "Wilhelmstraße 45",
-      "latLng": {
-        "lat": 52.5117229,
-        "lng": 13.3835554
-      }
-    },
-    "A' marina": {
-      "address": "Bergstraße 62",
-      "latLng": {
-        "lat": 52.4589607,
-        "lng": 13.3430652
-      }
-    },
-    "Asude Yemek Dünyası": {
-      "address": "Hermannstraße 120",
-      "latLng": {
-        "lat": 52.46568800000001,
-        "lng": 13.4320435
-      }
-    },
-    "Sticks'n'Sushi": {
-      "address": "Potsdamer Str. 85",
-      "latLng": {
-        "lat": 52.5019764,
-        "lng": 13.3651086
-      }
-    },
-    "Chicha": {
-      "address": "Friedelstraße 34",
-      "latLng": {
-        "lat": 52.4931876,
-        "lng": 13.4279083
-      }
-    },
-    "Delhi 6 Restaurant - Berlin": {
-      "address": "Friedrichstraße 237",
-      "latLng": {
-        "lat": 52.5019381,
-        "lng": 13.3910946
-      }
-    },
-    "1990 Vegan Living": {
-      "address": "Krossener Str. 19",
-      "latLng": {
-        "lat": 52.5103695,
-        "lng": 13.458578
-      }
-    },
-    "Falafel Jakoub": {
-      "address": "Weserstr. 14",
-      "latLng": {
-        "lat": 52.48758609999999,
-        "lng": 13.4306944
-      }
-    },
-    "Asteria": {
-      "address": "Schönhauser Allee 143",
-      "latLng": {
-        "lat": 52.5415419,
-        "lng": 13.4117448
-      }
-    },
-    "Peter Schlemihl": {
-      "address": "Willibald-Alexis-Straße 25",
-      "latLng": {
-        "lat": 52.4876343,
-        "lng": 13.3908163
-      }
-    },
-    "T'unas Gemüse Kebap": {
-      "address": "Wrangelstraße 42",
-      "latLng": {
-        "lat": 52.4996813,
-        "lng": 13.438852
-      }
-    },
-    "Ryu": {
-      "address": "Krossener Str. 17",
-      "latLng": {
-        "lat": 52.51051469999999,
-        "lng": 13.4576475
-      }
-    },
-    "Asia Farmhouse": {
-      "address": "Pannierstraße 54",
-      "latLng": {
-        "lat": 52.4877312,
-        "lng": 13.4315178
-      }
-    },
-    "The Neighborhood": {
-      "address": "Möckernstrasse 91",
-      "latLng": {
-        "lat": 52.492911,
-        "lng": 13.3797341
-      }
-    },
-    "Pizzeria Marienkäfer": {
-      "address": "Marienstraße 18",
-      "latLng": {
-        "lat": 52.52236449999999,
-        "lng": 13.3841801
-      }
-    },
-    "Tossakan Berlin": {
-      "address": "Schliemannstraße 16",
-      "latLng": {
-        "lat": 52.5437294,
-        "lng": 13.4200028
-      }
-    },
-    "Mamida": {
-      "address": "Dunckerstraße 80A",
-      "latLng": {
-        "lat": 52.5430291,
-        "lng": 13.4209438
-      }
-    },
-    "BLOCK HOUSE Am Alexanderplatz": {
-      "address": "Karl-Liebknecht-Str. 7",
-      "latLng": {
-        "lat": 52.5204965,
-        "lng": 13.4051548
-      }
-    },
-    "NiVu-Restaurant": {
-      "address": "Stuttgarter Pl. 13",
-      "latLng": {
-        "lat": 52.5054966,
-        "lng": 13.3019475
-      }
-    },
-    "Neki Sushi & Ramen, Gua Bao Burger, Korean Chicken": {
-      "address": "Gieselerstraße 17",
-      "latLng": {
-        "lat": 52.4912921,
-        "lng": 13.3182998
-      }
-    },
-    "Restaurant Marjan Grill - Berlin": {
-      "address": "Flensburger Straße Bogen 411",
-      "latLng": {
-        "lat": 52.520105,
-        "lng": 13.3466979
-      }
-    },
-    "Berlin Tantuni": {
-      "address": "Hermannstraße 228",
-      "latLng": {
-        "lat": 52.4810459,
-        "lng": 13.4252675
-      }
-    },
-    "Restaurant Nante Kaulsdorf": {
-      "address": "Cecilienpl. 7",
-      "latLng": {
-        "lat": 52.5208013,
-        "lng": 13.5912905
-      }
-    },
-    "Restaurant Rhodos": {
-      "address": "Dahlwitzer Str. 7",
-      "latLng": {
-        "lat": 52.52204,
-        "lng": 13.64597
-      }
-    },
-    "El Amigo Taqueria": {
-      "address": "Veteranenstraße 21",
-      "latLng": {
-        "lat": 52.5335802,
-        "lng": 13.4009513
-      }
-    },
-    "Döner x Burger": {
-      "address": "Müllerstraße 65A",
-      "latLng": {
-        "lat": 52.5563947,
-        "lng": 13.3419191
-      }
-    },
-    "Formidable": {
-      "address": "Schönhauser Allee 126",
-      "latLng": {
-        "lat": 52.5471335,
-        "lng": 13.4128636
-      }
-    },
-    "Song Nguu \"Wasserbüffel\"": {
-      "address": "Am Falkpl. 5",
-      "latLng": {
-        "lat": 52.5466998,
-        "lng": 13.4057961
-      }
-    },
-    "Fire Tiger - Cocktail Bar - Asiatisch & Sushi": {
-      "address": "Revaler Str. 7",
-      "latLng": {
-        "lat": 52.5085671,
-        "lng": 13.4519917
-      }
-    },
-    "Amrit": {
-      "address": "Oranienburger Str. 45",
-      "latLng": {
-        "lat": 52.5259176,
-        "lng": 13.3898183
-      }
-    },
-    "Trattoria LaFamiglia": {
-      "address": "Gärtnerstraße 21",
-      "latLng": {
-        "lat": 52.5118404,
-        "lng": 13.4611431
-      }
-    },
-    "CODA Dessert Dining": {
-      "address": "Friedelstraße 47",
-      "latLng": {
-        "lat": 52.489976,
-        "lng": 13.427357
-      }
-    },
-    "Zollpackhof": {
-      "address": "Elisabeth-Abegg-Straße 1",
-      "latLng": {
-        "lat": 52.5213107,
-        "lng": 13.3668981
-      }
-    },
-    "Dolce Pizza": {
-      "address": "Belziger Str. 73",
-      "latLng": {
-        "lat": 52.4846917,
-        "lng": 13.3459988
-      }
-    },
-    "momiji": {
-      "address": "Bleibtreustraße 52",
-      "latLng": {
-        "lat": 52.506638,
-        "lng": 13.3204188
-      }
-    },
-    "Babel": {
-      "address": "Kastanienallee 33",
-      "latLng": {
-        "lat": 52.5367182,
-        "lng": 13.4074297
-      }
-    },
-    "Osmans Töchter": {
-      "address": "Pappelallee 15",
-      "latLng": {
-        "lat": 52.543079,
-        "lng": 13.4147569
-      }
-    },
-    "meet me halfway - Berlin": {
-      "address": "Zinnowitzer Str. 5",
-      "latLng": {
-        "lat": 52.5319419,
-        "lng": 13.3832472
-      }
-    },
-    "D.O.": {
-      "address": "Kollwitzstraße 88",
-      "latLng": {
-        "lat": 52.5383353,
-        "lng": 13.4206548
-      }
-    },
-    "Taktiek": {
-      "address": "Göhrener Str. 6",
-      "latLng": {
-        "lat": 52.5416552,
-        "lng": 13.4210526
-      }
-    },
-    "Buffet Restaurant Royal Garden Berlin": {
-      "address": "Osdorfer Str. 26",
-      "latLng": {
-        "lat": 52.416276,
-        "lng": 13.3154516
-      }
-    },
-    "Wen's Küche": {
-      "address": "Mariendorfer Damm 175",
-      "latLng": {
-        "lat": 52.436139,
-        "lng": 13.3892725
-      }
-    },
-    "Crispy Döner": {
-      "address": "Richard-Wagner-Straße 2",
-      "latLng": {
-        "lat": 52.5120341,
-        "lng": 13.3075386
-      }
-    },
-    "Estelle Dining": {
-      "address": "Kopenhagener Str. 12A",
-      "latLng": {
-        "lat": 52.5490787,
-        "lng": 13.409392
-      }
-    },
-    "Restaurant Bricole": {
-      "address": "Senefelderstraße 30",
-      "latLng": {
-        "lat": 52.5410473,
-        "lng": 13.4223333
-      }
-    },
-    "Eins44": {
-      "address": "Elbestraße 28/29",
-      "latLng": {
-        "lat": 52.4852905,
-        "lng": 13.4397497
-      }
-    },
-    "Ristorante Firenze": {
-      "address": "Florastraße 27",
-      "latLng": {
-        "lat": 52.5653465,
-        "lng": 13.404017
-      }
-    },
-    "Lila restaurant": {
-      "address": "Paul-Lincke-Ufer 39-40",
-      "latLng": {
-        "lat": 52.4961442,
-        "lng": 13.421788
-      }
-    },
-    "Wilhelm Hoeck 1892": {
-      "address": "Wilmersdorfer Str. 149",
-      "latLng": {
-        "lat": 52.5139254,
-        "lng": 13.3051183
-      }
-    },
-    "Caramel": {
-      "address": "Zimmerstraße 26",
-      "latLng": {
-        "lat": 52.5076905,
-        "lng": 13.3931423
-      }
-    },
-    "Skykitchen": {
-      "address": "Landsberger Allee 106",
-      "latLng": {
-        "lat": 52.5285071,
-        "lng": 13.4575779
-      }
-    },
-    "Chay Long": {
-      "address": "Raumerstraße 17",
-      "latLng": {
-        "lat": 52.5416152,
-        "lng": 13.4217729
-      }
-    },
-    "Seoulkitchen": {
-      "address": "Warschauer Str. 46",
-      "latLng": {
-        "lat": 52.5037072,
-        "lng": 13.4472838
-      }
-    },
-    "Caravaggi Naturwein Bistro": {
-      "address": "Lettestraße 3",
-      "latLng": {
-        "lat": 52.54302080000001,
-        "lng": 13.420258
-      }
-    },
-    "Shezan": {
-      "address": "Neue Roßstraße 13",
-      "latLng": {
-        "lat": 52.512185,
-        "lng": 13.4082378
-      }
-    },
-    "falafelwerk(Mawal)": {
-      "address": "Oranienstraße 30",
-      "latLng": {
-        "lat": 52.5014584,
-        "lng": 13.4190053
-      }
-    },
-    "HOONGY": {
-      "address": "Chausseestraße 5",
-      "latLng": {
-        "lat": 52.5278947,
-        "lng": 13.3866837
-      }
-    },
-    "Matreshka": {
-      "address": "Boxhagener Str. 60",
-      "latLng": {
-        "lat": 52.5063545,
-        "lng": 13.4696142
-      }
-    },
-    "Wok Show": {
-      "address": "Greifenhagener Str. 31",
-      "latLng": {
-        "lat": 52.5519534,
-        "lng": 13.4192568
-      }
-    },
-    "Goji": {
-      "address": "Motzstraße 58",
-      "latLng": {
-        "lat": 52.4952641,
-        "lng": 13.3399584
-      }
-    },
-    "Umami": {
-      "address": "Knaackstraße 16-18",
-      "latLng": {
-        "lat": 52.5344418,
-        "lng": 13.4194515
-      }
-    },
-    "Zweistrom Land": {
-      "address": "Danziger Str. 18",
-      "latLng": {
-        "lat": 52.5402579,
-        "lng": 13.4157453
-      }
-    },
-    "Trancina": {
-      "address": "Stargarder Str. 39",
-      "latLng": {
-        "lat": 52.54305129999999,
-        "lng": 13.4258042
-      }
-    },
-    "Magic John's Pizza": {
-      "address": "Oranienburger Str. 48",
-      "latLng": {
-        "lat": 52.5261429,
-        "lng": 13.3889663
-      }
-    },
-    "Imbiss Rissani": {
-      "address": "Firlstraße 38",
-      "latLng": {
-        "lat": 52.461293,
-        "lng": 13.5213028
-      }
-    },
-    "Miss Phuong Restaurant": {
-      "address": "Prenzlauer Allee 226",
-      "latLng": {
-        "lat": 52.5334254,
-        "lng": 13.4204077
-      }
-    },
-    "Barra": {
-      "address": "Okerstraße 2",
-      "latLng": {
-        "lat": 52.4743722,
-        "lng": 13.4269388
-      }
-    },
-    "ACETO CHICKEN DÖNER - Döner Dach": {
-      "address": "Simon-Dach-Straße 11",
-      "latLng": {
-        "lat": 52.5106906,
-        "lng": 13.456262
-      }
-    },
-    "Mercatino": {
-      "address": "Müllerstraße 118",
-      "latLng": {
-        "lat": 52.5546562,
-        "lng": 13.3441402
-      }
-    },
-    "Prizreni Qebaptore": {
-      "address": "Karl-Marx-Straße 26",
-      "latLng": {
-        "lat": 52.4844835,
-        "lng": 13.4279775
-      }
-    },
-    "Luardi": {
-      "address": "Meinekestraße 24",
-      "latLng": {
-        "lat": 52.5020704,
-        "lng": 13.3293071
-      }
-    },
-    "Upper Burger Grill": {
-      "address": "Rankestraße 3",
-      "latLng": {
-        "lat": 52.5033326,
-        "lng": 13.3342994
-      }
-    },
-    "Izmir Köfte": {
-      "address": "Reichenberger Str. 10",
-      "latLng": {
-        "lat": 52.4994251,
-        "lng": 13.4166479
-      }
-    },
-    "Lemon Feinkost": {
-      "address": "Wühlischstraße 17",
-      "latLng": {
-        "lat": 52.5086451,
-        "lng": 13.4620787
-      }
-    },
-    "Ristorante La Piccola Cantina": {
-      "address": "Eisenacher Str. 8",
-      "latLng": {
-        "lat": 52.44768,
-        "lng": 13.38905
-      }
-    },
-    "STADTSALAT": {
-      "address": "Friedrichstraße 113",
-      "latLng": {
-        "lat": 52.52581929999999,
-        "lng": 13.3876012
-      }
-    },
-    "Alt Berliner Wirtshaus Henne": {
-      "address": "Leuschnerdamm 25",
-      "latLng": {
-        "lat": 52.5042617,
-        "lng": 13.417855
-      }
-    },
-    "KYO grill": {
-      "address": "Kastanienallee 23",
-      "latLng": {
-        "lat": 52.5378151,
-        "lng": 13.4085121
-      }
-    },
-    "Klas Bäckerei": {
-      "address": "Naunynstraße 2",
-      "latLng": {
-        "lat": 52.50046,
-        "lng": 13.42709
-      }
-    },
-    "Dicke Wirtin": {
-      "address": "Carmerstraße 9",
-      "latLng": {
-        "lat": 52.5065268,
-        "lng": 13.3235691
-      }
-    },
-    "Marco Polo Uno": {
-      "address": "Dolgenseestraße 9 G",
-      "latLng": {
-        "lat": 52.49289460000001,
-        "lng": 13.5069314
-      }
-    },
-    "Mustafa Demir’s Gemüse Kebap": {
-      "address": "Warschauer Str. 27A",
-      "latLng": {
-        "lat": 52.5100382,
-        "lng": 13.451065
-      }
-    },
-    "spaghetteria loreta": {
-      "address": "Prenzlauer Allee 175A",
-      "latLng": {
-        "lat": 52.54612359999999,
-        "lng": 13.4275649
-      }
-    },
-    "Cafe Bar Restaurant Shan Shan": {
-      "address": "Gleimstraße 24",
-      "latLng": {
-        "lat": 52.5473963,
-        "lng": 13.4112721
-      }
-    },
-    "Alaska Bar": {
-      "address": "Reuterstraße 85",
-      "latLng": {
-        "lat": 52.4829207,
-        "lng": 13.4287199
-      }
-    },
-    "PizzAngelo": {
-      "address": "Buddestraße 14",
-      "latLng": {
-        "lat": 52.589105,
-        "lng": 13.2885328
-      }
-    },
-    "Mozzarella & Pomodoro": {
-      "address": "Torstraße 97",
-      "latLng": {
-        "lat": 52.52996599999999,
-        "lng": 13.4044602
-      }
-    },
-    "Tenur": {
-      "address": "Reichenberger Str. 147",
-      "latLng": {
-        "lat": 52.4971324,
-        "lng": 13.4258939
-      }
-    },
-    "La Caleta": {
-      "address": "Wielandstraße 26A",
-      "latLng": {
-        "lat": 52.50022329999999,
-        "lng": 13.3152525
-      }
-    },
-    "DaBangg": {
-      "address": "Hedwigstraße 18",
-      "latLng": {
-        "lat": 52.4716339,
-        "lng": 13.3360934
-      }
-    },
-    "Sachiko Sushi": {
-      "address": "Jeanne-Mammen-Bogen 584",
-      "latLng": {
-        "lat": 52.50470139999999,
-        "lng": 13.323713
-      }
-    },
-    "Khao Taan": {
-      "address": "Gryphiusstraße 10",
-      "latLng": {
-        "lat": 52.50865109999999,
-        "lng": 13.4638149
-      }
-    },
-    "Bejte-Ethiopia": {
-      "address": "Zietenstraße 8",
-      "latLng": {
-        "lat": 52.4993923,
-        "lng": 13.3570205
-      }
-    },
-    "Restaurant Bobbe Speisesalon": {
-      "address": "Motzstraße 91",
-      "latLng": {
-        "lat": 52.4933274,
-        "lng": 13.3343626
-      }
-    },
-    "Gemüse Kebap & Friends": {
-      "address": "Warschauer Str. 81A",
-      "latLng": {
-        "lat": 52.5138718,
-        "lng": 13.4536355
-      }
-    },
-    "Poké Pelelina Kreuzberg": {
-      "address": "Graefestraße 75",
-      "latLng": {
-        "lat": 52.4927802,
-        "lng": 13.4177419
-      }
-    },
-    "Ataya Caffe": {
-      "address": "Zelterstraße 6",
-      "latLng": {
-        "lat": 52.5472293,
-        "lng": 13.4274918
-      }
-    },
-    "Korean Food Stories - Restaurant": {
-      "address": "Prenzlauer Allee 217",
-      "latLng": {
-        "lat": 52.5351201,
-        "lng": 13.4214333
-      }
-    },
-    "7 Dumpling": {
-      "address": "Schönhauser Allee 122",
-      "latLng": {
-        "lat": 52.5481127,
-        "lng": 13.413102
-      }
-    },
-    "La Piadina - Kreuzberg": {
-      "address": "Mariannenpl. 23",
-      "latLng": {
-        "lat": 52.5042148,
-        "lng": 13.4265662
-      }
-    },
-    "Enzo Sushi Bar": {
-      "address": "Marienburger Str. 38",
-      "latLng": {
-        "lat": 52.5347556,
-        "lng": 13.4251497
-      }
-    },
-    "Pizza Nostra": {
-      "address": "Lychener Str. 2",
-      "latLng": {
-        "lat": 52.54101989999999,
-        "lng": 13.4148663
-      }
-    },
-    "Cedar Berlin Shawarma Falafel (Schawarma)": {
-      "address": "Skalitzer Str. 102",
-      "latLng": {
-        "lat": 52.4994719,
-        "lng": 13.4279598
-      }
-    },
-    "The future is up to you": {
-      "address": "Kastanienallee 62",
-      "latLng": {
-        "lat": 52.5343708,
-        "lng": 13.4058112
-      }
-    },
-    "Tianfuzius 天府子": {
-      "address": "Regensburger Str. 1",
-      "latLng": {
-        "lat": 52.4959762,
-        "lng": 13.3405322
-      }
-    },
-    "Iro Izakaya": {
-      "address": "Krossener Str. 19",
-      "latLng": {
-        "lat": 52.5103966,
-        "lng": 13.4587284
-      }
-    },
-    "Fatoush": {
-      "address": "Simon-Dach-Straße 41A",
-      "latLng": {
-        "lat": 52.51147229999999,
-        "lng": 13.4572257
-      }
-    },
-    "Dada Falafel": {
-      "address": "Linienstraße 132",
-      "latLng": {
-        "lat": 52.5264427,
-        "lng": 13.3881916
-      }
-    },
-    "Horváth": {
-      "address": "Paul-Lincke-Ufer 44a",
-      "latLng": {
-        "lat": 52.496461,
-        "lng": 13.4208765
-      }
-    },
-    "Akcaabat Saray Köfte": {
-      "address": "Oranienstraße 72",
-      "latLng": {
-        "lat": 52.5049588,
-        "lng": 13.4073027
-      }
-    },
-    "Shiso Burger": {
-      "address": "Auguststraße 29C",
-      "latLng": {
-        "lat": 52.5272762,
-        "lng": 13.3987744
-      }
-    },
-    "Focaccia Pasta & Pizza": {
-      "address": "Alt-Moabit 51",
-      "latLng": {
-        "lat": 52.5240387,
-        "lng": 13.3303022
-      }
-    },
-    "Domke Nino Fleischerei": {
-      "address": "Warschauer Str. 64",
-      "latLng": {
-        "lat": 52.5104769,
-        "lng": 13.4520734
-      }
-    },
-    "New Day Vietnam Heritage Food": {
-      "address": "Newday Restaurant, Niederbarnimstraße 25",
-      "latLng": {
-        "lat": 52.514606,
-        "lng": 13.4598804
-      }
-    },
-    "Schüsseldienst": {
-      "address": "Akazienstraße 7",
-      "latLng": {
-        "lat": 52.4873906,
-        "lng": 13.3550764
-      }
-    },
-    "Mom's Creation Vegan Restaurant Friedrichshain": {
-      "address": "Proskauer Str. 1",
-      "latLng": {
-        "lat": 52.5156442,
-        "lng": 13.4606306
-      }
-    },
-    "clánndestino | Tapasbar & Weinhandel": {
-      "address": "Waldemarstraße 29",
-      "latLng": {
-        "lat": 52.5039419,
-        "lng": 13.41887
-      }
-    },
-    "Meyan Mediterranean Restaurant": {
-      "address": "Goltzstraße 36",
-      "latLng": {
-        "lat": 52.4937462,
-        "lng": 13.3535133
-      }
-    },
-    "Zweistrom": {
-      "address": "Kollwitzstraße 104",
-      "latLng": {
-        "lat": 52.5392406,
-        "lng": 13.4216598
-      }
-    },
-    "Big Stuff Smoked BBQ": {
-      "address": "Eisenbahnstraße 42/43",
-      "latLng": {
-        "lat": 52.50202299999999,
-        "lng": 13.4317947
-      }
-    },
-    "Maria Bonita": {
-      "address": "Danziger Str. 33",
-      "latLng": {
-        "lat": 52.54040579999999,
-        "lng": 13.4181515
-      }
-    },
-    "Ohana - Viet Poké Bowl": {
-      "address": "Reichenberger Str. 120",
-      "latLng": {
-        "lat": 52.4951894,
-        "lng": 13.4324715
-      }
-    },
-    "Samowar": {
-      "address": "Luisenpl. 3",
-      "latLng": {
-        "lat": 52.5209804,
-        "lng": 13.2999686
-      }
-    },
-    "Al Gazali - Schawarma Falafel": {
-      "address": "Krossener Str. 20",
-      "latLng": {
-        "lat": 52.5102266,
-        "lng": 13.4589602
-      }
-    },
-    "Louis Alfons - Pop Up Bar": {
-      "address": "Gerichtstraße 60",
-      "latLng": {
-        "lat": 52.5442931,
-        "lng": 13.3712241
-      }
-    },
-    "TAKA Fisch House": {
-      "address": "Adalbertstraße 97",
-      "latLng": {
-        "lat": 52.4999783,
-        "lng": 13.4179115
-      }
-    },
-    "Zsa Zsa Burger": {
-      "address": "Motzstraße 28",
-      "latLng": {
-        "lat": 52.4979458,
-        "lng": 13.3479686
-      }
-    },
-    "Gasthaus Alt Wien": {
-      "address": "Hufelandstraße 22",
-      "latLng": {
-        "lat": 52.53148669999999,
-        "lng": 13.4325518
-      }
-    },
-    "Munch's Hus": {
-      "address": "Bülowstraße 66",
-      "latLng": {
-        "lat": 52.4964802,
-        "lng": 13.3670014
-      }
-    },
-    "Crunch Kantine": {
-      "address": "Siemensstraße 16",
-      "latLng": {
-        "lat": 52.5327905,
-        "lng": 13.3338141
-      }
-    },
-    "Smartdeli Sushi & More": {
-      "address": "Novalisstraße 2",
-      "latLng": {
-        "lat": 52.5280421,
-        "lng": 13.3890738
-      }
-    },
-    "Rüyam Gemüse Kebab 2": {
-      "address": "Schönhauser Allee 44A",
-      "latLng": {
-        "lat": 52.5405338,
-        "lng": 13.4125814
-      }
-    },
-    "CHIKOGI": {
-      "address": "Oranienstraße 31",
-      "latLng": {
-        "lat": 52.5014863,
-        "lng": 13.418876
-      }
-    },
-    "Casablanca Imbiss": {
-      "address": "Rigaer Str. 25",
-      "latLng": {
-        "lat": 52.51684359999999,
-        "lng": 13.4618783
-      }
-    },
-    "Bao Vietnamese Cooking": {
-      "address": "Hindenburgdamm 57A",
-      "latLng": {
-        "lat": 52.446226,
-        "lng": 13.315654
-      }
-    },
-    "Café Marral": {
-      "address": "Torstraße 222",
-      "latLng": {
-        "lat": 52.5272764,
-        "lng": 13.3886087
-      }
-    },
-    "Dolores Wittenbergplatz": {
-      "address": "Bayreuther Str. 36",
-      "latLng": {
-        "lat": 52.5012611,
-        "lng": 13.3437825
-      }
-    },
-    "Restaurant Tim Raue": {
-      "address": "Rudi-Dutschke-Straße 26",
-      "latLng": {
-        "lat": 52.5068948,
-        "lng": 13.3914718
-      }
-    },
-    "Bonvivant Cocktail Bistro": {
-      "address": "Goltzstraße 32",
-      "latLng": {
-        "lat": 52.4946487,
-        "lng": 13.3537681
-      }
-    },
-    "Roji - Godai no Sekai Prenzlauer Berg": {
-      "address": "Oderberger Str. 11",
-      "latLng": {
-        "lat": 52.5390366,
-        "lng": 13.4091437
-      }
-    },
-    "Lon Men's Noodle House": {
-      "address": "Kantstraße 33",
-      "latLng": {
-        "lat": 52.5063606,
-        "lng": 13.3164921
-      }
-    },
-    "Com A Sushi & Asia Grill": {
-      "address": "Oranienstraße 191",
-      "latLng": {
-        "lat": 52.50024999999999,
-        "lng": 13.4223
-      }
-    },
-    "A Mano": {
-      "address": "Strausberger Pl. 2",
-      "latLng": {
-        "lat": 52.5193916,
-        "lng": 13.4273865
-      }
-    },
-    "Thai Aroma": {
-      "address": "Dunckerstraße 18",
-      "latLng": {
-        "lat": 52.5435357,
-        "lng": 13.4219225
-      }
-    },
-    "QADMOUS - Libanesisches Restaurant Berlin": {
-      "address": "Am Friedrichshain 1",
-      "latLng": {
-        "lat": 52.529724,
-        "lng": 13.4363696
-      }
-    },
-    "Fes": {
-      "address": "Hasenheide 58",
-      "latLng": {
-        "lat": 52.48925699999999,
-        "lng": 13.4087189
-      }
-    },
-    "Tapiocaria Berlin": {
-      "address": "Samariterstraße 34A",
-      "latLng": {
-        "lat": 52.5163273,
-        "lng": 13.4648928
-      }
-    },
-    "Sapori di Casa": {
-      "address": "Wilsnacker Str. 61-62",
-      "latLng": {
-        "lat": 52.5274295,
-        "lng": 13.3513602
-      }
-    },
-    "Pizzeria Farina": {
-      "address": "Karl-Kunger-Straße 10",
-      "latLng": {
-        "lat": 52.4917037,
-        "lng": 13.4462816
-      }
-    },
-    "Gobento": {
-      "address": "Reichenberger Str. 118",
-      "latLng": {
-        "lat": 52.4948707,
-        "lng": 13.4332469
-      }
-    },
-    "Rocoto": {
-      "address": "Winterfeldtstraße 17",
-      "latLng": {
-        "lat": 52.4962354,
-        "lng": 13.3586761
-      }
-    },
-    "rembrandt-burger": {
-      "address": "Richard-Sorge-Straße 21",
-      "latLng": {
-        "lat": 52.5200221,
-        "lng": 13.4478945
-      }
-    },
-    "mogg": {
-      "address": "Auguststraße 11-13",
-      "latLng": {
-        "lat": 52.52640719999999,
-        "lng": 13.3944188
-      }
-    },
-    "Salami Social Club": {
-      "address": "Frankfurter Allee 43",
-      "latLng": {
-        "lat": 52.5150878,
-        "lng": 13.4633347
-      }
-    },
-    "Pasta Factory": {
-      "address": "Kottbusser Damm 6",
-      "latLng": {
-        "lat": 52.4943342,
-        "lng": 13.4209838
-      }
-    },
-    "OMONI 오 모 니": {
-      "address": "Kopenhagener Str. 14",
-      "latLng": {
-        "lat": 52.5491636,
-        "lng": 13.4088857
-      }
-    },
-    "li.ke : serious||thai||vegan": {
-      "address": "Grünberger Str. 69",
-      "latLng": {
-        "lat": 52.51166569999999,
-        "lng": 13.4584965
-      }
-    },
-    "Feinberg’s": {
-      "address": "Fuggerstraße 35",
-      "latLng": {
-        "lat": 52.4991013,
-        "lng": 13.3418082
-      }
-    },
-    "Koshary Lux": {
-      "address": "Grolmanstraße 27",
-      "latLng": {
-        "lat": 52.50460589999999,
-        "lng": 13.3230871
-      }
-    },
-    "KOKIO Berlin": {
-      "address": "Hagenauer Str. 9",
-      "latLng": {
-        "lat": 52.540032,
-        "lng": 13.4161384
-      }
-    },
-    "Suppeto": {
-      "address": "Krausnickstraße 11",
-      "latLng": {
-        "lat": 52.5253222,
-        "lng": 13.3984219
-      }
-    },
-    "Shaniu's House of Noodles": {
-      "address": "Pariser Str. 58",
-      "latLng": {
-        "lat": 52.496173,
-        "lng": 13.3279995
-      }
-    },
-    "Malafemmena": {
-      "address": "Hauptstraße 85",
-      "latLng": {
-        "lat": 52.47376629999999,
-        "lng": 13.3383341
-      }
-    },
-    "heimlichTreu": {
-      "address": "Anklamer Str. 38",
-      "latLng": {
-        "lat": 52.53532,
-        "lng": 13.39919
-      }
-    },
-    "Bandol sur mer": {
-      "address": "Torstraße 167",
-      "latLng": {
-        "lat": 52.5291384,
-        "lng": 13.3954537
-      }
-    },
-    "Speisehaus Berlin": {
-      "address": "Wühlischstraße 30",
-      "latLng": {
-        "lat": 52.50967559999999,
-        "lng": 13.4577303
-      }
-    },
-    "Berkis": {
-      "address": "Winterfeldtstraße 45",
-      "latLng": {
-        "lat": 52.4967199,
-        "lng": 13.3536959
-      }
-    },
-    "Knödelwirtschaft": {
-      "address": "Fuldastraße 33",
-      "latLng": {
-        "lat": 52.4866815,
-        "lng": 13.4393703
-      }
-    },
-    "Zur Haxe": {
-      "address": "Erich-Weinert-Straße 128",
-      "latLng": {
-        "lat": 52.5448106,
-        "lng": 13.4369116
-      }
-    },
-    "Phönicia": {
-      "address": "Seestraße 100",
-      "latLng": {
-        "lat": 52.5495577,
-        "lng": 13.349473
-      }
-    },
-    "Taverna Santorini": {
-      "address": "Cauerstraße 28",
-      "latLng": {
-        "lat": 52.5175798,
-        "lng": 13.3172884
-      }
-    },
-    "NaNum": {
-      "address": "Lindenstraße 90",
-      "latLng": {
-        "lat": 52.5025546,
-        "lng": 13.3941126
-      }
-    },
-    "Le Saint Amour": {
-      "address": "Maybachufer 2",
-      "latLng": {
-        "lat": 52.4954244,
-        "lng": 13.4214598
-      }
-    },
-    "6868 Restaurant": {
-      "address": "Invalidenstraße 159",
-      "latLng": {
-        "lat": 52.5323951,
-        "lng": 13.3972841
-      }
-    },
-    "Cookies Cream": {
-      "address": "Behrenstraße 55",
-      "latLng": {
-        "lat": 52.5157146,
-        "lng": 13.3877824
-      }
-    },
-    "Mitho Cha!": {
-      "address": "Rykestraße 40",
-      "latLng": {
-        "lat": 52.5374212,
-        "lng": 13.4210038
-      }
-    },
-    "Antonello's Cevicheria & StreetFood": {
-      "address": "Nostitzstraße 22",
-      "latLng": {
-        "lat": 52.4904993,
-        "lng": 13.3901334
-      }
-    },
-    "Wansh": {
-      "address": "Pannierstraße 54",
-      "latLng": {
-        "lat": 52.4876101,
-        "lng": 13.4314336
-      }
-    },
-    "Papadam Indisches Restaurant": {
-      "address": "Scharnweberstraße 6",
-      "latLng": {
-        "lat": 52.5625686,
-        "lng": 13.3310447
-      }
-    },
-    "Yarok": {
-      "address": "Torstraße 195",
-      "latLng": {
-        "lat": 52.5283375,
-        "lng": 13.3920495
-      }
-    },
-    "Grünfisch": {
-      "address": "Graefestraße 26a",
-      "latLng": {
-        "lat": 52.4914739,
-        "lng": 13.41636
-      }
-    },
-    "ammAmma": {
-      "address": "Urbanstraße 28A",
-      "latLng": {
-        "lat": 52.4919412,
-        "lng": 13.4117835
-      }
-    },
-    "W - Der Imbiss | vegan vegetarisches Restaurant": {
-      "address": "Fuggerstraße 20",
-      "latLng": {
-        "lat": 52.499073,
-        "lng": 13.3448782
-      }
-    },
-    "Centopassi": {
-      "address": "Krossener Str. 36",
-      "latLng": {
-        "lat": 52.5093492,
-        "lng": 13.4650108
-      }
-    },
-    "Der Fischladen": {
-      "address": "Schönhauser Allee 128",
-      "latLng": {
-        "lat": 52.5459842,
-        "lng": 13.4124555
-      }
-    },
-    "Papaya Kantstraße": {
-      "address": "Kantstraße 122",
-      "latLng": {
-        "lat": 52.5062766,
-        "lng": 13.3104784
-      }
-    },
-    "Restaurant Trattoria Portofino": {
-      "address": "Gubener Str. 48",
-      "latLng": {
-        "lat": 52.5123562,
-        "lng": 13.4484136
-      }
-    },
-    "tulus lotrek": {
-      "address": "Fichtestraße 24",
-      "latLng": {
-        "lat": 52.489677,
-        "lng": 13.413604
-      }
-    },
-    "Kisso": {
-      "address": "Rheinstraße 44",
-      "latLng": {
-        "lat": 52.4660684,
-        "lng": 13.3299164
-      }
-    },
-    "Fischfabrik Berlin": {
-      "address": "Danziger Str. 24",
-      "latLng": {
-        "lat": 52.5400699,
-        "lng": 13.416925
-      }
-    },
-    "Ali Baba": {
-      "address": "Krossener Str. 17",
-      "latLng": {
-        "lat": 52.5106043,
-        "lng": 13.4575777
-      }
-    },
-    "Ristorante Masaniello": {
-      "address": "Hasenheide 20",
-      "latLng": {
-        "lat": 52.487945,
-        "lng": 13.4191314
-      }
-    },
-    "Zeus Pizza & Pide": {
-      "address": "Boxhagener Str. 30",
-      "latLng": {
-        "lat": 52.5124104,
-        "lng": 13.4591168
-      }
-    },
-    "ZENKICHI": {
-      "address": "Auguststraße 11-13",
-      "latLng": {
-        "lat": 52.52640719999999,
-        "lng": 13.3944188
-      }
-    },
-    "La Cantine d'Augusta Restaurant Bar à Vins": {
-      "address": "Langenscheidtstraße 6A",
-      "latLng": {
-        "lat": 52.4891205,
-        "lng": 13.3621136
-      }
-    },
-    "Basmah": {
-      "address": "Reichenberger Str. 26",
-      "latLng": {
-        "lat": 52.4980262,
-        "lng": 13.4212075
-      }
-    },
-    "Les Valseuses Restaurant": {
-      "address": "Eberswalder Str. 28",
-      "latLng": {
-        "lat": 52.5412949,
-        "lng": 13.4108581
-      }
-    },
-    "Orient Falafel": {
-      "address": "Graefestraße 65A",
-      "latLng": {
-        "lat": 52.49119839999999,
-        "lng": 13.4166156
-      }
-    },
-    "HOLY FLAT!": {
-      "address": "Lenaustraße 10",
-      "latLng": {
-        "lat": 52.490101,
-        "lng": 13.427028
-      }
-    },
-    "G wie Goulasch": {
-      "address": "Chamissopl. 1",
-      "latLng": {
-        "lat": 52.488552,
-        "lng": 13.390629
-      }
-    },
-    "Amitié": {
-      "address": "Potsdamer Str. 151",
-      "latLng": {
-        "lat": 52.495559,
-        "lng": 13.361503
-      }
-    },
-    "Dong Do Restaurant": {
-      "address": "Eberswalder Str. 27",
-      "latLng": {
-        "lat": 52.54126549999999,
-        "lng": 13.4111373
-      }
-    },
-    "Bei Lydia": {
-      "address": "Inselstraße 8A",
-      "latLng": {
-        "lat": 52.5124856,
-        "lng": 13.4117312
-      }
-    },
-    "Restaurant Blaue Adria": {
-      "address": "Cotheniusstraße 8",
-      "latLng": {
-        "lat": 52.5286026,
-        "lng": 13.4489986
-      }
-    },
-    "Maroush": {
-      "address": "Adalbertstraße 93",
-      "latLng": {
-        "lat": 52.5009474,
-        "lng": 13.4188435
-      }
-    },
-    "Naardoun": {
-      "address": "Windscheidstraße 27",
-      "latLng": {
-        "lat": 52.5064436,
-        "lng": 13.2995857
-      }
-    },
-    "The Poutine Kitchen": {
-      "address": "Arminiusstraße 2-4",
-      "latLng": {
-        "lat": 52.5277717,
-        "lng": 13.3386289
-      }
-    },
-    "Ebe Ano nigerian soulfood": {
-      "address": "Bamberger Str. 49",
-      "latLng": {
-        "lat": 52.4940024,
-        "lng": 13.3375317
-      }
-    },
-    "Vesuvio": {
-      "address": "Strausberger Pl. 8",
-      "latLng": {
-        "lat": 52.5190864,
-        "lng": 13.429525
-      }
-    },
-    "Zen": {
-      "address": "Uhlandstraße 170a",
-      "latLng": {
-        "lat": 52.5009029,
-        "lng": 13.3252628
-      }
-    },
-    "Best Curry": {
-      "address": "Kurfürstendamm 166",
-      "latLng": {
-        "lat": 52.4998107,
-        "lng": 13.3079426
-      }
-    },
-    "Schwarze Heidi": {
-      "address": "Mariannenstraße 50",
-      "latLng": {
-        "lat": 52.5010681,
-        "lng": 13.4238074
-      }
-    },
-    "Lac Viet": {
-      "address": "Rheinstraße 50",
-      "latLng": {
-        "lat": 52.4676586,
-        "lng": 13.3315991
-      }
-    },
-    "Pequena Habana Restaurant Berlin": {
-      "address": "Eisenacher Str. 48",
-      "latLng": {
-        "lat": 52.4877694,
-        "lng": 13.3491677
-      }
-    },
-    "Restaurant Dae Mon": {
-      "address": "Monbijoupl. 11",
-      "latLng": {
-        "lat": 52.52276990000001,
-        "lng": 13.399358
-      }
-    },
-    "Restaurant Schneeweiß": {
-      "address": "Simplonstraße 16",
-      "latLng": {
-        "lat": 52.5086167,
-        "lng": 13.4581712
-      }
-    },
-    "Salut Mediterranean Food & Catering Berlin": {
-      "address": "Augsburger Str. 29",
-      "latLng": {
-        "lat": 52.501547,
-        "lng": 13.3346581
-      }
-    },
-    "EIVGI´S Orientalische Spezialitäten - Koscher essen in Berlin!": {
-      "address": "Belziger Str. 75",
-      "latLng": {
-        "lat": 52.4846493,
-        "lng": 13.3457504
-      }
-    },
-    "WaWa Berlin": {
-      "address": "Grunewaldstraße 10",
-      "latLng": {
-        "lat": 52.4902689,
-        "lng": 13.3555616
-      }
-    },
-    "Lụa Restaurant": {
-      "address": "Schwedter Str. 269",
-      "latLng": {
-        "lat": 52.5326073,
-        "lng": 13.4120899
-      }
-    },
-    "LIU 成都味道面馆 Nudelhaus": {
-      "address": "Kronenstraße 72",
-      "latLng": {
-        "lat": 52.5112094,
-        "lng": 13.3875929
-      }
-    },
-    "Kochu Karu": {
-      "address": "Eberswalder Str. 35",
-      "latLng": {
-        "lat": 52.5414463,
-        "lng": 13.4092076
-      }
-    },
-    "Maître Philippe & Filles GmbH": {
-      "address": "Emser Str. 42",
-      "latLng": {
-        "lat": 52.49720610000001,
-        "lng": 13.3199219
-      }
-    },
-    "Falafel Aladdin": {
-      "address": "Stargarder Str. 50",
-      "latLng": {
-        "lat": 52.54401840000001,
-        "lng": 13.4243957
-      }
-    },
-    "Villa Rodizio": {
-      "address": "Milastraße 2",
-      "latLng": {
-        "lat": 52.5454658,
-        "lng": 13.4114636
-      }
-    },
-    "La tia Rica": {
-      "address": "Knesebeckstraße 92",
-      "latLng": {
-        "lat": 52.5085969,
-        "lng": 13.3231327
-      }
-    },
-    "Bahadur": {
-      "address": "Sigmaringer Str. 36",
-      "latLng": {
-        "lat": 52.4878977,
-        "lng": 13.3192648
-      }
-    },
-    "Son Kitchen": {
-      "address": "Kantstraße 46",
-      "latLng": {
-        "lat": 52.50661090000001,
-        "lng": 13.3118442
-      }
-    },
-    "Sofram": {
-      "address": "Potsdamer Str. 137",
-      "latLng": {
-        "lat": 52.4969484,
-        "lng": 13.3619445
-      }
-    },
-    "Rüyam Gemüse Kebab": {
-      "address": "Hauptstraße 133",
-      "latLng": {
-        "lat": 52.4846282,
-        "lng": 13.353968
-      }
-    },
-    "Rice On! Berlin": {
-      "address": "Berlin Hauptbahnhof – Foodcourt, Europaplatz 1",
-      "latLng": {
-        "lat": 52.5249111,
-        "lng": 13.369492
-      }
-    },
-    "Sarod's": {
-      "address": "Friesenstraße 22",
-      "latLng": {
-        "lat": 52.4878537,
-        "lng": 13.3946807
-      }
-    },
-    "Chelany-Mitte Restaurant": {
-      "address": "Torstraße 221",
-      "latLng": {
-        "lat": 52.5276532,
-        "lng": 13.38861
-      }
-    },
-    "Niko Niko Ramen (Ex-Hako Ramen am Boxi)": {
-      "address": "Boxhagener Str. 26",
-      "latLng": {
-        "lat": 52.5125968,
-        "lng": 13.4579686
-      }
-    },
-    "K'Ups Gemüsekebap": {
-      "address": "Kastanienallee 102",
-      "latLng": {
-        "lat": 52.5398109,
-        "lng": 13.4113164
-      }
-    }
+  "Best Gemüse Kebap": {
+    "address": "Boddinstraße 1",
+    "latLng": {
+      "lat": 52.4810743,
+      "lng": 13.4346183
+    },
+    "categories": ["restaurants"]
   },
-  "Cafes/bars": {
-    "Bagel, coffee.culture": {
-      "address": "Mehringdamm 66",
-      "latLng": {
-        "lat": 52.49066819999999,
-        "lng": 13.3863647
-      }
-    },
-    "uppers coworking": {
-      "address": "Yorckstraße 3",
-      "latLng": {
-        "lat": 52.4933925,
-        "lng": 13.3868053
-      }
-    },
-    "cuccuma": {
-      "address": "Zossener Str. 34",
-      "latLng": {
-        "lat": 52.49064139999999,
-        "lng": 13.394404
-      }
-    },
-    "KAP FRIDA": {
-      "address": "Alt-Stralau 61",
-      "latLng": {
-        "lat": 52.4958968,
-        "lng": 13.4679455
-      }
-    },
-    "Zazza Moabit": {
-      "address": "Platz der Nachbarschaft, Lehrter Str. 24e",
-      "latLng": {
-        "lat": 52.5313698,
-        "lng": 13.3617368
-      }
-    },
-    "soulcafé": {
-      "address": "Okerstraße 3",
-      "latLng": {
-        "lat": 52.4743989,
-        "lng": 13.426646
-      }
-    },
-    "Café Três": {
-      "address": "Adalbertstraße 91",
-      "latLng": {
-        "lat": 52.5011783,
-        "lng": 13.4189706
-      }
-    },
-    "BAIZ": {
-      "address": "Schönhauser Allee 26A",
-      "latLng": {
-        "lat": 52.5359427,
-        "lng": 13.41281
-      }
-    },
-    "Aslan's Mix": {
-      "address": "Urbanstraße 133",
-      "latLng": {
-        "lat": 52.4917174,
-        "lng": 13.4143419
-      }
-    },
-    "Cerebra Coffee": {
-      "address": "Ritterstraße 127",
-      "latLng": {
-        "lat": 52.50036369999999,
-        "lng": 13.4134943
-      }
-    },
-    "b flat Acoustic Music & Jazz Club": {
-      "address": "Dircksenstraße 40",
-      "latLng": {
-        "lat": 52.5236259,
-        "lng": 13.4069351
-      }
-    },
-    "La Fève": {
-      "address": "Karl-Kunger-Straße 58",
-      "latLng": {
-        "lat": 52.4911958,
-        "lng": 13.4477001
-      }
-    },
-    "EINSTEIN Unter den Linden": {
-      "address": "Unter den Linden 42",
-      "latLng": {
-        "lat": 52.51725,
-        "lng": 13.3860628
-      }
-    },
-    "La Maison Berlin": {
-      "address": "Paul-Lincke-Ufer 17",
-      "latLng": {
-        "lat": 52.4933315,
-        "lng": 13.4310939
-      }
-    },
-    "Café 60 Grad": {
-      "address": "Friesenstraße 15",
-      "latLng": {
-        "lat": 52.4856636,
-        "lng": 13.3941952
-      }
-    },
-    "Balu Coffee": {
-      "address": "Otto-Weidt-Platz 5",
-      "latLng": {
-        "lat": 52.5336216,
-        "lng": 13.3664599
-      }
-    },
-    "Maxway Coffee": {
-      "address": "Katharina-Paulus-Straße 2",
-      "latLng": {
-        "lat": 52.5226437,
-        "lng": 13.3675004
-      }
-    },
-    "Home: Brewing & Kitchen": {
-      "address": "Jonasstraße 23",
-      "latLng": {
-        "lat": 52.4714965,
-        "lng": 13.4334518
-      }
-    },
-    "Café Dunja": {
-      "address": "Altenbraker Str. 27",
-      "latLng": {
-        "lat": 52.4689308,
-        "lng": 13.4329587
-      }
-    },
-    "Golden Coffee": {
-      "address": "Graefestraße 2",
-      "latLng": {
-        "lat": 52.4952947,
-        "lng": 13.4192238
-      }
-    },
-    "SEVEN COFFEE Stay Green": {
-      "address": "Leipziger Str. 51",
-      "latLng": {
-        "lat": 52.5107975,
-        "lng": 13.4015782
-      }
-    },
-    "Demlik Cafe Restaurant": {
-      "address": "Kottbusser Damm 75",
-      "latLng": {
-        "lat": 52.4906251,
-        "lng": 13.4239011
-      }
-    },
-    "La Femme": {
-      "address": "Kottbusser Damm 77",
-      "latLng": {
-        "lat": 52.4909907,
-        "lng": 13.4236726
-      }
-    },
-    "Mira Frühstücksparadies": {
-      "address": "Hermannstraße 156",
-      "latLng": {
-        "lat": 52.46669,
-        "lng": 13.43214
-      }
-    },
-    "100 Gramm Bar": {
-      "address": "Weinbergsweg 25",
-      "latLng": {
-        "lat": 52.5306534,
-        "lng": 13.401757
-      }
-    },
-    "Café Komine": {
-      "address": "Welserstraße 13-15",
-      "latLng": {
-        "lat": 52.4978438,
-        "lng": 13.3417035
-      }
-    },
-    "Meta Mate Bar": {
-      "address": "Straßburger Str. 16",
-      "latLng": {
-        "lat": 52.5307316,
-        "lng": 13.4149569
-      }
-    },
-    "HERMAN Belgian Bar": {
-      "address": "Schönhauser Allee 173",
-      "latLng": {
-        "lat": 52.53248019999999,
-        "lng": 13.4120464
-      }
-    },
-    "Kilkenny Irish Pub": {
-      "address": "Am Zwirngraben 17-20",
-      "latLng": {
-        "lat": 52.522491,
-        "lng": 13.401438
-      }
-    },
-    "Irish Pub": {
-      "address": "Tauentzienstraße 9-12",
-      "latLng": {
-        "lat": 52.5044796,
-        "lng": 13.3383409
-      }
-    },
-    "Tiergartenquelle": {
-      "address": "Bachstraße S-Bahnbogen 482",
-      "latLng": {
-        "lat": 52.51519279999999,
-        "lng": 13.3369085
-      }
-    },
-    "Cancún Mariendorf": {
-      "address": "Mariendorfer Damm 310",
-      "latLng": {
-        "lat": 52.42552509999999,
-        "lng": 13.3945121
-      }
-    },
-    "White Lounge Shisha": {
-      "address": "Goebenstraße 14",
-      "latLng": {
-        "lat": 52.4932512,
-        "lng": 13.3663202
-      }
-    },
-    "Zum Frosch": {
-      "address": "Stresemannstraße 15",
-      "latLng": {
-        "lat": 52.4991521,
-        "lng": 13.3882354
-      }
-    },
-    "Stern Cafe": {
-      "address": "Silbersteinstraße 140",
-      "latLng": {
-        "lat": 52.4655225,
-        "lng": 13.4229808
-      }
-    },
-    "Kaffeekirsche Böckhstraße": {
-      "address": "Böckhstraße 30",
-      "latLng": {
-        "lat": 52.4931642,
-        "lng": 13.4215768
-      }
-    },
-    "Coffee Circle Café": {
-      "address": "Rosa-Luxemburg-Straße 19",
-      "latLng": {
-        "lat": 52.5253399,
-        "lng": 13.4103461
-      }
-    },
-    "Picoteo": {
-      "address": "Erkelenzdamm 47",
-      "latLng": {
-        "lat": 52.4977692,
-        "lng": 13.4131188
-      }
-    },
-    "Savo Bar Café": {
-      "address": "Weisestraße 35",
-      "latLng": {
-        "lat": 52.4741803,
-        "lng": 13.4251535
-      }
-    },
-    "A Never Ever Ending Love Story": {
-      "address": "Kantstraße 25",
-      "latLng": {
-        "lat": 52.5062266,
-        "lng": 13.3198224
-      }
-    },
-    "Patesô Bar": {
-      "address": "Novalisstraße 2",
-      "latLng": {
-        "lat": 52.5281223,
-        "lng": 13.3890878
-      }
-    },
-    "Fourty Years": {
-      "address": "Lausitzer Str. 34",
-      "latLng": {
-        "lat": 52.49579079999999,
-        "lng": 13.4273973
-      }
-    },
-    "Unsre Kneipe": {
-      "address": "Belforter Str. 22",
-      "latLng": {
-        "lat": 52.5323004,
-        "lng": 13.418964
-      }
-    },
-    "Sicula Bar": {
-      "address": "Scharnweberstraße 46",
-      "latLng": {
-        "lat": 52.512609,
-        "lng": 13.4664522
-      }
-    },
-    "Café des Schicksals": {
-      "address": "Gerichtstraße 68",
-      "latLng": {
-        "lat": 52.5437924,
-        "lng": 13.3729875
-      }
-    },
-    "KikiSol": {
-      "address": "Reinickendorfer Str. 96",
-      "latLng": {
-        "lat": 52.5475747,
-        "lng": 13.3688392
-      }
-    },
-    "BONA Kollektiv": {
-      "address": "Hermannstraße 178",
-      "latLng": {
-        "lat": 52.4717087,
-        "lng": 13.4292346
-      }
-    },
-    "Café Alcatraz": {
-      "address": "Wilsnacker Str. 30",
-      "latLng": {
-        "lat": 52.5308927,
-        "lng": 13.3508621
-      }
-    },
-    "All About Berlin": {
-      "address": "Rigaerstr. 75, Samariterstraße 9",
-      "latLng": {
-        "lat": 52.5164953,
-        "lng": 13.4654783
-      }
-    },
-    "Coffee For Coffee": {
-      "address": "Frankfurter Allee 70",
-      "latLng": {
-        "lat": 52.5142801,
-        "lng": 13.4671265
-      }
-    },
-    "Bricks & Mortar": {
-      "address": "Voigtstraße 42",
-      "latLng": {
-        "lat": 52.515184,
-        "lng": 13.4676004
-      }
-    },
-    "The Neighborhood": {
-      "address": "Möckernstrasse 91",
-      "latLng": {
-        "lat": 52.492911,
-        "lng": 13.3797341
-      }
-    },
-    "Pavillon am Ufer": {
-      "address": "Paul-Lincke-Ufer 4",
-      "latLng": {
-        "lat": 52.4916486,
-        "lng": 13.4353687
-      }
-    },
-    "Green Tea Café MAMECHA": {
-      "address": "Mulackstraße 33",
-      "latLng": {
-        "lat": 52.527199,
-        "lng": 13.40622
-      }
-    },
-    "CODOS Coffee": {
-      "address": "Invalidenstraße 1",
-      "latLng": {
-        "lat": 52.5326848,
-        "lng": 13.3985759
-      }
-    },
-    "Wiener Conditorei Caffeehaus": {
-      "address": "Reichsstraße 81",
-      "latLng": {
-        "lat": 52.5159842,
-        "lng": 13.2604813
-      }
-    },
-    "Cupcake Berlin": {
-      "address": "Krossener Str. 12",
-      "latLng": {
-        "lat": 52.5107751,
-        "lng": 13.4577852
-      }
-    },
-    "Barcomi’s Café & Kaffeerösterei": {
-      "address": "Bergmannstraße 21",
-      "latLng": {
-        "lat": 52.48903379999999,
-        "lng": 13.3934183
-      }
-    },
-    "Zora Supermarkt 2": {
-      "address": "Boxhagener Str. 80",
-      "latLng": {
-        "lat": 52.507969,
-        "lng": 13.4675769
-      }
-    },
-    "Geicha Bubble Tea": {
-      "address": "Reichenberger Str. 176",
-      "latLng": {
-        "lat": 52.4997282,
-        "lng": 13.4169453
-      }
-    },
-    "Companion Tea & Coffee": {
-      "address": "Weserstr. 166",
-      "latLng": {
-        "lat": 52.4834032,
-        "lng": 13.4412229
-      }
-    },
-    "Berliner Kaffeerösterei Uhlandstraße": {
-      "address": "Uhlandstraße 173/174",
-      "latLng": {
-        "lat": 52.5014854,
-        "lng": 13.3252931
-      }
-    },
-    "Bubbletea World": {
-      "address": "Kottbusser Damm 29-30",
-      "latLng": {
-        "lat": 52.48932869999999,
-        "lng": 13.4238785
-      }
-    },
-    "TEE.SALON.IKI": {
-      "address": "Böckhstraße 50",
-      "latLng": {
-        "lat": 52.4943941,
-        "lng": 13.4167806
-      }
-    },
-    "Tante Käthe": {
-      "address": "Bernauer Str. 63-64",
-      "latLng": {
-        "lat": 52.5404135,
-        "lng": 13.4030038
-      }
-    },
-    "Crêplala": {
-      "address": "Kantstraße 85A",
-      "latLng": {
-        "lat": 52.5066828,
-        "lng": 13.2959381
-      }
-    },
-    "KAFFEE 26": {
-      "address": "Jüdenstraße 26",
-      "latLng": {
-        "lat": 52.538109,
-        "lng": 13.2029468
-      }
-    },
-    "wild caffè": {
-      "address": "Südwestkorso 63",
-      "latLng": {
-        "lat": 52.4730533,
-        "lng": 13.3218062
-      }
-    },
-    "Ratzeputz": {
-      "address": "Weserstr. 182",
-      "latLng": {
-        "lat": 52.4853693,
-        "lng": 13.4371082
-      }
-    },
-    "Kame Berlin Japanese Food and Snacks": {
-      "address": "Leibnizstraße 45",
-      "latLng": {
-        "lat": 52.5038272,
-        "lng": 13.313836
-      }
-    },
-    "meet me halfway - Berlin": {
-      "address": "Zinnowitzer Str. 5",
-      "latLng": {
-        "lat": 52.5319419,
-        "lng": 13.3832472
-      }
-    },
-    "Neumanns Café": {
-      "address": "Gabriel-Max-Straße 18",
-      "latLng": {
-        "lat": 52.5103056,
-        "lng": 13.4580857
-      }
-    },
-    "KEIT": {
-      "address": "Goltzstraße 18",
-      "latLng": {
-        "lat": 52.4936276,
-        "lng": 13.3539902
-      }
-    },
-    "Albatross Bakery": {
-      "address": "Graefestraße 66/67",
-      "latLng": {
-        "lat": 52.4914301,
-        "lng": 13.4167959
-      }
-    },
-    "Café ?": {
-      "address": "Goltzstraße 34",
-      "latLng": {
-        "lat": 52.4940782,
-        "lng": 13.3535794
-      }
-    },
-    "Café Tasso - Das andere Antiquariat": {
-      "address": "Frankfurter Allee 11",
-      "latLng": {
-        "lat": 52.5160722,
-        "lng": 13.4569722
-      }
-    },
-    "Wilhelm Hoeck 1892": {
-      "address": "Wilmersdorfer Str. 149",
-      "latLng": {
-        "lat": 52.5139254,
-        "lng": 13.3051183
-      }
-    },
-    "Caramel": {
-      "address": "Zimmerstraße 26",
-      "latLng": {
-        "lat": 52.5076905,
-        "lng": 13.3931423
-      }
-    },
-    "Caravaggi Naturwein Bistro": {
-      "address": "Lettestraße 3",
-      "latLng": {
-        "lat": 52.54302080000001,
-        "lng": 13.420258
-      }
-    },
-    "OFFSIDE Pub & Whisky Bar": {
-      "address": "Jülicher Str. 4",
-      "latLng": {
-        "lat": 52.553383,
-        "lng": 13.39163
-      }
-    },
-    "Café Dodo Coffee & Gelato": {
-      "address": "Dunckerstraße 12",
-      "latLng": {
-        "lat": 52.5426414,
-        "lng": 13.4211537
-      }
-    },
-    "Du Bonheur": {
-      "address": "Brunnenstraße 39",
-      "latLng": {
-        "lat": 52.536243,
-        "lng": 13.397867
-      }
-    },
-    "Zuckerstück": {
-      "address": "Schivelbeiner Str. 7",
-      "latLng": {
-        "lat": 52.5509876,
-        "lng": 13.4117518
-      }
-    },
-    "Hard Rock Cafe": {
-      "address": "Kurfürstendamm 224",
-      "latLng": {
-        "lat": 52.5030902,
-        "lng": 13.3294058
-      }
-    },
-    "No Fire No Glory": {
-      "address": "Rykestraße 45",
-      "latLng": {
-        "lat": 52.5366659,
-        "lng": 13.4204562
-      }
-    },
-    "Tucker Brunch Bar": {
-      "address": "Wühlischstraße 1",
-      "latLng": {
-        "lat": 52.5073642,
-        "lng": 13.4674563
-      }
-    },
-    "Mo’s Coffee": {
-      "address": "Stargarder Str. 45",
-      "latLng": {
-        "lat": 52.5435332,
-        "lng": 13.4255722
-      }
-    },
-    "Lemon Feinkost": {
-      "address": "Wühlischstraße 17",
-      "latLng": {
-        "lat": 52.5086451,
-        "lng": 13.4620787
-      }
-    },
-    "Alaska Bar": {
-      "address": "Reuterstraße 85",
-      "latLng": {
-        "lat": 52.4829207,
-        "lng": 13.4287199
-      }
-    },
-    "BIP - Bier in Pankow": {
-      "address": "Kreuzstraße 14",
-      "latLng": {
-        "lat": 52.5674962,
-        "lng": 13.3972277
-      }
-    },
-    "Adara Lounge": {
-      "address": "Boxhagener Str. 75",
-      "latLng": {
-        "lat": 52.5072278,
-        "lng": 13.4684685
-      }
-    },
-    "Cafe Neue Liebe": {
-      "address": "Rykestraße 42",
-      "latLng": {
-        "lat": 52.537133,
-        "lng": 13.4208163
-      }
-    },
-    "PapalaCup": {
-      "address": "Gotenstraße 55",
-      "latLng": {
-        "lat": 52.479837,
-        "lng": 13.3604371
-      }
-    },
-    "Kajumi": {
-      "address": "Dunckerstraße 73",
-      "latLng": {
-        "lat": 52.5441872,
-        "lng": 13.4219242
-      }
-    },
-    "Domberger Brot-Werk - Moabit": {
-      "address": "Essener Str. 11",
-      "latLng": {
-        "lat": 52.5238982,
-        "lng": 13.3383117
-      }
-    },
-    "Monster Ronson's Ichiban Karaoke": {
-      "address": "Warschauer Str. 34",
-      "latLng": {
-        "lat": 52.5052743,
-        "lng": 13.4484712
-      }
-    },
-    "Winterfeldt Schokoladen": {
-      "address": "Goltzstraße 23",
-      "latLng": {
-        "lat": 52.4945996,
-        "lng": 13.3541914
-      }
-    },
-    "Café Morgenrot": {
-      "address": "Kastanienallee 85",
-      "latLng": {
-        "lat": 52.5375162,
-        "lng": 13.4089072
-      }
-    },
-    "Kaffeekirsche": {
-      "address": "Adalbertstraße 23",
-      "latLng": {
-        "lat": 52.50303220000001,
-        "lng": 13.4206823
-      }
-    },
-    "Five Elephant Mitte": {
-      "address": "Alte Schönhauser Str. 14",
-      "latLng": {
-        "lat": 52.5267524,
-        "lng": 13.4075826
-      }
-    },
-    "ZAZZA Kaffeehaus": {
-      "address": "Schönleinstraße 7B",
-      "latLng": {
-        "lat": 52.49209459999999,
-        "lng": 13.4206836
-      }
-    },
-    "Die Legende von Paula und Ben": {
-      "address": "Gneisenaustraße 58",
-      "latLng": {
-        "lat": 52.4898907,
-        "lng": 13.4042063
-      }
-    },
-    "Kunst- und Kulturverein Mastul e.V": {
-      "address": "Liebenwalder Str. 33",
-      "latLng": {
-        "lat": 52.5519793,
-        "lng": 13.3582565
-      }
-    },
-    "Kürbiskern": {
-      "address": "Kopernikusstraße 23",
-      "latLng": {
-        "lat": 52.51039859999999,
-        "lng": 13.4543906
-      }
-    },
-    "Chapter One Coffee": {
-      "address": "Mittenwalder Str. 30",
-      "latLng": {
-        "lat": 52.4897848,
-        "lng": 13.3956902
-      }
-    },
-    "FACTORY GIRL": {
-      "address": "Auguststraße 29c",
-      "latLng": {
-        "lat": 52.527247,
-        "lng": 13.3987937
-      }
-    },
-    "Toasted Berlin": {
-      "address": "Karl-Marx-Straße 33",
-      "latLng": {
-        "lat": 52.4842996,
-        "lng": 13.429436
-      }
-    },
-    "Zig Zag Jazz Club Berlin": {
-      "address": "Hauptstraße 89",
-      "latLng": {
-        "lat": 52.4750583,
-        "lng": 13.3399194
-      }
-    },
-    "Populus Coffee": {
-      "address": "Maybachufer 20",
-      "latLng": {
-        "lat": 52.49369,
-        "lng": 13.42704
-      }
-    },
-    "DoubleEye": {
-      "address": "Akazienstraße 22",
-      "latLng": {
-        "lat": 52.4879893,
-        "lng": 13.354066
-      }
-    },
-    "Mano Cafe": {
-      "address": "Skalitzer Str. 46A",
-      "latLng": {
-        "lat": 52.4989448,
-        "lng": 13.4306064
-      }
-    },
-    "Bonanza Coffee Heroes": {
-      "address": "Oderberger Str. 35",
-      "latLng": {
-        "lat": 52.539975,
-        "lng": 13.4053444
-      }
-    },
-    "Kallasch & - Moab Barprojekt": {
-      "address": "Unionstraße 2",
-      "latLng": {
-        "lat": 52.53293919999999,
-        "lng": 13.3365603
-      }
-    },
-    "Take a Break": {
-      "address": "Bergmannstraße 59",
-      "latLng": {
-        "lat": 52.4889684,
-        "lng": 13.4029713
-      }
-    },
-    "Holzmarkt Pampa": {
-      "address": "Holzmarktstraße 25",
-      "latLng": {
-        "lat": 52.5110152,
-        "lng": 13.427431
-      }
-    },
-    "Salut! Classic bar": {
-      "address": "Goltzstraße 7",
-      "latLng": {
-        "lat": 52.49109929999999,
-        "lng": 13.3534905
-      }
-    },
-    "Siebert Bakery": {
-      "address": "Schönfließer Str. 12",
-      "latLng": {
-        "lat": 52.55293,
-        "lng": 13.40817
-      }
-    },
-    "Milch Halle Berlin Coffee": {
-      "address": "Auguststraße 50",
-      "latLng": {
-        "lat": 52.52781599999999,
-        "lng": 13.4005262
-      }
-    },
-    "Café de Enrico": {
-      "address": "Fritz-Reuter-Straße 13",
-      "latLng": {
-        "lat": 52.4808218,
-        "lng": 13.3499152
-      }
-    },
-    "Bagco Coffee Bar": {
-      "address": "Kantstraße 154A",
-      "latLng": {
-        "lat": 52.5053461,
-        "lng": 13.3276563
-      }
-    },
-    "SPRO Scones Bakery & Coffee": {
-      "address": "Schönhauser Allee 50A",
-      "latLng": {
-        "lat": 52.5426373,
-        "lng": 13.4127143
-      }
-    },
-    "Tante Lisbeth": {
-      "address": "Muskauer Str. 49",
-      "latLng": {
-        "lat": 52.5011774,
-        "lng": 13.4317162
-      }
-    },
-    "La Cantine d'Augusta Restaurant Bar à Vins": {
-      "address": "Langenscheidtstraße 6A",
-      "latLng": {
-        "lat": 52.4891205,
-        "lng": 13.3621136
-      }
-    },
-    "Prachtwerk": {
-      "address": "Ganghoferstraße 2",
-      "latLng": {
-        "lat": 52.4790697,
-        "lng": 13.4388571
-      }
-    },
-    "Lerchen&Eulen": {
-      "address": "Pücklerstraße 33",
-      "latLng": {
-        "lat": 52.5020624,
-        "lng": 13.4307922
-      }
-    },
-    "Katie's Blue Cat": {
-      "address": "Friedelstraße 31",
-      "latLng": {
-        "lat": 52.4929667,
-        "lng": 13.4282694
-      }
-    },
-    "KLO": {
-      "address": "Leibnizstraße 57",
-      "latLng": {
-        "lat": 52.5022415,
-        "lng": 13.3130075
-      }
-    },
-    "Crêpestation": {
-      "address": "Pappelallee 58",
-      "latLng": {
-        "lat": 52.5463183,
-        "lng": 13.4177593
-      }
-    },
-    "Café Friedrichs": {
-      "address": "Mierendorffpl. 2",
-      "latLng": {
-        "lat": 52.5249377,
-        "lng": 13.3043802
-      }
-    },
-    "Café Casero - Frühstück Friedrichshain Berlin": {
-      "address": "Neue Bahnhofstraße 21",
-      "latLng": {
-        "lat": 52.5074015,
-        "lng": 13.4711449
-      }
-    },
-    "Mindful Life Berlin": {
-      "address": "Gleimstraße 19",
-      "latLng": {
-        "lat": 52.54714000000001,
-        "lng": 13.4092701
-      }
-    },
-    "Café / Bar Marienhof": {
-      "address": "Marienburger Str. 7",
-      "latLng": {
-        "lat": 52.53477059999999,
-        "lng": 13.4239597
-      }
-    },
-    "Good Morning Monday": {
-      "address": "Falckensteinstraße 18",
-      "latLng": {
-        "lat": 52.4975168,
-        "lng": 13.4410025
-      }
-    },
-    "Stagger Lee": {
-      "address": "Nollendorfstraße 27",
-      "latLng": {
-        "lat": 52.4975727,
-        "lng": 13.3516112
-      }
-    },
-    "Cookies & Co": {
-      "address": "Senefelderstraße 4",
-      "latLng": {
-        "lat": 52.5404574,
-        "lng": 13.4224335
-      }
-    },
-    "Destille Kreuzberg": {
-      "address": "Mehringdamm 67",
-      "latLng": {
-        "lat": 52.4904258,
-        "lng": 13.3870541
-      }
-    },
-    "Salut Backwaren": {
-      "address": "Schlesische Str. 1",
-      "latLng": {
-        "lat": 52.5005919,
-        "lng": 13.4419141
-      }
-    },
-    "Café GeScHmacKsachE": {
-      "address": "Motzstraße 34",
-      "latLng": {
-        "lat": 52.4974621,
-        "lng": 13.3466837
-      }
-    },
-    "Tipsy Bear": {
-      "address": "Eberswalder Str. 21",
-      "latLng": {
-        "lat": 52.540937,
-        "lng": 13.4106912
-      }
-    },
-    "Cafe Neundrei": {
-      "address": "Monbijoupl. 2",
-      "latLng": {
-        "lat": 52.5231054,
-        "lng": 13.3998056
-      }
-    },
-    "Zeit für Brot": {
-      "address": "Alte Schönhauser Str. 4",
-      "latLng": {
-        "lat": 52.5280152,
-        "lng": 13.4086068
-      }
-    },
-    "Ulteamate Berlin": {
-      "address": "Kantstraße 40",
-      "latLng": {
-        "lat": 52.5065272,
-        "lng": 13.3133079
-      }
-    },
-    "Café Bell Chicco": {
-      "address": "Rosa-Luxemburg-Straße 16",
-      "latLng": {
-        "lat": 52.5247142,
-        "lng": 13.4104766
-      }
-    },
-    "Nata Lisboa": {
-      "address": "Pariser Str. 24",
-      "latLng": {
-        "lat": 52.4987479,
-        "lng": 13.316983
-      }
-    },
-    "NOTHAFT CAFE": {
-      "address": "Schönhauser Allee 43A",
-      "latLng": {
-        "lat": 52.540311,
-        "lng": 13.4126148
-      }
-    },
-    "Rosengarten Kulturpavillon": {
-      "address": "Weinbergsweg 13",
-      "latLng": {
-        "lat": 52.5324776,
-        "lng": 13.4034001
-      }
-    },
-    "Birra - Italian Craft Beer": {
-      "address": "Prenzlauer Allee 198",
-      "latLng": {
-        "lat": 52.5386191,
-        "lng": 13.4234473
-      }
-    },
-    "passenger coffee": {
-      "address": "Elsenstraße 38",
-      "latLng": {
-        "lat": 52.4874747,
-        "lng": 13.4516993
-      }
-    },
-    "Flying Roasters": {
-      "address": "Hochstraße 34",
-      "latLng": {
-        "lat": 52.543872,
-        "lng": 13.37705
-      }
-    },
-    "Spontan Coffee": {
-      "address": "Gotzkowskystraße 28",
-      "latLng": {
-        "lat": 52.5250885,
-        "lng": 13.3303343
-      }
-    },
-    "ABC - Allans Breakfast Club & Wine Bar": {
-      "address": "Rykestraße 13",
-      "latLng": {
-        "lat": 52.5364792,
-        "lng": 13.4209021
-      }
-    },
-    "Schwarzes Cafe": {
-      "address": "Kantstraße 148",
-      "latLng": {
-        "lat": 52.5055292,
-        "lng": 13.3242208
-      }
-    },
-    "Celtic Cottage": {
-      "address": "Markelstraße 13",
-      "latLng": {
-        "lat": 52.4645239,
-        "lng": 13.3238667
-      }
-    },
-    "Centopassi": {
-      "address": "Krossener Str. 36",
-      "latLng": {
-        "lat": 52.5093492,
-        "lng": 13.4650108
-      }
-    },
-    "Klas Bäckerei": {
-      "address": "Naunynstraße 2",
-      "latLng": {
-        "lat": 52.50046,
-        "lng": 13.42709
-      }
-    },
-    "rocket + basil": {
-      "address": "Lützowstraße 22",
-      "latLng": {
-        "lat": 52.5030596,
-        "lng": 13.3666316
-      }
-    },
-    "Bekarei - The Good Baking Company": {
-      "address": "Dunckerstraße 23",
-      "latLng": {
-        "lat": 52.54431719999999,
-        "lng": 13.4226478
-      }
-    },
-    "Bubble Bauch -Tea Art Café": {
-      "address": "Danziger Str. 59",
-      "latLng": {
-        "lat": 52.5397308,
-        "lng": 13.4222886
-      }
-    },
-    "Babuschka in der alten Fischräucherei": {
-      "address": "Behaimstraße 32",
-      "latLng": {
-        "lat": 52.5505741,
-        "lng": 13.4470112
-      }
-    },
-    "Jubel": {
-      "address": "Hufelandstraße 10",
-      "latLng": {
-        "lat": 52.532228,
-        "lng": 13.4305784
-      }
-    },
-    "Röstwerk by Humboldt Kaffeemanufaktur Berlin": {
-      "address": "Seelingstraße 32",
-      "latLng": {
-        "lat": 52.51557570000001,
-        "lng": 13.2918343
-      }
-    },
-    "Brotgarten GmbH in Charlottenburg": {
-      "address": "Seelingstraße 30",
-      "latLng": {
-        "lat": 52.5156076,
-        "lng": 13.2923042
-      }
-    }
+  "Fischtheke Berlin": {
+    "address": "Flughafenstraße 35",
+    "latLng": {
+      "lat": 52.48108329999999,
+      "lng": 13.4284599
+    },
+    "categories": ["restaurants"]
   },
-  "Sweets": {
-    "Şengüloğlu Antep Baklava": {
-      "address": "Kottbusser Damm 32",
-      "latLng": {
-        "lat": 52.4889394,
-        "lng": 13.4242268
-      }
+  "Tuana Turkish Deli": {
+    "address": "Kolonnenstraße 12",
+    "latLng": {
+      "lat": 52.4856123,
+      "lng": 13.3621565
     },
-    "Osteria Maria / Cremeria Maria": {
-      "address": "Leydenallee 79",
-      "latLng": {
-        "lat": 52.453227,
-        "lng": 13.3245278
-      }
-    },
-    "Konditorei Rabien": {
-      "address": "Klingsorstraße 13",
-      "latLng": {
-        "lat": 52.4518052,
-        "lng": 13.330492
-      }
-    },
-    "Baklavaci Antepliogullari": {
-      "address": "Hermannstraße 64",
-      "latLng": {
-        "lat": 52.4754882,
-        "lng": 13.4268221
-      }
-    },
-    "Baklavaci Antepli Haciogullari (TATLICI AHMET USTA)": {
-      "address": "Schöneweider Str. 16",
-      "latLng": {
-        "lat": 52.4720547,
-        "lng": 13.4451029
-      }
-    },
-    "Waffle Brothers": {
-      "address": "Kantstraße 118-119",
-      "latLng": {
-        "lat": 52.506302,
-        "lng": 13.3097589
-      }
-    },
-    "Der Kuchenladen": {
-      "address": "Kantstraße 138",
-      "latLng": {
-        "lat": 52.5057974,
-        "lng": 13.31828
-      }
-    },
-    "CANAL Artisanal Ice cream & pastry": {
-      "address": "Rosenthaler Str. 40",
-      "latLng": {
-        "lat": 52.5242082,
-        "lng": 13.4020973
-      }
-    },
-    "CODOS Coffee": {
-      "address": "Invalidenstraße 1",
-      "latLng": {
-        "lat": 52.5326848,
-        "lng": 13.3985759
-      }
-    },
-    "Wiener Conditorei Caffeehaus": {
-      "address": "Reichsstraße 81",
-      "latLng": {
-        "lat": 52.5159842,
-        "lng": 13.2604813
-      }
-    },
-    "Cupcake Berlin": {
-      "address": "Krossener Str. 12",
-      "latLng": {
-        "lat": 52.5107751,
-        "lng": 13.4577852
-      }
-    },
-    "Barcomi’s Café & Kaffeerösterei": {
-      "address": "Bergmannstraße 21",
-      "latLng": {
-        "lat": 52.48903379999999,
-        "lng": 13.3934183
-      }
-    },
-    "Konditorei Damaskus": {
-      "address": "Sonnenallee 93",
-      "latLng": {
-        "lat": 52.4826134,
-        "lng": 13.4388355
-      }
-    },
-    "Alagha Konditorei حلويات الآغا": {
-      "address": "Sonnenallee 80",
-      "latLng": {
-        "lat": 52.4833027,
-        "lng": 13.4364265
-      }
-    },
-    "Duo Sicilian Ice Cream - Maybachufer": {
-      "address": "Maybachufer 3",
-      "latLng": {
-        "lat": 52.4953894,
-        "lng": 13.4216914
-      }
-    },
-    "Berat Bäckerei": {
-      "address": "Badstraße 45",
-      "latLng": {
-        "lat": 52.5528238,
-        "lng": 13.3787998
-      }
-    },
-    "Burak Künefe": {
-      "address": "Brunnenstraße 56 (U-Bahn Bernauer Str.) 13355",
-      "latLng": {
-        "lat": 52.5391779,
-        "lng": 13.3958704
-      }
-    },
-    "GioMecca Pastry": {
-      "address": "Erich-Weinert-Straße 3",
-      "latLng": {
-        "lat": 52.55208649999999,
-        "lng": 13.4151372
-      }
-    },
-    "Caffè e Gelato": {
-      "address": "Maaßenstraße 6",
-      "latLng": {
-        "lat": 52.49839919999999,
-        "lng": 13.3538407
-      }
-    },
-    "Zeit für Brot": {
-      "address": "Alte Schönhauser Str. 4",
-      "latLng": {
-        "lat": 52.5280152,
-        "lng": 13.4086068
-      }
-    },
-    "Chipi Chipi Bombón": {
-      "address": "Warschauer Str. 12",
-      "latLng": {
-        "lat": 52.5132387,
-        "lng": 13.4525667
-      }
-    },
-    "Ice cream culture - Berlin": {
-      "address": "Schnellerstraße 118",
-      "latLng": {
-        "lat": 52.4550256,
-        "lng": 13.5150729
-      }
-    },
-    "Café Dodo Coffee & Gelato": {
-      "address": "Dunckerstraße 12",
-      "latLng": {
-        "lat": 52.5426414,
-        "lng": 13.4211537
-      }
-    },
-    "der Eisladen": {
-      "address": "Luisenstraße 14",
-      "latLng": {
-        "lat": 52.52329899999999,
-        "lng": 13.3793122
-      }
-    },
-    "Cookies & Co": {
-      "address": "Senefelderstraße 4",
-      "latLng": {
-        "lat": 52.5404574,
-        "lng": 13.4224335
-      }
-    },
-    "Gimme Gelato GmbH": {
-      "address": "Wundtstraße 15",
-      "latLng": {
-        "lat": 52.51210099999999,
-        "lng": 13.2941161
-      }
-    },
-    "Ulteamate Berlin": {
-      "address": "Kantstraße 40",
-      "latLng": {
-        "lat": 52.5065272,
-        "lng": 13.3133079
-      }
-    },
-    "Crêpestation": {
-      "address": "Pappelallee 58",
-      "latLng": {
-        "lat": 52.5463183,
-        "lng": 13.4177593
-      }
-    },
-    "Spoonful Berlin (ehemals Eismanufaktur Berlin)": {
-      "address": "Maxstraße 11",
-      "latLng": {
-        "lat": 52.5500792,
-        "lng": 13.364024
-      }
-    },
-    "Cupcakeladen": {
-      "address": "Frankenstraße 15",
-      "latLng": {
-        "lat": 52.4932814,
-        "lng": 13.3527326
-      }
-    },
-    "Neuhaus Berlin": {
-      "address": "Friedrichstraße 63",
-      "latLng": {
-        "lat": 52.512134,
-        "lng": 13.390001
-      }
-    },
-    "Ritter Sport Colorful Chocolate World Berlin": {
-      "address": "Franz. Str. 24",
-      "latLng": {
-        "lat": 52.514723,
-        "lng": 13.3905063
-      }
-    },
-    "Süßfein Rykestraße": {
-      "address": "Rykestraße 50",
-      "latLng": {
-        "lat": 52.5355099,
-        "lng": 13.4194857
-      }
-    },
-    "Du Bonheur": {
-      "address": "Brunnenstraße 39",
-      "latLng": {
-        "lat": 52.536243,
-        "lng": 13.397867
-      }
-    },
-    "vanille & marille Tempelhof": {
-      "address": "Friedrich-Wilhelm-Straße 22",
-      "latLng": {
-        "lat": 52.45859549999999,
-        "lng": 13.3813258
-      }
-    },
-    "Eis Da Dalt": {
-      "address": "Bölschestraße 94",
-      "latLng": {
-        "lat": 52.4531922,
-        "lng": 13.6247442
-      }
-    },
-    "Duo - Sicilian Ice Cream": {
-      "address": "Skalitzer Str. 82",
-      "latLng": {
-        "lat": 52.5006767,
-        "lng": 13.4388173
-      }
-    },
-    "OAK & ICE": {
-      "address": "Schönhauser Allee 52",
-      "latLng": {
-        "lat": 52.5428824,
-        "lng": 13.4126635
-      }
-    },
-    "Winterfeldt Schokoladen": {
-      "address": "Goltzstraße 23",
-      "latLng": {
-        "lat": 52.4945996,
-        "lng": 13.3541914
-      }
-    },
-    "Rausch Schokoladenhaus": {
-      "address": "Charlottenstraße 60",
-      "latLng": {
-        "lat": 52.51205299999999,
-        "lng": 13.3912058
-      }
-    },
-    "Eispatisserie Hokey Pokey Boutique": {
-      "address": "Stargarder Str. 73",
-      "latLng": {
-        "lat": 52.5469814,
-        "lng": 13.417435
-      }
-    },
-    "Salkim Baklava": {
-      "address": "Kottbusser Damm 7, 10967 (Kreuzberg Hauptstraße 16, 10827",
-      "latLng": {
-        "lat": 52.4941279,
-        "lng": 13.4210318
-      }
-    },
-    "Nata Lisboa": {
-      "address": "Pariser Str. 24",
-      "latLng": {
-        "lat": 52.4987479,
-        "lng": 13.316983
-      }
-    },
-    "Eispatisserie Hokey Pokey": {
-      "address": "Oderberger Str. 38",
-      "latLng": {
-        "lat": 52.53973269999999,
-        "lng": 13.4060977
-      }
-    },
-    "Paletas Berlin Office": {
-      "address": "Wühlischstraße 26",
-      "latLng": {
-        "lat": 52.5093511,
-        "lng": 13.4591813
-      }
-    },
-    "SchokoLadenEis Manufaktur": {
-      "address": "Kaskelstraße 15",
-      "latLng": {
-        "lat": 52.5049083,
-        "lng": 13.4775353
-      }
-    },
-    "Salut Backwaren": {
-      "address": "Schlesische Str. 1",
-      "latLng": {
-        "lat": 52.5005919,
-        "lng": 13.4419141
-      }
-    },
-    "Florida Eis green Café the ocean": {
-      "address": "Klosterstraße 15",
-      "latLng": {
-        "lat": 52.5305025,
-        "lng": 13.1960029
-      }
-    },
-    "Eismieze Berlin": {
-      "address": "Schlegelstraße 21",
-      "latLng": {
-        "lat": 52.5304326,
-        "lng": 13.3871112
-      }
-    },
-    "Bekarei - The Good Baking Company": {
-      "address": "Dunckerstraße 23",
-      "latLng": {
-        "lat": 52.54431719999999,
-        "lng": 13.4226478
-      }
-    },
-    "JONES ice cream": {
-      "address": "Goltzstraße 3",
-      "latLng": {
-        "lat": 52.4904841,
-        "lng": 13.3534528
-      }
-    },
-    "Rosa Canina": {
-      "address": "Pasteurstraße 32",
-      "latLng": {
-        "lat": 52.5323632,
-        "lng": 13.4357455
-      }
-    },
-    "The Juicery Berlin": {
-      "address": "Oderberger Str. 28",
-      "latLng": {
-        "lat": 52.5402193,
-        "lng": 13.405828
-      }
-    }
+    "categories": ["restaurants"]
   },
-  "Fitness": {
-    "BEAT81": {
-      "address": "Brunnenstraße 10",
-      "latLng": {
-        "lat": 52.5311832,
-        "lng": 13.4003117
-      }
-    },
-    "Stadtbad Mitte \"James Simon\"": {
-      "address": "Gartenstraße 5",
-      "latLng": {
-        "lat": 52.52946000000001,
-        "lng": 13.39289
-      }
-    },
-    "Flying Steps Academy": {
-      "address": "Lobeckstraße 30-35",
-      "latLng": {
-        "lat": 52.50301229999999,
-        "lng": 13.407874
-      }
-    },
-    "vea yoga STUDIO": {
-      "address": "Naunynstraße 38",
-      "latLng": {
-        "lat": 52.502759,
-        "lng": 13.4188459
-      }
-    },
-    "JUMP House Reinickendorf": {
-      "address": "Miraustraße 38",
-      "latLng": {
-        "lat": 52.58272950000001,
-        "lng": 13.3117665
-      }
-    },
-    "JUMP3000 GmbH - Parkour- und Trampolinpark": {
-      "address": "Landsberger Str. 217/218",
-      "latLng": {
-        "lat": 52.5066667,
-        "lng": 13.6225
-      }
-    },
-    "MyJump Berlin-Mitte": {
-      "address": "Caroline-Michaelis-Straße 8",
-      "latLng": {
-        "lat": 52.533024,
-        "lng": 13.3849723
-      }
-    },
-    "Kreuzretter Senefelderplatz": {
-      "address": "Schwedter Str. 2",
-      "latLng": {
-        "lat": 52.53310889999999,
-        "lng": 13.4116593
-      }
-    },
-    "Kreuzretter Berlin Charlottenburg": {
-      "address": "Bismarckstraße 67",
-      "latLng": {
-        "lat": 52.51126619999999,
-        "lng": 13.2979883
-      }
-    },
-    "Volkspark Friedrichshain": {
-      "address": "",
-      "latLng": {
-        "lat": 52.5280353,
-        "lng": 13.4363934
-      }
-    },
-    "Rocycle Mitte": {
-      "address": "Linienstraße 41",
-      "latLng": {
-        "lat": 52.5285497,
-        "lng": 13.4094801
-      }
-    },
-    "McFit": {
-      "address": "Alt-Moabit 96d",
-      "latLng": {
-        "lat": 52.52488890000001,
-        "lng": 13.3455771
-      }
-    },
-    "McFIT Charlottenburg": {
-      "address": "Tauentzienstraße 8",
-      "latLng": {
-        "lat": 52.5036892,
-        "lng": 13.3387944
-      }
-    },
-    "Bouldergarten": {
-      "address": "Thiemannstraße 1 Tor 4/2. HH",
-      "latLng": {
-        "lat": 52.47940759999999,
-        "lng": 13.4514319
-      }
-    },
-    "Freeletics Fitness Area": {
-      "address": "Monbijoustraße 3B",
-      "latLng": {
-        "lat": 52.52278769999999,
-        "lng": 13.3951181
-      }
-    },
-    "clever fit Berlin Charlottenburg": {
-      "address": "Joachimsthaler Str. 19",
-      "latLng": {
-        "lat": 52.5014397,
-        "lng": 13.3307793
-      }
-    },
-    "clever fit Berlin Tempelhof": {
-      "address": "Mariendorfer Damm 5",
-      "latLng": {
-        "lat": 52.4523772,
-        "lng": 13.3851744
-      }
-    },
-    "Magic Mountain (Climbing / Bouldering)": {
-      "address": "Böttgerstraße 20",
-      "latLng": {
-        "lat": 52.548763,
-        "lng": 13.381548
-      }
-    },
-    "ELBGYM Steglitz": {
-      "address": "Walther-Schreiber-Platz 1",
-      "latLng": {
-        "lat": 52.465267,
-        "lng": 13.3290011
-      }
-    },
-    "Yayla Sportschule": {
-      "address": "Forster Str. 4",
-      "latLng": {
-        "lat": 52.4957432,
-        "lng": 13.4335066
-      }
-    },
-    "Beat81 Cycle Studio": {
-      "address": "Libauer Str. 1",
-      "latLng": {
-        "lat": 52.5100472,
-        "lng": 13.4549519
-      }
-    },
-    "BEAT81 - HIIT Fitness Classes | Rosa Luxemburg Str.": {
-      "address": "Rosa-Luxemburg-Straße 17",
-      "latLng": {
-        "lat": 52.5250888,
-        "lng": 13.4101313
-      }
-    },
-    "Sommerbad Neukölln - Berliner Bäder": {
-      "address": "Columbiadamm 160",
-      "latLng": {
-        "lat": 52.4798698,
-        "lng": 13.4173746
-      }
-    },
-    "Corpus Dicio Gym": {
-      "address": "Wilmersdorfer Str. 46",
-      "latLng": {
-        "lat": 52.509249,
-        "lng": 13.304609
-      }
-    },
-    "SICURO DOJO": {
-      "address": "Bahnhofstraße 2A",
-      "latLng": {
-        "lat": 52.4533123,
-        "lng": 13.575139
-      }
-    },
-    "Evolution Martial Arts Berlin / Sportschule Bernd Grossmann": {
-      "address": "Mariendorfer Damm 72",
-      "latLng": {
-        "lat": 52.4462191,
-        "lng": 13.3849117
-      }
-    },
-    "BJJ Fightzone Checkmat Berlin": {
-      "address": "Coppistraße 17",
-      "latLng": {
-        "lat": 52.5072658,
-        "lng": 13.4823506
-      }
-    },
-    "BEAT81 Cycle Studio": {
-      "address": "Dircksenstraße 99",
-      "latLng": {
-        "lat": 52.5186721,
-        "lng": 13.4151868
-      }
-    },
-    "McFit gym Berlin Tempelhof": {
-      "address": "Schöneberger Str. 11-15",
-      "latLng": {
-        "lat": 52.4698116,
-        "lng": 13.3736818
-      }
-    },
-    "American Fitness": {
-      "address": "Hermannplatz 10",
-      "latLng": {
-        "lat": 52.48727,
-        "lng": 13.42438
-      }
-    },
-    "McFit gym Berlin Wedding": {
-      "address": "Forum, Seestraße 64",
-      "latLng": {
-        "lat": 52.5536499,
-        "lng": 13.3608474
-      }
-    },
-    "E1 Boxing Gym Berlin": {
-      "address": "Dircksenstraße 104 S-Bahn Bogen gegenüber Alexa",
-      "latLng": {
-        "lat": 52.5192527,
-        "lng": 13.4146551
-      }
-    },
-    "CrossFit Sheep Pack / Black Sheep Athletics": {
-      "address": "Am Tempelhofer Berg 6",
-      "latLng": {
-        "lat": 52.4888706,
-        "lng": 13.3874497
-      }
-    },
-    "CrossFit Aorta": {
-      "address": "Alboinstraße 11",
-      "latLng": {
-        "lat": 52.4684998,
-        "lng": 13.3720715
-      }
-    },
-    "EVOPE - Evolution of human Performance": {
-      "address": "Storkower Str. 105",
-      "latLng": {
-        "lat": 52.5365165,
-        "lng": 13.4510837
-      }
-    },
-    "Spitfire Academy Berlin GmbH": {
-      "address": "Bülowstraße 56/Hinterhof 2.OG",
-      "latLng": {
-        "lat": 52.4951491,
-        "lng": 13.3669328
-      }
-    },
-    "High5 Gym": {
-      "address": "Leipziger Str. 46/47",
-      "latLng": {
-        "lat": 52.5106322,
-        "lng": 13.3975817
-      }
-    },
-    "Poststadion": {
-      "address": "Lehrter Str. 59",
-      "latLng": {
-        "lat": 52.53022379999999,
-        "lng": 13.3595576
-      }
-    },
-    "Bright Site - Berlin Boulder Project": {
-      "address": "Wilhelm-Kabus-Straße 40",
-      "latLng": {
-        "lat": 52.4818532,
-        "lng": 13.3654925
-      }
-    },
-    "McFit gym Berlin Neukölln": {
-      "address": "Tempelhofer Weg 91-99",
-      "latLng": {
-        "lat": 52.4517694,
-        "lng": 13.4347313
-      }
-    },
-    "52°29'55.3\"N 13°26'38.5\"E": {
-      "address": "",
-      "latLng": {
-        "lat": 52.52000659999999,
-        "lng": 13.404954
-      }
-    },
-    "52°30'09.1\"N 13°27'34.3\"E": {
-      "address": "",
-      "latLng": {
-        "lat": 52.52000659999999,
-        "lng": 13.404954
-      }
-    },
-    "Element Yoga": {
-      "address": "Pfuelstraße 5",
-      "latLng": {
-        "lat": 52.5026972,
-        "lng": 13.4406357
-      }
-    },
-    "BJJ DOJO Berlin": {
-      "address": "Bergmannstraße 5/Haus 5",
-      "latLng": {
-        "lat": 52.4894901,
-        "lng": 13.388672
-      }
-    },
-    "Turngemeinde in Berlin (TiB)": {
-      "address": "Columbiadamm 111",
-      "latLng": {
-        "lat": 52.4829198,
-        "lng": 13.4077195
-      }
-    },
-    "Sportcenter Wittenau": {
-      "address": "Wittenauer Str. 82",
-      "latLng": {
-        "lat": 52.6049151,
-        "lng": 13.3388422
-      }
-    },
-    "Squash-Tennis-Nord": {
-      "address": "Treuenbrietzener Str. 36",
-      "latLng": {
-        "lat": 52.6025052,
-        "lng": 13.3678187
-      }
-    },
-    "Strandbad Jungfernheide": {
-      "address": "Freibad, Jungfernheideweg 60",
-      "latLng": {
-        "lat": 52.5438033,
-        "lng": 13.2745877
-      }
-    },
-    "Holmes Place Fitness - Steglitz": {
-      "address": "Schildhornstraße 1",
-      "latLng": {
-        "lat": 52.4623187,
-        "lng": 13.3241281
-      }
-    },
-    "Gewölbe-Sauna": {
-      "address": "Fröbelstraße 17",
-      "latLng": {
-        "lat": 52.5407728,
-        "lng": 13.4261154
-      }
-    },
-    "South Rock Kletterhalle": {
-      "address": "Trachenbergring 85",
-      "latLng": {
-        "lat": 52.4272035,
-        "lng": 13.3697619
-      }
-    },
-    "South Beach Berlin GmbH": {
-      "address": "Trachenbergring 85",
-      "latLng": {
-        "lat": 52.4272801,
-        "lng": 13.3700871
-      }
-    },
-    "Squash House Berlin": {
-      "address": "Vulkanstraße 3",
-      "latLng": {
-        "lat": 52.5241915,
-        "lng": 13.4860866
-      }
-    },
-    "StandUpClub Berlin – Funkhaus | SUP Verleih | SUP Schule": {
-      "address": "Nalepastraße 18 Nicht über die Kleingarten-Anlage erreichbar!",
-      "latLng": {
-        "lat": 52.47761569999999,
-        "lng": 13.4980732
-      }
-    },
-    "Havanna": {
-      "address": "Hauptstraße 30",
-      "latLng": {
-        "lat": 52.485115,
-        "lng": 13.353549
-      }
-    },
-    "Crunch Fit Berlin Schöneberg": {
-      "address": "Bessemerstraße 57-75",
-      "latLng": {
-        "lat": 52.4625332,
-        "lng": 13.3674535
-      }
-    },
-    "Beach 61 (Beachvolleyball)": {
-      "address": "Park am Gleisdreieck",
-      "latLng": {
-        "lat": 52.4945779,
-        "lng": 13.3767026
-      }
-    },
-    "Cumbancha \"LaFamilia\" -Salsa Tanzschule - Berlin": {
-      "address": "Möckernstrasse 68",
-      "latLng": {
-        "lat": 52.4907097,
-        "lng": 13.3774641
-      }
-    },
-    "Gracie Berlin | Brazilian Jiu-Jitsu Schule": {
-      "address": "Lobeckstraße 36",
-      "latLng": {
-        "lat": 52.50400990000001,
-        "lng": 13.4078654
-      }
-    },
-    "Badeschiff": {
-      "address": "Eichenstraße 4",
-      "latLng": {
-        "lat": 52.4978612,
-        "lng": 13.4537728
-      }
-    },
-    "SPRUNG RAUM Tempelhof GmbH": {
-      "address": "Malteserstraße 139-142",
-      "latLng": {
-        "lat": 52.4189111,
-        "lng": 13.3590942
-      }
-    },
-    "Hangar1": {
-      "address": "Columbiadamm 10",
-      "latLng": {
-        "lat": 52.4833244,
-        "lng": 13.398485
-      }
-    },
-    "Chimosa": {
-      "address": "Linienstraße 127",
-      "latLng": {
-        "lat": 52.52669100000001,
-        "lng": 13.3894577
-      }
-    },
-    "East61 Indoor Beachvolleyball": {
-      "address": "Wilhelm-Kabus-Straße 42",
-      "latLng": {
-        "lat": 52.4818448,
-        "lng": 13.3640401
-      }
-    },
-    "Indoor Swimming Pool Fischerinsel": {
-      "address": "Fischerinsel 11",
-      "latLng": {
-        "lat": 52.5124487,
-        "lng": 13.4044437
-      }
-    },
-    "Berlin Strength": {
-      "address": "Revaler Str. 99",
-      "latLng": {
-        "lat": 52.5075076,
-        "lng": 13.4554542
-      }
-    },
-    "Kanuliebe": {
-      "address": "Alt-Treptow, Insel der Jugend 6",
-      "latLng": {
-        "lat": 52.48678,
-        "lng": 13.4808001
-      }
-    },
-    "FitnessCenter aTB": {
-      "address": "Am Tempelhofer Berg 6",
-      "latLng": {
-        "lat": 52.4890181,
-        "lng": 13.3872264
-      }
-    },
-    "Fitness Company Berlin": {
-      "address": "Rüdersdorfer Str. 71",
-      "latLng": {
-        "lat": 52.5130345,
-        "lng": 13.4408367
-      }
-    },
-    "Berlin Gym - Verein der Kampfkünste e.V. (Mitte)": {
-      "address": "Torstraße 125",
-      "latLng": {
-        "lat": 52.5297381,
-        "lng": 13.400638
-      }
-    },
-    "Berlin Gym -Verein der Kampfkünste e.V. (Friedrichshain)": {
-      "address": "Samariterstraße 19-20",
-      "latLng": {
-        "lat": 52.5196334,
-        "lng": 13.4669711
-      }
-    },
-    "Sommerbad Kreuzberg - Prinzenbad - Berliner Bäder": {
-      "address": "Prinzenstraße 113-119",
-      "latLng": {
-        "lat": 52.4979166,
-        "lng": 13.4057239
-      }
-    },
-    "Fenriz Gym": {
-      "address": "Lobeckstraße 36",
-      "latLng": {
-        "lat": 52.5037617,
-        "lng": 13.4077196
-      }
-    },
-    "Basement Boulderstudio": {
-      "address": "Stresemannstraße 72",
-      "latLng": {
-        "lat": 52.5036269,
-        "lng": 13.3842346
-      }
-    },
-    "Ostbloc Boulderhalle": {
-      "address": "Hauptstraße 13",
-      "latLng": {
-        "lat": 52.4912363,
-        "lng": 13.4883836
-      }
-    },
-    "Südbloc Boulderhalle": {
-      "address": "Großbeerenstraße 4",
-      "latLng": {
-        "lat": 52.4399135,
-        "lng": 13.3796306
-      }
-    },
-    "BeachMitte": {
-      "address": "Caroline-Michaelis-Straße 8",
-      "latLng": {
-        "lat": 52.53383780000001,
-        "lng": 13.3844979
-      }
-    },
-    "Der Kegel Kletterturm": {
-      "address": "Revaler Str. 99",
-      "latLng": {
-        "lat": 52.5071382,
-        "lng": 13.4544647
-      }
-    },
-    "Berta Block": {
-      "address": "Mühlenstraße 62",
-      "latLng": {
-        "lat": 52.5636824,
-        "lng": 13.4099068
-      }
-    },
-    "MyJump Berlin Ost": {
-      "address": "Allee der Kosmonauten 30",
-      "latLng": {
-        "lat": 52.5250081,
-        "lng": 13.5280099
-      }
-    }
+  "Bistro Albero": {
+    "address": "Lehrter Str. 24b",
+    "latLng": {
+      "lat": 52.5314454,
+      "lng": 13.3621927
+    },
+    "categories": ["restaurants"]
+  },
+  "Buya Ramen Factory": {
+    "address": "Reichenberger Str. 36 Backyard",
+    "latLng": {
+      "lat": 52.4971335,
+      "lng": 13.4233648
+    },
+    "categories": ["restaurants"]
+  },
+  "Cancún Kaiserdamm": {
+    "address": "Kaiserdamm 24",
+    "latLng": {
+      "lat": 52.5103831,
+      "lng": 13.2827941
+    },
+    "categories": ["restaurants"]
+  },
+  "Marafina": {
+    "address": "Wühlischstraße 17",
+    "latLng": {
+      "lat": 52.5087091,
+      "lng": 13.4619876
+    },
+    "categories": ["restaurants"]
+  },
+  "Falafel in berlin.de": {
+    "address": "Skalitzer Str. 102",
+    "latLng": {
+      "lat": 52.49947239999999,
+      "lng": 13.4281026
+    },
+    "categories": ["restaurants"]
+  },
+  "KÖFTECİ ÖZEN": {
+    "address": "Frankfurter Allee 80",
+    "latLng": {
+      "lat": 52.5140888,
+      "lng": 13.4684774
+    },
+    "categories": ["restaurants"]
+  },
+  "Sadhu Prenzlauer Berg": {
+    "address": "Stargarder Str. 60",
+    "latLng": {
+      "lat": 52.5453541,
+      "lng": 13.4214104
+    },
+    "categories": ["restaurants"]
+  },
+  "FALCO´SLICE": {
+    "address": "Falckensteinstraße 33",
+    "latLng": {
+      "lat": 52.4978689,
+      "lng": 13.4419715
+    },
+    "categories": ["restaurants"]
+  },
+  "MOM’S Creation": {
+    "address": "Elsenstraße 27",
+    "latLng": {
+      "lat": 52.4889749,
+      "lng": 13.4536057
+    },
+    "categories": ["restaurants"]
+  },
+  "HIMMEL 8": {
+    "address": "Ritterstraße 8",
+    "latLng": {
+      "lat": 52.5011219,
+      "lng": 13.4118891
+    },
+    "categories": ["restaurants"]
+  },
+  "Berta Restaurant": {
+    "address": "Stresemannstraße 99",
+    "latLng": {
+      "lat": 52.50585,
+      "lng": 13.38018
+    },
+    "categories": ["restaurants"]
+  },
+  "Wurstbar Berlin": {
+    "address": "Ecke, Stresemannstr, Niederkirchnerstraße 120",
+    "latLng": {
+      "lat": 52.50718209999999,
+      "lng": 13.3792968
+    },
+    "categories": ["restaurants"]
+  },
+  "Oliveto · Ristorante & Pizzeria": {
+    "address": "Pannierstraße 9a",
+    "latLng": {
+      "lat": 52.4872282,
+      "lng": 13.4316353
+    },
+    "categories": ["restaurants"]
+  },
+  "Anh Em Restaurant": {
+    "address": "Hermannstraße 154",
+    "latLng": {
+      "lat": 52.4661592,
+      "lng": 13.4323586
+    },
+    "categories": ["restaurants"]
+  },
+  "Bistro Aleksandra-Polnisches Spezialitätenbistro": {
+    "address": "Schloßstraße 33",
+    "latLng": {
+      "lat": 52.5121709,
+      "lng": 13.2976425
+    },
+    "categories": ["restaurants"]
+  },
+  "Osteria Maria / Cremeria Maria": {
+    "address": "Leydenallee 79",
+    "latLng": {
+      "lat": 52.453227,
+      "lng": 13.3245278
+    },
+    "categories": ["restaurants", "sweets"]
+  },
+  "Hako Ramen Prenzlauer Berg": {
+    "address": "Kastanienallee 16",
+    "latLng": {
+      "lat": 52.538508,
+      "lng": 13.40932
+    },
+    "categories": ["restaurants"]
+  },
+  "PHO - Noodlebar (Mitte)": {
+    "address": "Linienstraße 134",
+    "latLng": {
+      "lat": 52.5264943,
+      "lng": 13.3878687
+    },
+    "categories": ["restaurants"]
+  },
+  "Lemongrass": {
+    "address": "Simon-Dach-Straße 2",
+    "latLng": {
+      "lat": 52.512542,
+      "lng": 13.4571294
+    },
+    "categories": ["restaurants"]
+  },
+  "Night Kitchen": {
+    "address": "Heckmann Höfe, Oranienburger Str. 32",
+    "latLng": {
+      "lat": 52.5255777,
+      "lng": 13.3939795
+    },
+    "categories": ["restaurants"]
+  },
+  "Curry-Keule": {
+    "address": "Müllerstraße 47A",
+    "latLng": {
+      "lat": 52.55196910000001,
+      "lng": 13.3498702
+    },
+    "categories": ["restaurants"]
+  },
+  "Hackethal's": {
+    "address": "Pflugstraße 11",
+    "latLng": {
+      "lat": 52.53640859999999,
+      "lng": 13.3795799
+    },
+    "categories": ["restaurants"]
+  },
+  "Nefis Gemüse Kebap": {
+    "address": "Kottbusser Damm 34",
+    "latLng": {
+      "lat": 52.4886948,
+      "lng": 13.4244107
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant YUUMI": {
+    "address": "Emanuelstraße 1",
+    "latLng": {
+      "lat": 52.5015385,
+      "lng": 13.4907844
+    },
+    "categories": ["restaurants"]
+  },
+  "Mater | Pizzeria Verace in Berlin": {
+    "address": "Weichselstraße 17",
+    "latLng": {
+      "lat": 52.48576,
+      "lng": 13.43529
+    },
+    "categories": ["restaurants"]
+  },
+  "Turtle Pizza": {
+    "address": "Kottbusser Damm 88",
+    "latLng": {
+      "lat": 52.4927775,
+      "lng": 13.4225229
+    },
+    "categories": ["restaurants"]
+  },
+  "Valentine": {
+    "address": "Hermannstraße 126",
+    "latLng": {
+      "lat": 52.46429,
+      "lng": 13.43281
+    },
+    "categories": ["restaurants"]
+  },
+  "Rüya Gemüse Kebap": {
+    "address": "Otto-Suhr-Allee 19",
+    "latLng": {
+      "lat": 52.51380839999999,
+      "lng": 13.316974
+    },
+    "categories": ["restaurants"]
+  },
+  "Curry 61": {
+    "address": "Oranienburger Str. 6",
+    "latLng": {
+      "lat": 52.523725,
+      "lng": 13.4007139
+    },
+    "categories": ["restaurants"]
+  },
+  "La Mirada Restaurant": {
+    "address": "Richardstraße 107",
+    "latLng": {
+      "lat": 52.4780711,
+      "lng": 13.4396571
+    },
+    "categories": ["restaurants"]
+  },
+  "LoveBurger": {
+    "address": "Treptower Str. 90",
+    "latLng": {
+      "lat": 52.4790188,
+      "lng": 13.4490972
+    },
+    "categories": ["restaurants"]
+  },
+  "Akatsuki Sushi": {
+    "address": "Schönleinstraße 8",
+    "latLng": {
+      "lat": 52.4920048,
+      "lng": 13.4204968
+    },
+    "categories": ["restaurants"]
+  },
+  "The Klub Kitchen West": {
+    "address": "Uhlandstraße 175",
+    "latLng": {
+      "lat": 52.50160529999999,
+      "lng": 13.3255733
+    },
+    "categories": ["restaurants"]
+  },
+  "SubHero Berlin": {
+    "address": "Revaler Str. 11",
+    "latLng": {
+      "lat": 52.5081745,
+      "lng": 13.4540479
+    },
+    "categories": ["restaurants"]
+  },
+  "ROLLS Asian Street Food": {
+    "address": "Prenzlauer Allee 176",
+    "latLng": {
+      "lat": 52.5455475,
+      "lng": 13.4272749
+    },
+    "categories": ["restaurants"]
+  },
+  "Fdeitah": {
+    "address": "Seestraße 57",
+    "latLng": {
+      "lat": 52.5517474,
+      "lng": 13.3552989
+    },
+    "categories": ["restaurants"]
+  },
+  "Picoteo": {
+    "address": "Erkelenzdamm 47",
+    "latLng": {
+      "lat": 52.4977692,
+      "lng": 13.4131188
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "Scheers Schnitzel": {
+    "address": "Warschauer Pl. 18",
+    "latLng": {
+      "lat": 52.50281520000001,
+      "lng": 13.4473839
+    },
+    "categories": ["restaurants"]
+  },
+  "Lasan Restaurant": {
+    "address": "Adalbertstraße 96",
+    "latLng": {
+      "lat": 52.50010469999999,
+      "lng": 13.4178976
+    },
+    "categories": ["restaurants"]
+  },
+  "House of Burgerz": {
+    "address": "Schützenstraße 2",
+    "latLng": {
+      "lat": 52.5083299,
+      "lng": 13.3905082
+    },
+    "categories": ["restaurants"]
+  },
+  "OLIVIO Pizza Pasta Bar": {
+    "address": "Olivio Pizza Pasta Bar, Schönleinstraße 29",
+    "latLng": {
+      "lat": 52.491984,
+      "lng": 13.4212594
+    },
+    "categories": ["restaurants"]
+  },
+  "Darfur Sudanesische Imbiss": {
+    "address": "Reichenberger Str. 57",
+    "latLng": {
+      "lat": 52.49582110000001,
+      "lng": 13.4285986
+    },
+    "categories": ["restaurants"]
+  },
+  "Sicula Bar": {
+    "address": "Scharnweberstraße 46",
+    "latLng": {
+      "lat": 52.512609,
+      "lng": 13.4664522
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "Jemenitisches Restaurant المطعم اليمني": {
+    "address": "Huttenstraße 7",
+    "latLng": {
+      "lat": 52.5278824,
+      "lng": 13.3261096
+    },
+    "categories": ["restaurants"]
+  },
+  "Jemenitisches Restaurant": {
+    "address": "Karl-Marx-Straße 172",
+    "latLng": {
+      "lat": 52.4746399,
+      "lng": 13.4397637
+    },
+    "categories": ["restaurants"]
+  },
+  "Casalot Restaurant": {
+    "address": "Claire-Waldoff-Straße 5",
+    "latLng": {
+      "lat": 52.5245422,
+      "lng": 13.3863424
+    },
+    "categories": ["restaurants"]
+  },
+  "Cheers Kiez Pizza": {
+    "address": "Choriner Str. 37",
+    "latLng": {
+      "lat": 52.5366732,
+      "lng": 13.4109091
+    },
+    "categories": ["restaurants"]
+  },
+  "Döner Kebab Restaurant TERAS Berlin": {
+    "address": "Wilhelmstraße 45",
+    "latLng": {
+      "lat": 52.5117229,
+      "lng": 13.3835554
+    },
+    "categories": ["restaurants"]
+  },
+  "A' marina": {
+    "address": "Bergstraße 62",
+    "latLng": {
+      "lat": 52.4589607,
+      "lng": 13.3430652
+    },
+    "categories": ["restaurants"]
+  },
+  "Asude Yemek Dünyası": {
+    "address": "Hermannstraße 120",
+    "latLng": {
+      "lat": 52.46568800000001,
+      "lng": 13.4320435
+    },
+    "categories": ["restaurants"]
+  },
+  "Sticks'n'Sushi": {
+    "address": "Potsdamer Str. 85",
+    "latLng": {
+      "lat": 52.5019764,
+      "lng": 13.3651086
+    },
+    "categories": ["restaurants"]
+  },
+  "Chicha": {
+    "address": "Friedelstraße 34",
+    "latLng": {
+      "lat": 52.4931876,
+      "lng": 13.4279083
+    },
+    "categories": ["restaurants"]
+  },
+  "Delhi 6 Restaurant - Berlin": {
+    "address": "Friedrichstraße 237",
+    "latLng": {
+      "lat": 52.5019381,
+      "lng": 13.3910946
+    },
+    "categories": ["restaurants"]
+  },
+  "1990 Vegan Living": {
+    "address": "Krossener Str. 19",
+    "latLng": {
+      "lat": 52.5103695,
+      "lng": 13.458578
+    },
+    "categories": ["restaurants"]
+  },
+  "Falafel Jakoub": {
+    "address": "Weserstr. 14",
+    "latLng": {
+      "lat": 52.48758609999999,
+      "lng": 13.4306944
+    },
+    "categories": ["restaurants"]
+  },
+  "Asteria": {
+    "address": "Schönhauser Allee 143",
+    "latLng": {
+      "lat": 52.5415419,
+      "lng": 13.4117448
+    },
+    "categories": ["restaurants"]
+  },
+  "Peter Schlemihl": {
+    "address": "Willibald-Alexis-Straße 25",
+    "latLng": {
+      "lat": 52.4876343,
+      "lng": 13.3908163
+    },
+    "categories": ["restaurants"]
+  },
+  "T'unas Gemüse Kebap": {
+    "address": "Wrangelstraße 42",
+    "latLng": {
+      "lat": 52.4996813,
+      "lng": 13.438852
+    },
+    "categories": ["restaurants"]
+  },
+  "Ryu": {
+    "address": "Krossener Str. 17",
+    "latLng": {
+      "lat": 52.51051469999999,
+      "lng": 13.4576475
+    },
+    "categories": ["restaurants"]
+  },
+  "Asia Farmhouse": {
+    "address": "Pannierstraße 54",
+    "latLng": {
+      "lat": 52.4877312,
+      "lng": 13.4315178
+    },
+    "categories": ["restaurants"]
+  },
+  "The Neighborhood": {
+    "address": "Möckernstrasse 91",
+    "latLng": {
+      "lat": 52.492911,
+      "lng": 13.3797341
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "Pizzeria Marienkäfer": {
+    "address": "Marienstraße 18",
+    "latLng": {
+      "lat": 52.52236449999999,
+      "lng": 13.3841801
+    },
+    "categories": ["restaurants"]
+  },
+  "Tossakan Berlin": {
+    "address": "Schliemannstraße 16",
+    "latLng": {
+      "lat": 52.5437294,
+      "lng": 13.4200028
+    },
+    "categories": ["restaurants"]
+  },
+  "Mamida": {
+    "address": "Dunckerstraße 80A",
+    "latLng": {
+      "lat": 52.5430291,
+      "lng": 13.4209438
+    },
+    "categories": ["restaurants"]
+  },
+  "BLOCK HOUSE Am Alexanderplatz": {
+    "address": "Karl-Liebknecht-Str. 7",
+    "latLng": {
+      "lat": 52.5204965,
+      "lng": 13.4051548
+    },
+    "categories": ["restaurants"]
+  },
+  "NiVu-Restaurant": {
+    "address": "Stuttgarter Pl. 13",
+    "latLng": {
+      "lat": 52.5054966,
+      "lng": 13.3019475
+    },
+    "categories": ["restaurants"]
+  },
+  "Neki Sushi & Ramen, Gua Bao Burger, Korean Chicken": {
+    "address": "Gieselerstraße 17",
+    "latLng": {
+      "lat": 52.4912921,
+      "lng": 13.3182998
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant Marjan Grill - Berlin": {
+    "address": "Flensburger Straße Bogen 411",
+    "latLng": {
+      "lat": 52.520105,
+      "lng": 13.3466979
+    },
+    "categories": ["restaurants"]
+  },
+  "Berlin Tantuni": {
+    "address": "Hermannstraße 228",
+    "latLng": {
+      "lat": 52.4810459,
+      "lng": 13.4252675
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant Nante Kaulsdorf": {
+    "address": "Cecilienpl. 7",
+    "latLng": {
+      "lat": 52.5208013,
+      "lng": 13.5912905
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant Rhodos": {
+    "address": "Dahlwitzer Str. 7",
+    "latLng": {
+      "lat": 52.52204,
+      "lng": 13.64597
+    },
+    "categories": ["restaurants"]
+  },
+  "El Amigo Taqueria": {
+    "address": "Veteranenstraße 21",
+    "latLng": {
+      "lat": 52.5335802,
+      "lng": 13.4009513
+    },
+    "categories": ["restaurants"]
+  },
+  "Döner x Burger": {
+    "address": "Müllerstraße 65A",
+    "latLng": {
+      "lat": 52.5563947,
+      "lng": 13.3419191
+    },
+    "categories": ["restaurants"]
+  },
+  "Formidable": {
+    "address": "Schönhauser Allee 126",
+    "latLng": {
+      "lat": 52.5471335,
+      "lng": 13.4128636
+    },
+    "categories": ["restaurants"]
+  },
+  "Song Nguu \"Wasserbüffel\"": {
+    "address": "Am Falkpl. 5",
+    "latLng": {
+      "lat": 52.5466998,
+      "lng": 13.4057961
+    },
+    "categories": ["restaurants"]
+  },
+  "Fire Tiger - Cocktail Bar - Asiatisch & Sushi": {
+    "address": "Revaler Str. 7",
+    "latLng": {
+      "lat": 52.5085671,
+      "lng": 13.4519917
+    },
+    "categories": ["restaurants"]
+  },
+  "Amrit": {
+    "address": "Oranienburger Str. 45",
+    "latLng": {
+      "lat": 52.5259176,
+      "lng": 13.3898183
+    },
+    "categories": ["restaurants"]
+  },
+  "Trattoria LaFamiglia": {
+    "address": "Gärtnerstraße 21",
+    "latLng": {
+      "lat": 52.5118404,
+      "lng": 13.4611431
+    },
+    "categories": ["restaurants"]
+  },
+  "CODA Dessert Dining": {
+    "address": "Friedelstraße 47",
+    "latLng": {
+      "lat": 52.489976,
+      "lng": 13.427357
+    },
+    "categories": ["restaurants"]
+  },
+  "Zollpackhof": {
+    "address": "Elisabeth-Abegg-Straße 1",
+    "latLng": {
+      "lat": 52.5213107,
+      "lng": 13.3668981
+    },
+    "categories": ["restaurants"]
+  },
+  "Dolce Pizza": {
+    "address": "Belziger Str. 73",
+    "latLng": {
+      "lat": 52.4846917,
+      "lng": 13.3459988
+    },
+    "categories": ["restaurants"]
+  },
+  "momiji": {
+    "address": "Bleibtreustraße 52",
+    "latLng": {
+      "lat": 52.506638,
+      "lng": 13.3204188
+    },
+    "categories": ["restaurants"]
+  },
+  "Babel": {
+    "address": "Kastanienallee 33",
+    "latLng": {
+      "lat": 52.5367182,
+      "lng": 13.4074297
+    },
+    "categories": ["restaurants"]
+  },
+  "Osmans Töchter": {
+    "address": "Pappelallee 15",
+    "latLng": {
+      "lat": 52.543079,
+      "lng": 13.4147569
+    },
+    "categories": ["restaurants"]
+  },
+  "meet me halfway - Berlin": {
+    "address": "Zinnowitzer Str. 5",
+    "latLng": {
+      "lat": 52.5319419,
+      "lng": 13.3832472
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "D.O.": {
+    "address": "Kollwitzstraße 88",
+    "latLng": {
+      "lat": 52.5383353,
+      "lng": 13.4206548
+    },
+    "categories": ["restaurants"]
+  },
+  "Taktiek": {
+    "address": "Göhrener Str. 6",
+    "latLng": {
+      "lat": 52.5416552,
+      "lng": 13.4210526
+    },
+    "categories": ["restaurants"]
+  },
+  "Buffet Restaurant Royal Garden Berlin": {
+    "address": "Osdorfer Str. 26",
+    "latLng": {
+      "lat": 52.416276,
+      "lng": 13.3154516
+    },
+    "categories": ["restaurants"]
+  },
+  "Wen's Küche": {
+    "address": "Mariendorfer Damm 175",
+    "latLng": {
+      "lat": 52.436139,
+      "lng": 13.3892725
+    },
+    "categories": ["restaurants"]
+  },
+  "Crispy Döner": {
+    "address": "Richard-Wagner-Straße 2",
+    "latLng": {
+      "lat": 52.5120341,
+      "lng": 13.3075386
+    },
+    "categories": ["restaurants"]
+  },
+  "Estelle Dining": {
+    "address": "Kopenhagener Str. 12A",
+    "latLng": {
+      "lat": 52.5490787,
+      "lng": 13.409392
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant Bricole": {
+    "address": "Senefelderstraße 30",
+    "latLng": {
+      "lat": 52.5410473,
+      "lng": 13.4223333
+    },
+    "categories": ["restaurants"]
+  },
+  "Eins44": {
+    "address": "Elbestraße 28/29",
+    "latLng": {
+      "lat": 52.4852905,
+      "lng": 13.4397497
+    },
+    "categories": ["restaurants"]
+  },
+  "Ristorante Firenze": {
+    "address": "Florastraße 27",
+    "latLng": {
+      "lat": 52.5653465,
+      "lng": 13.404017
+    },
+    "categories": ["restaurants"]
+  },
+  "Lila restaurant": {
+    "address": "Paul-Lincke-Ufer 39-40",
+    "latLng": {
+      "lat": 52.4961442,
+      "lng": 13.421788
+    },
+    "categories": ["restaurants"]
+  },
+  "Wilhelm Hoeck 1892": {
+    "address": "Wilmersdorfer Str. 149",
+    "latLng": {
+      "lat": 52.5139254,
+      "lng": 13.3051183
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "Caramel": {
+    "address": "Zimmerstraße 26",
+    "latLng": {
+      "lat": 52.5076905,
+      "lng": 13.3931423
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "Skykitchen": {
+    "address": "Landsberger Allee 106",
+    "latLng": {
+      "lat": 52.5285071,
+      "lng": 13.4575779
+    },
+    "categories": ["restaurants"]
+  },
+  "Chay Long": {
+    "address": "Raumerstraße 17",
+    "latLng": {
+      "lat": 52.5416152,
+      "lng": 13.4217729
+    },
+    "categories": ["restaurants"]
+  },
+  "Seoulkitchen": {
+    "address": "Warschauer Str. 46",
+    "latLng": {
+      "lat": 52.5037072,
+      "lng": 13.4472838
+    },
+    "categories": ["restaurants"]
+  },
+  "Caravaggi Naturwein Bistro": {
+    "address": "Lettestraße 3",
+    "latLng": {
+      "lat": 52.54302080000001,
+      "lng": 13.420258
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "Shezan": {
+    "address": "Neue Roßstraße 13",
+    "latLng": {
+      "lat": 52.512185,
+      "lng": 13.4082378
+    },
+    "categories": ["restaurants"]
+  },
+  "falafelwerk(Mawal)": {
+    "address": "Oranienstraße 30",
+    "latLng": {
+      "lat": 52.5014584,
+      "lng": 13.4190053
+    },
+    "categories": ["restaurants"]
+  },
+  "HOONGY": {
+    "address": "Chausseestraße 5",
+    "latLng": {
+      "lat": 52.5278947,
+      "lng": 13.3866837
+    },
+    "categories": ["restaurants"]
+  },
+  "Matreshka": {
+    "address": "Boxhagener Str. 60",
+    "latLng": {
+      "lat": 52.5063545,
+      "lng": 13.4696142
+    },
+    "categories": ["restaurants"]
+  },
+  "Wok Show": {
+    "address": "Greifenhagener Str. 31",
+    "latLng": {
+      "lat": 52.5519534,
+      "lng": 13.4192568
+    },
+    "categories": ["restaurants"]
+  },
+  "Goji": {
+    "address": "Motzstraße 58",
+    "latLng": {
+      "lat": 52.4952641,
+      "lng": 13.3399584
+    },
+    "categories": ["restaurants"]
+  },
+  "Umami": {
+    "address": "Knaackstraße 16-18",
+    "latLng": {
+      "lat": 52.5344418,
+      "lng": 13.4194515
+    },
+    "categories": ["restaurants"]
+  },
+  "Zweistrom Land": {
+    "address": "Danziger Str. 18",
+    "latLng": {
+      "lat": 52.5402579,
+      "lng": 13.4157453
+    },
+    "categories": ["restaurants"]
+  },
+  "Trancina": {
+    "address": "Stargarder Str. 39",
+    "latLng": {
+      "lat": 52.54305129999999,
+      "lng": 13.4258042
+    },
+    "categories": ["restaurants"]
+  },
+  "Magic John's Pizza": {
+    "address": "Oranienburger Str. 48",
+    "latLng": {
+      "lat": 52.5261429,
+      "lng": 13.3889663
+    },
+    "categories": ["restaurants"]
+  },
+  "Imbiss Rissani": {
+    "address": "Firlstraße 38",
+    "latLng": {
+      "lat": 52.461293,
+      "lng": 13.5213028
+    },
+    "categories": ["restaurants"]
+  },
+  "Miss Phuong Restaurant": {
+    "address": "Prenzlauer Allee 226",
+    "latLng": {
+      "lat": 52.5334254,
+      "lng": 13.4204077
+    },
+    "categories": ["restaurants"]
+  },
+  "Barra": {
+    "address": "Okerstraße 2",
+    "latLng": {
+      "lat": 52.4743722,
+      "lng": 13.4269388
+    },
+    "categories": ["restaurants"]
+  },
+  "ACETO CHICKEN DÖNER - Döner Dach": {
+    "address": "Simon-Dach-Straße 11",
+    "latLng": {
+      "lat": 52.5106906,
+      "lng": 13.456262
+    },
+    "categories": ["restaurants"]
+  },
+  "Mercatino": {
+    "address": "Müllerstraße 118",
+    "latLng": {
+      "lat": 52.5546562,
+      "lng": 13.3441402
+    },
+    "categories": ["restaurants"]
+  },
+  "Prizreni Qebaptore": {
+    "address": "Karl-Marx-Straße 26",
+    "latLng": {
+      "lat": 52.4844835,
+      "lng": 13.4279775
+    },
+    "categories": ["restaurants"]
+  },
+  "Luardi": {
+    "address": "Meinekestraße 24",
+    "latLng": {
+      "lat": 52.5020704,
+      "lng": 13.3293071
+    },
+    "categories": ["restaurants"]
+  },
+  "Upper Burger Grill": {
+    "address": "Rankestraße 3",
+    "latLng": {
+      "lat": 52.5033326,
+      "lng": 13.3342994
+    },
+    "categories": ["restaurants"]
+  },
+  "Izmir Köfte": {
+    "address": "Reichenberger Str. 10",
+    "latLng": {
+      "lat": 52.4994251,
+      "lng": 13.4166479
+    },
+    "categories": ["restaurants"]
+  },
+  "Lemon Feinkost": {
+    "address": "Wühlischstraße 17",
+    "latLng": {
+      "lat": 52.5086451,
+      "lng": 13.4620787
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "Ristorante La Piccola Cantina": {
+    "address": "Eisenacher Str. 8",
+    "latLng": {
+      "lat": 52.44768,
+      "lng": 13.38905
+    },
+    "categories": ["restaurants"]
+  },
+  "STADTSALAT": {
+    "address": "Friedrichstraße 113",
+    "latLng": {
+      "lat": 52.52581929999999,
+      "lng": 13.3876012
+    },
+    "categories": ["restaurants"]
+  },
+  "Alt Berliner Wirtshaus Henne": {
+    "address": "Leuschnerdamm 25",
+    "latLng": {
+      "lat": 52.5042617,
+      "lng": 13.417855
+    },
+    "categories": ["restaurants"]
+  },
+  "KYO grill": {
+    "address": "Kastanienallee 23",
+    "latLng": {
+      "lat": 52.5378151,
+      "lng": 13.4085121
+    },
+    "categories": ["restaurants"]
+  },
+  "Klas Bäckerei": {
+    "address": "Naunynstraße 2",
+    "latLng": {
+      "lat": 52.50046,
+      "lng": 13.42709
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "Dicke Wirtin": {
+    "address": "Carmerstraße 9",
+    "latLng": {
+      "lat": 52.5065268,
+      "lng": 13.3235691
+    },
+    "categories": ["restaurants"]
+  },
+  "Marco Polo Uno": {
+    "address": "Dolgenseestraße 9 G",
+    "latLng": {
+      "lat": 52.49289460000001,
+      "lng": 13.5069314
+    },
+    "categories": ["restaurants"]
+  },
+  "Mustafa Demir’s Gemüse Kebap": {
+    "address": "Warschauer Str. 27A",
+    "latLng": {
+      "lat": 52.5100382,
+      "lng": 13.451065
+    },
+    "categories": ["restaurants"]
+  },
+  "spaghetteria loreta": {
+    "address": "Prenzlauer Allee 175A",
+    "latLng": {
+      "lat": 52.54612359999999,
+      "lng": 13.4275649
+    },
+    "categories": ["restaurants"]
+  },
+  "Cafe Bar Restaurant Shan Shan": {
+    "address": "Gleimstraße 24",
+    "latLng": {
+      "lat": 52.5473963,
+      "lng": 13.4112721
+    },
+    "categories": ["restaurants"]
+  },
+  "Alaska Bar": {
+    "address": "Reuterstraße 85",
+    "latLng": {
+      "lat": 52.4829207,
+      "lng": 13.4287199
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "PizzAngelo": {
+    "address": "Buddestraße 14",
+    "latLng": {
+      "lat": 52.589105,
+      "lng": 13.2885328
+    },
+    "categories": ["restaurants"]
+  },
+  "Mozzarella & Pomodoro": {
+    "address": "Torstraße 97",
+    "latLng": {
+      "lat": 52.52996599999999,
+      "lng": 13.4044602
+    },
+    "categories": ["restaurants"]
+  },
+  "Tenur": {
+    "address": "Reichenberger Str. 147",
+    "latLng": {
+      "lat": 52.4971324,
+      "lng": 13.4258939
+    },
+    "categories": ["restaurants"]
+  },
+  "La Caleta": {
+    "address": "Wielandstraße 26A",
+    "latLng": {
+      "lat": 52.50022329999999,
+      "lng": 13.3152525
+    },
+    "categories": ["restaurants"]
+  },
+  "DaBangg": {
+    "address": "Hedwigstraße 18",
+    "latLng": {
+      "lat": 52.4716339,
+      "lng": 13.3360934
+    },
+    "categories": ["restaurants"]
+  },
+  "Sachiko Sushi": {
+    "address": "Jeanne-Mammen-Bogen 584",
+    "latLng": {
+      "lat": 52.50470139999999,
+      "lng": 13.323713
+    },
+    "categories": ["restaurants"]
+  },
+  "Khao Taan": {
+    "address": "Gryphiusstraße 10",
+    "latLng": {
+      "lat": 52.50865109999999,
+      "lng": 13.4638149
+    },
+    "categories": ["restaurants"]
+  },
+  "Bejte-Ethiopia": {
+    "address": "Zietenstraße 8",
+    "latLng": {
+      "lat": 52.4993923,
+      "lng": 13.3570205
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant Bobbe Speisesalon": {
+    "address": "Motzstraße 91",
+    "latLng": {
+      "lat": 52.4933274,
+      "lng": 13.3343626
+    },
+    "categories": ["restaurants"]
+  },
+  "Gemüse Kebap & Friends": {
+    "address": "Warschauer Str. 81A",
+    "latLng": {
+      "lat": 52.5138718,
+      "lng": 13.4536355
+    },
+    "categories": ["restaurants"]
+  },
+  "Poké Pelelina Kreuzberg": {
+    "address": "Graefestraße 75",
+    "latLng": {
+      "lat": 52.4927802,
+      "lng": 13.4177419
+    },
+    "categories": ["restaurants"]
+  },
+  "Ataya Caffe": {
+    "address": "Zelterstraße 6",
+    "latLng": {
+      "lat": 52.5472293,
+      "lng": 13.4274918
+    },
+    "categories": ["restaurants"]
+  },
+  "Korean Food Stories - Restaurant": {
+    "address": "Prenzlauer Allee 217",
+    "latLng": {
+      "lat": 52.5351201,
+      "lng": 13.4214333
+    },
+    "categories": ["restaurants"]
+  },
+  "7 Dumpling": {
+    "address": "Schönhauser Allee 122",
+    "latLng": {
+      "lat": 52.5481127,
+      "lng": 13.413102
+    },
+    "categories": ["restaurants"]
+  },
+  "La Piadina - Kreuzberg": {
+    "address": "Mariannenpl. 23",
+    "latLng": {
+      "lat": 52.5042148,
+      "lng": 13.4265662
+    },
+    "categories": ["restaurants"]
+  },
+  "Enzo Sushi Bar": {
+    "address": "Marienburger Str. 38",
+    "latLng": {
+      "lat": 52.5347556,
+      "lng": 13.4251497
+    },
+    "categories": ["restaurants"]
+  },
+  "Pizza Nostra": {
+    "address": "Lychener Str. 2",
+    "latLng": {
+      "lat": 52.54101989999999,
+      "lng": 13.4148663
+    },
+    "categories": ["restaurants"]
+  },
+  "Cedar Berlin Shawarma Falafel (Schawarma)": {
+    "address": "Skalitzer Str. 102",
+    "latLng": {
+      "lat": 52.4994719,
+      "lng": 13.4279598
+    },
+    "categories": ["restaurants"]
+  },
+  "The future is up to you": {
+    "address": "Kastanienallee 62",
+    "latLng": {
+      "lat": 52.5343708,
+      "lng": 13.4058112
+    },
+    "categories": ["restaurants"]
+  },
+  "Tianfuzius 天府子": {
+    "address": "Regensburger Str. 1",
+    "latLng": {
+      "lat": 52.4959762,
+      "lng": 13.3405322
+    },
+    "categories": ["restaurants"]
+  },
+  "Iro Izakaya": {
+    "address": "Krossener Str. 19",
+    "latLng": {
+      "lat": 52.5103966,
+      "lng": 13.4587284
+    },
+    "categories": ["restaurants"]
+  },
+  "Fatoush": {
+    "address": "Simon-Dach-Straße 41A",
+    "latLng": {
+      "lat": 52.51147229999999,
+      "lng": 13.4572257
+    },
+    "categories": ["restaurants"]
+  },
+  "Dada Falafel": {
+    "address": "Linienstraße 132",
+    "latLng": {
+      "lat": 52.5264427,
+      "lng": 13.3881916
+    },
+    "categories": ["restaurants"]
+  },
+  "Horváth": {
+    "address": "Paul-Lincke-Ufer 44a",
+    "latLng": {
+      "lat": 52.496461,
+      "lng": 13.4208765
+    },
+    "categories": ["restaurants"]
+  },
+  "Akcaabat Saray Köfte": {
+    "address": "Oranienstraße 72",
+    "latLng": {
+      "lat": 52.5049588,
+      "lng": 13.4073027
+    },
+    "categories": ["restaurants"]
+  },
+  "Shiso Burger": {
+    "address": "Auguststraße 29C",
+    "latLng": {
+      "lat": 52.5272762,
+      "lng": 13.3987744
+    },
+    "categories": ["restaurants"]
+  },
+  "Focaccia Pasta & Pizza": {
+    "address": "Alt-Moabit 51",
+    "latLng": {
+      "lat": 52.5240387,
+      "lng": 13.3303022
+    },
+    "categories": ["restaurants"]
+  },
+  "Domke Nino Fleischerei": {
+    "address": "Warschauer Str. 64",
+    "latLng": {
+      "lat": 52.5104769,
+      "lng": 13.4520734
+    },
+    "categories": ["restaurants"]
+  },
+  "New Day Vietnam Heritage Food": {
+    "address": "Newday Restaurant, Niederbarnimstraße 25",
+    "latLng": {
+      "lat": 52.514606,
+      "lng": 13.4598804
+    },
+    "categories": ["restaurants"]
+  },
+  "Schüsseldienst": {
+    "address": "Akazienstraße 7",
+    "latLng": {
+      "lat": 52.4873906,
+      "lng": 13.3550764
+    },
+    "categories": ["restaurants"]
+  },
+  "Mom's Creation Vegan Restaurant Friedrichshain": {
+    "address": "Proskauer Str. 1",
+    "latLng": {
+      "lat": 52.5156442,
+      "lng": 13.4606306
+    },
+    "categories": ["restaurants"]
+  },
+  "clánndestino | Tapasbar & Weinhandel": {
+    "address": "Waldemarstraße 29",
+    "latLng": {
+      "lat": 52.5039419,
+      "lng": 13.41887
+    },
+    "categories": ["restaurants"]
+  },
+  "Meyan Mediterranean Restaurant": {
+    "address": "Goltzstraße 36",
+    "latLng": {
+      "lat": 52.4937462,
+      "lng": 13.3535133
+    },
+    "categories": ["restaurants"]
+  },
+  "Zweistrom": {
+    "address": "Kollwitzstraße 104",
+    "latLng": {
+      "lat": 52.5392406,
+      "lng": 13.4216598
+    },
+    "categories": ["restaurants"]
+  },
+  "Big Stuff Smoked BBQ": {
+    "address": "Eisenbahnstraße 42/43",
+    "latLng": {
+      "lat": 52.50202299999999,
+      "lng": 13.4317947
+    },
+    "categories": ["restaurants"]
+  },
+  "Maria Bonita": {
+    "address": "Danziger Str. 33",
+    "latLng": {
+      "lat": 52.54040579999999,
+      "lng": 13.4181515
+    },
+    "categories": ["restaurants"]
+  },
+  "Ohana - Viet Poké Bowl": {
+    "address": "Reichenberger Str. 120",
+    "latLng": {
+      "lat": 52.4951894,
+      "lng": 13.4324715
+    },
+    "categories": ["restaurants"]
+  },
+  "Samowar": {
+    "address": "Luisenpl. 3",
+    "latLng": {
+      "lat": 52.5209804,
+      "lng": 13.2999686
+    },
+    "categories": ["restaurants"]
+  },
+  "Al Gazali - Schawarma Falafel": {
+    "address": "Krossener Str. 20",
+    "latLng": {
+      "lat": 52.5102266,
+      "lng": 13.4589602
+    },
+    "categories": ["restaurants"]
+  },
+  "Louis Alfons - Pop Up Bar": {
+    "address": "Gerichtstraße 60",
+    "latLng": {
+      "lat": 52.5442931,
+      "lng": 13.3712241
+    },
+    "categories": ["restaurants"]
+  },
+  "TAKA Fisch House": {
+    "address": "Adalbertstraße 97",
+    "latLng": {
+      "lat": 52.4999783,
+      "lng": 13.4179115
+    },
+    "categories": ["restaurants"]
+  },
+  "Zsa Zsa Burger": {
+    "address": "Motzstraße 28",
+    "latLng": {
+      "lat": 52.4979458,
+      "lng": 13.3479686
+    },
+    "categories": ["restaurants"]
+  },
+  "Gasthaus Alt Wien": {
+    "address": "Hufelandstraße 22",
+    "latLng": {
+      "lat": 52.53148669999999,
+      "lng": 13.4325518
+    },
+    "categories": ["restaurants"]
+  },
+  "Munch's Hus": {
+    "address": "Bülowstraße 66",
+    "latLng": {
+      "lat": 52.4964802,
+      "lng": 13.3670014
+    },
+    "categories": ["restaurants"]
+  },
+  "Crunch Kantine": {
+    "address": "Siemensstraße 16",
+    "latLng": {
+      "lat": 52.5327905,
+      "lng": 13.3338141
+    },
+    "categories": ["restaurants"]
+  },
+  "Smartdeli Sushi & More": {
+    "address": "Novalisstraße 2",
+    "latLng": {
+      "lat": 52.5280421,
+      "lng": 13.3890738
+    },
+    "categories": ["restaurants"]
+  },
+  "Rüyam Gemüse Kebab 2": {
+    "address": "Schönhauser Allee 44A",
+    "latLng": {
+      "lat": 52.5405338,
+      "lng": 13.4125814
+    },
+    "categories": ["restaurants"]
+  },
+  "CHIKOGI": {
+    "address": "Oranienstraße 31",
+    "latLng": {
+      "lat": 52.5014863,
+      "lng": 13.418876
+    },
+    "categories": ["restaurants"]
+  },
+  "Casablanca Imbiss": {
+    "address": "Rigaer Str. 25",
+    "latLng": {
+      "lat": 52.51684359999999,
+      "lng": 13.4618783
+    },
+    "categories": ["restaurants"]
+  },
+  "Bao Vietnamese Cooking": {
+    "address": "Hindenburgdamm 57A",
+    "latLng": {
+      "lat": 52.446226,
+      "lng": 13.315654
+    },
+    "categories": ["restaurants"]
+  },
+  "Café Marral": {
+    "address": "Torstraße 222",
+    "latLng": {
+      "lat": 52.5272764,
+      "lng": 13.3886087
+    },
+    "categories": ["restaurants"]
+  },
+  "Dolores Wittenbergplatz": {
+    "address": "Bayreuther Str. 36",
+    "latLng": {
+      "lat": 52.5012611,
+      "lng": 13.3437825
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant Tim Raue": {
+    "address": "Rudi-Dutschke-Straße 26",
+    "latLng": {
+      "lat": 52.5068948,
+      "lng": 13.3914718
+    },
+    "categories": ["restaurants"]
+  },
+  "Bonvivant Cocktail Bistro": {
+    "address": "Goltzstraße 32",
+    "latLng": {
+      "lat": 52.4946487,
+      "lng": 13.3537681
+    },
+    "categories": ["restaurants"]
+  },
+  "Roji - Godai no Sekai Prenzlauer Berg": {
+    "address": "Oderberger Str. 11",
+    "latLng": {
+      "lat": 52.5390366,
+      "lng": 13.4091437
+    },
+    "categories": ["restaurants"]
+  },
+  "Lon Men's Noodle House": {
+    "address": "Kantstraße 33",
+    "latLng": {
+      "lat": 52.5063606,
+      "lng": 13.3164921
+    },
+    "categories": ["restaurants"]
+  },
+  "Com A Sushi & Asia Grill": {
+    "address": "Oranienstraße 191",
+    "latLng": {
+      "lat": 52.50024999999999,
+      "lng": 13.4223
+    },
+    "categories": ["restaurants"]
+  },
+  "A Mano": {
+    "address": "Strausberger Pl. 2",
+    "latLng": {
+      "lat": 52.5193916,
+      "lng": 13.4273865
+    },
+    "categories": ["restaurants"]
+  },
+  "Thai Aroma": {
+    "address": "Dunckerstraße 18",
+    "latLng": {
+      "lat": 52.5435357,
+      "lng": 13.4219225
+    },
+    "categories": ["restaurants"]
+  },
+  "QADMOUS - Libanesisches Restaurant Berlin": {
+    "address": "Am Friedrichshain 1",
+    "latLng": {
+      "lat": 52.529724,
+      "lng": 13.4363696
+    },
+    "categories": ["restaurants"]
+  },
+  "Fes": {
+    "address": "Hasenheide 58",
+    "latLng": {
+      "lat": 52.48925699999999,
+      "lng": 13.4087189
+    },
+    "categories": ["restaurants"]
+  },
+  "Tapiocaria Berlin": {
+    "address": "Samariterstraße 34A",
+    "latLng": {
+      "lat": 52.5163273,
+      "lng": 13.4648928
+    },
+    "categories": ["restaurants"]
+  },
+  "Sapori di Casa": {
+    "address": "Wilsnacker Str. 61-62",
+    "latLng": {
+      "lat": 52.5274295,
+      "lng": 13.3513602
+    },
+    "categories": ["restaurants"]
+  },
+  "Pizzeria Farina": {
+    "address": "Karl-Kunger-Straße 10",
+    "latLng": {
+      "lat": 52.4917037,
+      "lng": 13.4462816
+    },
+    "categories": ["restaurants"]
+  },
+  "Gobento": {
+    "address": "Reichenberger Str. 118",
+    "latLng": {
+      "lat": 52.4948707,
+      "lng": 13.4332469
+    },
+    "categories": ["restaurants"]
+  },
+  "Rocoto": {
+    "address": "Winterfeldtstraße 17",
+    "latLng": {
+      "lat": 52.4962354,
+      "lng": 13.3586761
+    },
+    "categories": ["restaurants"]
+  },
+  "rembrandt-burger": {
+    "address": "Richard-Sorge-Straße 21",
+    "latLng": {
+      "lat": 52.5200221,
+      "lng": 13.4478945
+    },
+    "categories": ["restaurants"]
+  },
+  "mogg": {
+    "address": "Auguststraße 11-13",
+    "latLng": {
+      "lat": 52.52640719999999,
+      "lng": 13.3944188
+    },
+    "categories": ["restaurants"]
+  },
+  "Salami Social Club": {
+    "address": "Frankfurter Allee 43",
+    "latLng": {
+      "lat": 52.5150878,
+      "lng": 13.4633347
+    },
+    "categories": ["restaurants"]
+  },
+  "Pasta Factory": {
+    "address": "Kottbusser Damm 6",
+    "latLng": {
+      "lat": 52.4943342,
+      "lng": 13.4209838
+    },
+    "categories": ["restaurants"]
+  },
+  "OMONI 오 모 니": {
+    "address": "Kopenhagener Str. 14",
+    "latLng": {
+      "lat": 52.5491636,
+      "lng": 13.4088857
+    },
+    "categories": ["restaurants"]
+  },
+  "li.ke : serious||thai||vegan": {
+    "address": "Grünberger Str. 69",
+    "latLng": {
+      "lat": 52.51166569999999,
+      "lng": 13.4584965
+    },
+    "categories": ["restaurants"]
+  },
+  "Feinberg’s": {
+    "address": "Fuggerstraße 35",
+    "latLng": {
+      "lat": 52.4991013,
+      "lng": 13.3418082
+    },
+    "categories": ["restaurants"]
+  },
+  "Koshary Lux": {
+    "address": "Grolmanstraße 27",
+    "latLng": {
+      "lat": 52.50460589999999,
+      "lng": 13.3230871
+    },
+    "categories": ["restaurants"]
+  },
+  "KOKIO Berlin": {
+    "address": "Hagenauer Str. 9",
+    "latLng": {
+      "lat": 52.540032,
+      "lng": 13.4161384
+    },
+    "categories": ["restaurants"]
+  },
+  "Suppeto": {
+    "address": "Krausnickstraße 11",
+    "latLng": {
+      "lat": 52.5253222,
+      "lng": 13.3984219
+    },
+    "categories": ["restaurants"]
+  },
+  "Shaniu's House of Noodles": {
+    "address": "Pariser Str. 58",
+    "latLng": {
+      "lat": 52.496173,
+      "lng": 13.3279995
+    },
+    "categories": ["restaurants"]
+  },
+  "Malafemmena": {
+    "address": "Hauptstraße 85",
+    "latLng": {
+      "lat": 52.47376629999999,
+      "lng": 13.3383341
+    },
+    "categories": ["restaurants"]
+  },
+  "heimlichTreu": {
+    "address": "Anklamer Str. 38",
+    "latLng": {
+      "lat": 52.53532,
+      "lng": 13.39919
+    },
+    "categories": ["restaurants"]
+  },
+  "Bandol sur mer": {
+    "address": "Torstraße 167",
+    "latLng": {
+      "lat": 52.5291384,
+      "lng": 13.3954537
+    },
+    "categories": ["restaurants"]
+  },
+  "Speisehaus Berlin": {
+    "address": "Wühlischstraße 30",
+    "latLng": {
+      "lat": 52.50967559999999,
+      "lng": 13.4577303
+    },
+    "categories": ["restaurants"]
+  },
+  "Berkis": {
+    "address": "Winterfeldtstraße 45",
+    "latLng": {
+      "lat": 52.4967199,
+      "lng": 13.3536959
+    },
+    "categories": ["restaurants"]
+  },
+  "Knödelwirtschaft": {
+    "address": "Fuldastraße 33",
+    "latLng": {
+      "lat": 52.4866815,
+      "lng": 13.4393703
+    },
+    "categories": ["restaurants"]
+  },
+  "Zur Haxe": {
+    "address": "Erich-Weinert-Straße 128",
+    "latLng": {
+      "lat": 52.5448106,
+      "lng": 13.4369116
+    },
+    "categories": ["restaurants"]
+  },
+  "Phönicia": {
+    "address": "Seestraße 100",
+    "latLng": {
+      "lat": 52.5495577,
+      "lng": 13.349473
+    },
+    "categories": ["restaurants"]
+  },
+  "Taverna Santorini": {
+    "address": "Cauerstraße 28",
+    "latLng": {
+      "lat": 52.5175798,
+      "lng": 13.3172884
+    },
+    "categories": ["restaurants"]
+  },
+  "NaNum": {
+    "address": "Lindenstraße 90",
+    "latLng": {
+      "lat": 52.5025546,
+      "lng": 13.3941126
+    },
+    "categories": ["restaurants"]
+  },
+  "Le Saint Amour": {
+    "address": "Maybachufer 2",
+    "latLng": {
+      "lat": 52.4954244,
+      "lng": 13.4214598
+    },
+    "categories": ["restaurants"]
+  },
+  "6868 Restaurant": {
+    "address": "Invalidenstraße 159",
+    "latLng": {
+      "lat": 52.5323951,
+      "lng": 13.3972841
+    },
+    "categories": ["restaurants"]
+  },
+  "Cookies Cream": {
+    "address": "Behrenstraße 55",
+    "latLng": {
+      "lat": 52.5157146,
+      "lng": 13.3877824
+    },
+    "categories": ["restaurants"]
+  },
+  "Mitho Cha!": {
+    "address": "Rykestraße 40",
+    "latLng": {
+      "lat": 52.5374212,
+      "lng": 13.4210038
+    },
+    "categories": ["restaurants"]
+  },
+  "Antonello's Cevicheria & StreetFood": {
+    "address": "Nostitzstraße 22",
+    "latLng": {
+      "lat": 52.4904993,
+      "lng": 13.3901334
+    },
+    "categories": ["restaurants"]
+  },
+  "Wansh": {
+    "address": "Pannierstraße 54",
+    "latLng": {
+      "lat": 52.4876101,
+      "lng": 13.4314336
+    },
+    "categories": ["restaurants"]
+  },
+  "Papadam Indisches Restaurant": {
+    "address": "Scharnweberstraße 6",
+    "latLng": {
+      "lat": 52.5625686,
+      "lng": 13.3310447
+    },
+    "categories": ["restaurants"]
+  },
+  "Yarok": {
+    "address": "Torstraße 195",
+    "latLng": {
+      "lat": 52.5283375,
+      "lng": 13.3920495
+    },
+    "categories": ["restaurants"]
+  },
+  "Grünfisch": {
+    "address": "Graefestraße 26a",
+    "latLng": {
+      "lat": 52.4914739,
+      "lng": 13.41636
+    },
+    "categories": ["restaurants"]
+  },
+  "ammAmma": {
+    "address": "Urbanstraße 28A",
+    "latLng": {
+      "lat": 52.4919412,
+      "lng": 13.4117835
+    },
+    "categories": ["restaurants"]
+  },
+  "W - Der Imbiss | vegan vegetarisches Restaurant": {
+    "address": "Fuggerstraße 20",
+    "latLng": {
+      "lat": 52.499073,
+      "lng": 13.3448782
+    },
+    "categories": ["restaurants"]
+  },
+  "Centopassi": {
+    "address": "Krossener Str. 36",
+    "latLng": {
+      "lat": 52.5093492,
+      "lng": 13.4650108
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "Der Fischladen": {
+    "address": "Schönhauser Allee 128",
+    "latLng": {
+      "lat": 52.5459842,
+      "lng": 13.4124555
+    },
+    "categories": ["restaurants"]
+  },
+  "Papaya Kantstraße": {
+    "address": "Kantstraße 122",
+    "latLng": {
+      "lat": 52.5062766,
+      "lng": 13.3104784
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant Trattoria Portofino": {
+    "address": "Gubener Str. 48",
+    "latLng": {
+      "lat": 52.5123562,
+      "lng": 13.4484136
+    },
+    "categories": ["restaurants"]
+  },
+  "tulus lotrek": {
+    "address": "Fichtestraße 24",
+    "latLng": {
+      "lat": 52.489677,
+      "lng": 13.413604
+    },
+    "categories": ["restaurants"]
+  },
+  "Kisso": {
+    "address": "Rheinstraße 44",
+    "latLng": {
+      "lat": 52.4660684,
+      "lng": 13.3299164
+    },
+    "categories": ["restaurants"]
+  },
+  "Fischfabrik Berlin": {
+    "address": "Danziger Str. 24",
+    "latLng": {
+      "lat": 52.5400699,
+      "lng": 13.416925
+    },
+    "categories": ["restaurants"]
+  },
+  "Ali Baba": {
+    "address": "Krossener Str. 17",
+    "latLng": {
+      "lat": 52.5106043,
+      "lng": 13.4575777
+    },
+    "categories": ["restaurants"]
+  },
+  "Ristorante Masaniello": {
+    "address": "Hasenheide 20",
+    "latLng": {
+      "lat": 52.487945,
+      "lng": 13.4191314
+    },
+    "categories": ["restaurants"]
+  },
+  "Zeus Pizza & Pide": {
+    "address": "Boxhagener Str. 30",
+    "latLng": {
+      "lat": 52.5124104,
+      "lng": 13.4591168
+    },
+    "categories": ["restaurants"]
+  },
+  "ZENKICHI": {
+    "address": "Auguststraße 11-13",
+    "latLng": {
+      "lat": 52.52640719999999,
+      "lng": 13.3944188
+    },
+    "categories": ["restaurants"]
+  },
+  "La Cantine d'Augusta Restaurant Bar à Vins": {
+    "address": "Langenscheidtstraße 6A",
+    "latLng": {
+      "lat": 52.4891205,
+      "lng": 13.3621136
+    },
+    "categories": ["restaurants", "cafes/bars"]
+  },
+  "Basmah": {
+    "address": "Reichenberger Str. 26",
+    "latLng": {
+      "lat": 52.4980262,
+      "lng": 13.4212075
+    },
+    "categories": ["restaurants"]
+  },
+  "Les Valseuses Restaurant": {
+    "address": "Eberswalder Str. 28",
+    "latLng": {
+      "lat": 52.5412949,
+      "lng": 13.4108581
+    },
+    "categories": ["restaurants"]
+  },
+  "Orient Falafel": {
+    "address": "Graefestraße 65A",
+    "latLng": {
+      "lat": 52.49119839999999,
+      "lng": 13.4166156
+    },
+    "categories": ["restaurants"]
+  },
+  "HOLY FLAT!": {
+    "address": "Lenaustraße 10",
+    "latLng": {
+      "lat": 52.490101,
+      "lng": 13.427028
+    },
+    "categories": ["restaurants"]
+  },
+  "G wie Goulasch": {
+    "address": "Chamissopl. 1",
+    "latLng": {
+      "lat": 52.488552,
+      "lng": 13.390629
+    },
+    "categories": ["restaurants"]
+  },
+  "Amitié": {
+    "address": "Potsdamer Str. 151",
+    "latLng": {
+      "lat": 52.495559,
+      "lng": 13.361503
+    },
+    "categories": ["restaurants"]
+  },
+  "Dong Do Restaurant": {
+    "address": "Eberswalder Str. 27",
+    "latLng": {
+      "lat": 52.54126549999999,
+      "lng": 13.4111373
+    },
+    "categories": ["restaurants"]
+  },
+  "Bei Lydia": {
+    "address": "Inselstraße 8A",
+    "latLng": {
+      "lat": 52.5124856,
+      "lng": 13.4117312
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant Blaue Adria": {
+    "address": "Cotheniusstraße 8",
+    "latLng": {
+      "lat": 52.5286026,
+      "lng": 13.4489986
+    },
+    "categories": ["restaurants"]
+  },
+  "Maroush": {
+    "address": "Adalbertstraße 93",
+    "latLng": {
+      "lat": 52.5009474,
+      "lng": 13.4188435
+    },
+    "categories": ["restaurants"]
+  },
+  "Naardoun": {
+    "address": "Windscheidstraße 27",
+    "latLng": {
+      "lat": 52.5064436,
+      "lng": 13.2995857
+    },
+    "categories": ["restaurants"]
+  },
+  "The Poutine Kitchen": {
+    "address": "Arminiusstraße 2-4",
+    "latLng": {
+      "lat": 52.5277717,
+      "lng": 13.3386289
+    },
+    "categories": ["restaurants"]
+  },
+  "Ebe Ano nigerian soulfood": {
+    "address": "Bamberger Str. 49",
+    "latLng": {
+      "lat": 52.4940024,
+      "lng": 13.3375317
+    },
+    "categories": ["restaurants"]
+  },
+  "Vesuvio": {
+    "address": "Strausberger Pl. 8",
+    "latLng": {
+      "lat": 52.5190864,
+      "lng": 13.429525
+    },
+    "categories": ["restaurants"]
+  },
+  "Zen": {
+    "address": "Uhlandstraße 170a",
+    "latLng": {
+      "lat": 52.5009029,
+      "lng": 13.3252628
+    },
+    "categories": ["restaurants"]
+  },
+  "Best Curry": {
+    "address": "Kurfürstendamm 166",
+    "latLng": {
+      "lat": 52.4998107,
+      "lng": 13.3079426
+    },
+    "categories": ["restaurants"]
+  },
+  "Schwarze Heidi": {
+    "address": "Mariannenstraße 50",
+    "latLng": {
+      "lat": 52.5010681,
+      "lng": 13.4238074
+    },
+    "categories": ["restaurants"]
+  },
+  "Lac Viet": {
+    "address": "Rheinstraße 50",
+    "latLng": {
+      "lat": 52.4676586,
+      "lng": 13.3315991
+    },
+    "categories": ["restaurants"]
+  },
+  "Pequena Habana Restaurant Berlin": {
+    "address": "Eisenacher Str. 48",
+    "latLng": {
+      "lat": 52.4877694,
+      "lng": 13.3491677
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant Dae Mon": {
+    "address": "Monbijoupl. 11",
+    "latLng": {
+      "lat": 52.52276990000001,
+      "lng": 13.399358
+    },
+    "categories": ["restaurants"]
+  },
+  "Restaurant Schneeweiß": {
+    "address": "Simplonstraße 16",
+    "latLng": {
+      "lat": 52.5086167,
+      "lng": 13.4581712
+    },
+    "categories": ["restaurants"]
+  },
+  "Salut Mediterranean Food & Catering Berlin": {
+    "address": "Augsburger Str. 29",
+    "latLng": {
+      "lat": 52.501547,
+      "lng": 13.3346581
+    },
+    "categories": ["restaurants"]
+  },
+  "EIVGI´S Orientalische Spezialitäten - Koscher essen in Berlin!": {
+    "address": "Belziger Str. 75",
+    "latLng": {
+      "lat": 52.4846493,
+      "lng": 13.3457504
+    },
+    "categories": ["restaurants"]
+  },
+  "WaWa Berlin": {
+    "address": "Grunewaldstraße 10",
+    "latLng": {
+      "lat": 52.4902689,
+      "lng": 13.3555616
+    },
+    "categories": ["restaurants"]
+  },
+  "Lụa Restaurant": {
+    "address": "Schwedter Str. 269",
+    "latLng": {
+      "lat": 52.5326073,
+      "lng": 13.4120899
+    },
+    "categories": ["restaurants"]
+  },
+  "LIU 成都味道面馆 Nudelhaus": {
+    "address": "Kronenstraße 72",
+    "latLng": {
+      "lat": 52.5112094,
+      "lng": 13.3875929
+    },
+    "categories": ["restaurants"]
+  },
+  "Kochu Karu": {
+    "address": "Eberswalder Str. 35",
+    "latLng": {
+      "lat": 52.5414463,
+      "lng": 13.4092076
+    },
+    "categories": ["restaurants"]
+  },
+  "Maître Philippe & Filles GmbH": {
+    "address": "Emser Str. 42",
+    "latLng": {
+      "lat": 52.49720610000001,
+      "lng": 13.3199219
+    },
+    "categories": ["restaurants"]
+  },
+  "Falafel Aladdin": {
+    "address": "Stargarder Str. 50",
+    "latLng": {
+      "lat": 52.54401840000001,
+      "lng": 13.4243957
+    },
+    "categories": ["restaurants"]
+  },
+  "Villa Rodizio": {
+    "address": "Milastraße 2",
+    "latLng": {
+      "lat": 52.5454658,
+      "lng": 13.4114636
+    },
+    "categories": ["restaurants"]
+  },
+  "La tia Rica": {
+    "address": "Knesebeckstraße 92",
+    "latLng": {
+      "lat": 52.5085969,
+      "lng": 13.3231327
+    },
+    "categories": ["restaurants"]
+  },
+  "Bahadur": {
+    "address": "Sigmaringer Str. 36",
+    "latLng": {
+      "lat": 52.4878977,
+      "lng": 13.3192648
+    },
+    "categories": ["restaurants"]
+  },
+  "Son Kitchen": {
+    "address": "Kantstraße 46",
+    "latLng": {
+      "lat": 52.50661090000001,
+      "lng": 13.3118442
+    },
+    "categories": ["restaurants"]
+  },
+  "Sofram": {
+    "address": "Potsdamer Str. 137",
+    "latLng": {
+      "lat": 52.4969484,
+      "lng": 13.3619445
+    },
+    "categories": ["restaurants"]
+  },
+  "Rüyam Gemüse Kebab": {
+    "address": "Hauptstraße 133",
+    "latLng": {
+      "lat": 52.4846282,
+      "lng": 13.353968
+    },
+    "categories": ["restaurants"]
+  },
+  "Rice On! Berlin": {
+    "address": "Berlin Hauptbahnhof – Foodcourt, Europaplatz 1",
+    "latLng": {
+      "lat": 52.5249111,
+      "lng": 13.369492
+    },
+    "categories": ["restaurants"]
+  },
+  "Sarod's": {
+    "address": "Friesenstraße 22",
+    "latLng": {
+      "lat": 52.4878537,
+      "lng": 13.3946807
+    },
+    "categories": ["restaurants"]
+  },
+  "Chelany-Mitte Restaurant": {
+    "address": "Torstraße 221",
+    "latLng": {
+      "lat": 52.5276532,
+      "lng": 13.38861
+    },
+    "categories": ["restaurants"]
+  },
+  "Niko Niko Ramen (Ex-Hako Ramen am Boxi)": {
+    "address": "Boxhagener Str. 26",
+    "latLng": {
+      "lat": 52.5125968,
+      "lng": 13.4579686
+    },
+    "categories": ["restaurants"]
+  },
+  "K'Ups Gemüsekebap": {
+    "address": "Kastanienallee 102",
+    "latLng": {
+      "lat": 52.5398109,
+      "lng": 13.4113164
+    },
+    "categories": ["restaurants"]
+  },
+  "Bagel, coffee.culture": {
+    "address": "Mehringdamm 66",
+    "latLng": {
+      "lat": 52.49066819999999,
+      "lng": 13.3863647
+    },
+    "categories": ["cafes/bars"]
+  },
+  "uppers coworking": {
+    "address": "Yorckstraße 3",
+    "latLng": {
+      "lat": 52.4933925,
+      "lng": 13.3868053
+    },
+    "categories": ["cafes/bars"]
+  },
+  "cuccuma": {
+    "address": "Zossener Str. 34",
+    "latLng": {
+      "lat": 52.49064139999999,
+      "lng": 13.394404
+    },
+    "categories": ["cafes/bars"]
+  },
+  "KAP FRIDA": {
+    "address": "Alt-Stralau 61",
+    "latLng": {
+      "lat": 52.4958968,
+      "lng": 13.4679455
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Zazza Moabit": {
+    "address": "Platz der Nachbarschaft, Lehrter Str. 24e",
+    "latLng": {
+      "lat": 52.5313698,
+      "lng": 13.3617368
+    },
+    "categories": ["cafes/bars"]
+  },
+  "soulcafé": {
+    "address": "Okerstraße 3",
+    "latLng": {
+      "lat": 52.4743989,
+      "lng": 13.426646
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café Três": {
+    "address": "Adalbertstraße 91",
+    "latLng": {
+      "lat": 52.5011783,
+      "lng": 13.4189706
+    },
+    "categories": ["cafes/bars"]
+  },
+  "BAIZ": {
+    "address": "Schönhauser Allee 26A",
+    "latLng": {
+      "lat": 52.5359427,
+      "lng": 13.41281
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Aslan's Mix": {
+    "address": "Urbanstraße 133",
+    "latLng": {
+      "lat": 52.4917174,
+      "lng": 13.4143419
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Cerebra Coffee": {
+    "address": "Ritterstraße 127",
+    "latLng": {
+      "lat": 52.50036369999999,
+      "lng": 13.4134943
+    },
+    "categories": ["cafes/bars"]
+  },
+  "b flat Acoustic Music & Jazz Club": {
+    "address": "Dircksenstraße 40",
+    "latLng": {
+      "lat": 52.5236259,
+      "lng": 13.4069351
+    },
+    "categories": ["cafes/bars"]
+  },
+  "La Fève": {
+    "address": "Karl-Kunger-Straße 58",
+    "latLng": {
+      "lat": 52.4911958,
+      "lng": 13.4477001
+    },
+    "categories": ["cafes/bars"]
+  },
+  "EINSTEIN Unter den Linden": {
+    "address": "Unter den Linden 42",
+    "latLng": {
+      "lat": 52.51725,
+      "lng": 13.3860628
+    },
+    "categories": ["cafes/bars"]
+  },
+  "La Maison Berlin": {
+    "address": "Paul-Lincke-Ufer 17",
+    "latLng": {
+      "lat": 52.4933315,
+      "lng": 13.4310939
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café 60 Grad": {
+    "address": "Friesenstraße 15",
+    "latLng": {
+      "lat": 52.4856636,
+      "lng": 13.3941952
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Balu Coffee": {
+    "address": "Otto-Weidt-Platz 5",
+    "latLng": {
+      "lat": 52.5336216,
+      "lng": 13.3664599
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Maxway Coffee": {
+    "address": "Katharina-Paulus-Straße 2",
+    "latLng": {
+      "lat": 52.5226437,
+      "lng": 13.3675004
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Home: Brewing & Kitchen": {
+    "address": "Jonasstraße 23",
+    "latLng": {
+      "lat": 52.4714965,
+      "lng": 13.4334518
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café Dunja": {
+    "address": "Altenbraker Str. 27",
+    "latLng": {
+      "lat": 52.4689308,
+      "lng": 13.4329587
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Golden Coffee": {
+    "address": "Graefestraße 2",
+    "latLng": {
+      "lat": 52.4952947,
+      "lng": 13.4192238
+    },
+    "categories": ["cafes/bars"]
+  },
+  "SEVEN COFFEE Stay Green": {
+    "address": "Leipziger Str. 51",
+    "latLng": {
+      "lat": 52.5107975,
+      "lng": 13.4015782
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Demlik Cafe Restaurant": {
+    "address": "Kottbusser Damm 75",
+    "latLng": {
+      "lat": 52.4906251,
+      "lng": 13.4239011
+    },
+    "categories": ["cafes/bars"]
+  },
+  "La Femme": {
+    "address": "Kottbusser Damm 77",
+    "latLng": {
+      "lat": 52.4909907,
+      "lng": 13.4236726
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Mira Frühstücksparadies": {
+    "address": "Hermannstraße 156",
+    "latLng": {
+      "lat": 52.46669,
+      "lng": 13.43214
+    },
+    "categories": ["cafes/bars"]
+  },
+  "100 Gramm Bar": {
+    "address": "Weinbergsweg 25",
+    "latLng": {
+      "lat": 52.5306534,
+      "lng": 13.401757
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café Komine": {
+    "address": "Welserstraße 13-15",
+    "latLng": {
+      "lat": 52.4978438,
+      "lng": 13.3417035
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Meta Mate Bar": {
+    "address": "Straßburger Str. 16",
+    "latLng": {
+      "lat": 52.5307316,
+      "lng": 13.4149569
+    },
+    "categories": ["cafes/bars"]
+  },
+  "HERMAN Belgian Bar": {
+    "address": "Schönhauser Allee 173",
+    "latLng": {
+      "lat": 52.53248019999999,
+      "lng": 13.4120464
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Kilkenny Irish Pub": {
+    "address": "Am Zwirngraben 17-20",
+    "latLng": {
+      "lat": 52.522491,
+      "lng": 13.401438
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Irish Pub": {
+    "address": "Tauentzienstraße 9-12",
+    "latLng": {
+      "lat": 52.5044796,
+      "lng": 13.3383409
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Tiergartenquelle": {
+    "address": "Bachstraße S-Bahnbogen 482",
+    "latLng": {
+      "lat": 52.51519279999999,
+      "lng": 13.3369085
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Cancún Mariendorf": {
+    "address": "Mariendorfer Damm 310",
+    "latLng": {
+      "lat": 52.42552509999999,
+      "lng": 13.3945121
+    },
+    "categories": ["cafes/bars"]
+  },
+  "White Lounge Shisha": {
+    "address": "Goebenstraße 14",
+    "latLng": {
+      "lat": 52.4932512,
+      "lng": 13.3663202
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Zum Frosch": {
+    "address": "Stresemannstraße 15",
+    "latLng": {
+      "lat": 52.4991521,
+      "lng": 13.3882354
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Stern Cafe": {
+    "address": "Silbersteinstraße 140",
+    "latLng": {
+      "lat": 52.4655225,
+      "lng": 13.4229808
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Kaffeekirsche Böckhstraße": {
+    "address": "Böckhstraße 30",
+    "latLng": {
+      "lat": 52.4931642,
+      "lng": 13.4215768
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Coffee Circle Café": {
+    "address": "Rosa-Luxemburg-Straße 19",
+    "latLng": {
+      "lat": 52.5253399,
+      "lng": 13.4103461
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Savo Bar Café": {
+    "address": "Weisestraße 35",
+    "latLng": {
+      "lat": 52.4741803,
+      "lng": 13.4251535
+    },
+    "categories": ["cafes/bars"]
+  },
+  "A Never Ever Ending Love Story": {
+    "address": "Kantstraße 25",
+    "latLng": {
+      "lat": 52.5062266,
+      "lng": 13.3198224
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Patesô Bar": {
+    "address": "Novalisstraße 2",
+    "latLng": {
+      "lat": 52.5281223,
+      "lng": 13.3890878
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Fourty Years": {
+    "address": "Lausitzer Str. 34",
+    "latLng": {
+      "lat": 52.49579079999999,
+      "lng": 13.4273973
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Unsre Kneipe": {
+    "address": "Belforter Str. 22",
+    "latLng": {
+      "lat": 52.5323004,
+      "lng": 13.418964
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café des Schicksals": {
+    "address": "Gerichtstraße 68",
+    "latLng": {
+      "lat": 52.5437924,
+      "lng": 13.3729875
+    },
+    "categories": ["cafes/bars"]
+  },
+  "KikiSol": {
+    "address": "Reinickendorfer Str. 96",
+    "latLng": {
+      "lat": 52.5475747,
+      "lng": 13.3688392
+    },
+    "categories": ["cafes/bars"]
+  },
+  "BONA Kollektiv": {
+    "address": "Hermannstraße 178",
+    "latLng": {
+      "lat": 52.4717087,
+      "lng": 13.4292346
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café Alcatraz": {
+    "address": "Wilsnacker Str. 30",
+    "latLng": {
+      "lat": 52.5308927,
+      "lng": 13.3508621
+    },
+    "categories": ["cafes/bars"]
+  },
+  "All About Berlin": {
+    "address": "Rigaerstr. 75, Samariterstraße 9",
+    "latLng": {
+      "lat": 52.5164953,
+      "lng": 13.4654783
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Coffee For Coffee": {
+    "address": "Frankfurter Allee 70",
+    "latLng": {
+      "lat": 52.5142801,
+      "lng": 13.4671265
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Bricks & Mortar": {
+    "address": "Voigtstraße 42",
+    "latLng": {
+      "lat": 52.515184,
+      "lng": 13.4676004
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Pavillon am Ufer": {
+    "address": "Paul-Lincke-Ufer 4",
+    "latLng": {
+      "lat": 52.4916486,
+      "lng": 13.4353687
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Green Tea Café MAMECHA": {
+    "address": "Mulackstraße 33",
+    "latLng": {
+      "lat": 52.527199,
+      "lng": 13.40622
+    },
+    "categories": ["cafes/bars"]
+  },
+  "CODOS Coffee": {
+    "address": "Invalidenstraße 1",
+    "latLng": {
+      "lat": 52.5326848,
+      "lng": 13.3985759
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Wiener Conditorei Caffeehaus": {
+    "address": "Reichsstraße 81",
+    "latLng": {
+      "lat": 52.5159842,
+      "lng": 13.2604813
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Cupcake Berlin": {
+    "address": "Krossener Str. 12",
+    "latLng": {
+      "lat": 52.5107751,
+      "lng": 13.4577852
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Barcomi’s Café & Kaffeerösterei": {
+    "address": "Bergmannstraße 21",
+    "latLng": {
+      "lat": 52.48903379999999,
+      "lng": 13.3934183
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Zora Supermarkt 2": {
+    "address": "Boxhagener Str. 80",
+    "latLng": {
+      "lat": 52.507969,
+      "lng": 13.4675769
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Geicha Bubble Tea": {
+    "address": "Reichenberger Str. 176",
+    "latLng": {
+      "lat": 52.4997282,
+      "lng": 13.4169453
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Companion Tea & Coffee": {
+    "address": "Weserstr. 166",
+    "latLng": {
+      "lat": 52.4834032,
+      "lng": 13.4412229
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Berliner Kaffeerösterei Uhlandstraße": {
+    "address": "Uhlandstraße 173/174",
+    "latLng": {
+      "lat": 52.5014854,
+      "lng": 13.3252931
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Bubbletea World": {
+    "address": "Kottbusser Damm 29-30",
+    "latLng": {
+      "lat": 52.48932869999999,
+      "lng": 13.4238785
+    },
+    "categories": ["cafes/bars"]
+  },
+  "TEE.SALON.IKI": {
+    "address": "Böckhstraße 50",
+    "latLng": {
+      "lat": 52.4943941,
+      "lng": 13.4167806
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Tante Käthe": {
+    "address": "Bernauer Str. 63-64",
+    "latLng": {
+      "lat": 52.5404135,
+      "lng": 13.4030038
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Crêplala": {
+    "address": "Kantstraße 85A",
+    "latLng": {
+      "lat": 52.5066828,
+      "lng": 13.2959381
+    },
+    "categories": ["cafes/bars"]
+  },
+  "KAFFEE 26": {
+    "address": "Jüdenstraße 26",
+    "latLng": {
+      "lat": 52.538109,
+      "lng": 13.2029468
+    },
+    "categories": ["cafes/bars"]
+  },
+  "wild caffè": {
+    "address": "Südwestkorso 63",
+    "latLng": {
+      "lat": 52.4730533,
+      "lng": 13.3218062
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Ratzeputz": {
+    "address": "Weserstr. 182",
+    "latLng": {
+      "lat": 52.4853693,
+      "lng": 13.4371082
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Kame Berlin Japanese Food and Snacks": {
+    "address": "Leibnizstraße 45",
+    "latLng": {
+      "lat": 52.5038272,
+      "lng": 13.313836
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Neumanns Café": {
+    "address": "Gabriel-Max-Straße 18",
+    "latLng": {
+      "lat": 52.5103056,
+      "lng": 13.4580857
+    },
+    "categories": ["cafes/bars"]
+  },
+  "KEIT": {
+    "address": "Goltzstraße 18",
+    "latLng": {
+      "lat": 52.4936276,
+      "lng": 13.3539902
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Albatross Bakery": {
+    "address": "Graefestraße 66/67",
+    "latLng": {
+      "lat": 52.4914301,
+      "lng": 13.4167959
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café ?": {
+    "address": "Goltzstraße 34",
+    "latLng": {
+      "lat": 52.4940782,
+      "lng": 13.3535794
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café Tasso - Das andere Antiquariat": {
+    "address": "Frankfurter Allee 11",
+    "latLng": {
+      "lat": 52.5160722,
+      "lng": 13.4569722
+    },
+    "categories": ["cafes/bars"]
+  },
+  "OFFSIDE Pub & Whisky Bar": {
+    "address": "Jülicher Str. 4",
+    "latLng": {
+      "lat": 52.553383,
+      "lng": 13.39163
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café Dodo Coffee & Gelato": {
+    "address": "Dunckerstraße 12",
+    "latLng": {
+      "lat": 52.5426414,
+      "lng": 13.4211537
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Du Bonheur": {
+    "address": "Brunnenstraße 39",
+    "latLng": {
+      "lat": 52.536243,
+      "lng": 13.397867
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Zuckerstück": {
+    "address": "Schivelbeiner Str. 7",
+    "latLng": {
+      "lat": 52.5509876,
+      "lng": 13.4117518
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Hard Rock Cafe": {
+    "address": "Kurfürstendamm 224",
+    "latLng": {
+      "lat": 52.5030902,
+      "lng": 13.3294058
+    },
+    "categories": ["cafes/bars"]
+  },
+  "No Fire No Glory": {
+    "address": "Rykestraße 45",
+    "latLng": {
+      "lat": 52.5366659,
+      "lng": 13.4204562
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Tucker Brunch Bar": {
+    "address": "Wühlischstraße 1",
+    "latLng": {
+      "lat": 52.5073642,
+      "lng": 13.4674563
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Mo’s Coffee": {
+    "address": "Stargarder Str. 45",
+    "latLng": {
+      "lat": 52.5435332,
+      "lng": 13.4255722
+    },
+    "categories": ["cafes/bars"]
+  },
+  "BIP - Bier in Pankow": {
+    "address": "Kreuzstraße 14",
+    "latLng": {
+      "lat": 52.5674962,
+      "lng": 13.3972277
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Adara Lounge": {
+    "address": "Boxhagener Str. 75",
+    "latLng": {
+      "lat": 52.5072278,
+      "lng": 13.4684685
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Cafe Neue Liebe": {
+    "address": "Rykestraße 42",
+    "latLng": {
+      "lat": 52.537133,
+      "lng": 13.4208163
+    },
+    "categories": ["cafes/bars"]
+  },
+  "PapalaCup": {
+    "address": "Gotenstraße 55",
+    "latLng": {
+      "lat": 52.479837,
+      "lng": 13.3604371
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Kajumi": {
+    "address": "Dunckerstraße 73",
+    "latLng": {
+      "lat": 52.5441872,
+      "lng": 13.4219242
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Domberger Brot-Werk - Moabit": {
+    "address": "Essener Str. 11",
+    "latLng": {
+      "lat": 52.5238982,
+      "lng": 13.3383117
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Monster Ronson's Ichiban Karaoke": {
+    "address": "Warschauer Str. 34",
+    "latLng": {
+      "lat": 52.5052743,
+      "lng": 13.4484712
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Winterfeldt Schokoladen": {
+    "address": "Goltzstraße 23",
+    "latLng": {
+      "lat": 52.4945996,
+      "lng": 13.3541914
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Café Morgenrot": {
+    "address": "Kastanienallee 85",
+    "latLng": {
+      "lat": 52.5375162,
+      "lng": 13.4089072
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Kaffeekirsche": {
+    "address": "Adalbertstraße 23",
+    "latLng": {
+      "lat": 52.50303220000001,
+      "lng": 13.4206823
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Five Elephant Mitte": {
+    "address": "Alte Schönhauser Str. 14",
+    "latLng": {
+      "lat": 52.5267524,
+      "lng": 13.4075826
+    },
+    "categories": ["cafes/bars"]
+  },
+  "ZAZZA Kaffeehaus": {
+    "address": "Schönleinstraße 7B",
+    "latLng": {
+      "lat": 52.49209459999999,
+      "lng": 13.4206836
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Die Legende von Paula und Ben": {
+    "address": "Gneisenaustraße 58",
+    "latLng": {
+      "lat": 52.4898907,
+      "lng": 13.4042063
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Kunst- und Kulturverein Mastul e.V": {
+    "address": "Liebenwalder Str. 33",
+    "latLng": {
+      "lat": 52.5519793,
+      "lng": 13.3582565
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Kürbiskern": {
+    "address": "Kopernikusstraße 23",
+    "latLng": {
+      "lat": 52.51039859999999,
+      "lng": 13.4543906
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Chapter One Coffee": {
+    "address": "Mittenwalder Str. 30",
+    "latLng": {
+      "lat": 52.4897848,
+      "lng": 13.3956902
+    },
+    "categories": ["cafes/bars"]
+  },
+  "FACTORY GIRL": {
+    "address": "Auguststraße 29c",
+    "latLng": {
+      "lat": 52.527247,
+      "lng": 13.3987937
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Toasted Berlin": {
+    "address": "Karl-Marx-Straße 33",
+    "latLng": {
+      "lat": 52.4842996,
+      "lng": 13.429436
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Zig Zag Jazz Club Berlin": {
+    "address": "Hauptstraße 89",
+    "latLng": {
+      "lat": 52.4750583,
+      "lng": 13.3399194
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Populus Coffee": {
+    "address": "Maybachufer 20",
+    "latLng": {
+      "lat": 52.49369,
+      "lng": 13.42704
+    },
+    "categories": ["cafes/bars"]
+  },
+  "DoubleEye": {
+    "address": "Akazienstraße 22",
+    "latLng": {
+      "lat": 52.4879893,
+      "lng": 13.354066
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Mano Cafe": {
+    "address": "Skalitzer Str. 46A",
+    "latLng": {
+      "lat": 52.4989448,
+      "lng": 13.4306064
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Bonanza Coffee Heroes": {
+    "address": "Oderberger Str. 35",
+    "latLng": {
+      "lat": 52.539975,
+      "lng": 13.4053444
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Kallasch & - Moab Barprojekt": {
+    "address": "Unionstraße 2",
+    "latLng": {
+      "lat": 52.53293919999999,
+      "lng": 13.3365603
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Take a Break": {
+    "address": "Bergmannstraße 59",
+    "latLng": {
+      "lat": 52.4889684,
+      "lng": 13.4029713
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Holzmarkt Pampa": {
+    "address": "Holzmarktstraße 25",
+    "latLng": {
+      "lat": 52.5110152,
+      "lng": 13.427431
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Salut! Classic bar": {
+    "address": "Goltzstraße 7",
+    "latLng": {
+      "lat": 52.49109929999999,
+      "lng": 13.3534905
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Siebert Bakery": {
+    "address": "Schönfließer Str. 12",
+    "latLng": {
+      "lat": 52.55293,
+      "lng": 13.40817
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Milch Halle Berlin Coffee": {
+    "address": "Auguststraße 50",
+    "latLng": {
+      "lat": 52.52781599999999,
+      "lng": 13.4005262
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café de Enrico": {
+    "address": "Fritz-Reuter-Straße 13",
+    "latLng": {
+      "lat": 52.4808218,
+      "lng": 13.3499152
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Bagco Coffee Bar": {
+    "address": "Kantstraße 154A",
+    "latLng": {
+      "lat": 52.5053461,
+      "lng": 13.3276563
+    },
+    "categories": ["cafes/bars"]
+  },
+  "SPRO Scones Bakery & Coffee": {
+    "address": "Schönhauser Allee 50A",
+    "latLng": {
+      "lat": 52.5426373,
+      "lng": 13.4127143
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Tante Lisbeth": {
+    "address": "Muskauer Str. 49",
+    "latLng": {
+      "lat": 52.5011774,
+      "lng": 13.4317162
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Prachtwerk": {
+    "address": "Ganghoferstraße 2",
+    "latLng": {
+      "lat": 52.4790697,
+      "lng": 13.4388571
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Lerchen&Eulen": {
+    "address": "Pücklerstraße 33",
+    "latLng": {
+      "lat": 52.5020624,
+      "lng": 13.4307922
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Katie's Blue Cat": {
+    "address": "Friedelstraße 31",
+    "latLng": {
+      "lat": 52.4929667,
+      "lng": 13.4282694
+    },
+    "categories": ["cafes/bars"]
+  },
+  "KLO": {
+    "address": "Leibnizstraße 57",
+    "latLng": {
+      "lat": 52.5022415,
+      "lng": 13.3130075
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Crêpestation": {
+    "address": "Pappelallee 58",
+    "latLng": {
+      "lat": 52.5463183,
+      "lng": 13.4177593
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Café Friedrichs": {
+    "address": "Mierendorffpl. 2",
+    "latLng": {
+      "lat": 52.5249377,
+      "lng": 13.3043802
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café Casero - Frühstück Friedrichshain Berlin": {
+    "address": "Neue Bahnhofstraße 21",
+    "latLng": {
+      "lat": 52.5074015,
+      "lng": 13.4711449
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Mindful Life Berlin": {
+    "address": "Gleimstraße 19",
+    "latLng": {
+      "lat": 52.54714000000001,
+      "lng": 13.4092701
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Café / Bar Marienhof": {
+    "address": "Marienburger Str. 7",
+    "latLng": {
+      "lat": 52.53477059999999,
+      "lng": 13.4239597
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Good Morning Monday": {
+    "address": "Falckensteinstraße 18",
+    "latLng": {
+      "lat": 52.4975168,
+      "lng": 13.4410025
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Stagger Lee": {
+    "address": "Nollendorfstraße 27",
+    "latLng": {
+      "lat": 52.4975727,
+      "lng": 13.3516112
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Cookies & Co": {
+    "address": "Senefelderstraße 4",
+    "latLng": {
+      "lat": 52.5404574,
+      "lng": 13.4224335
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Destille Kreuzberg": {
+    "address": "Mehringdamm 67",
+    "latLng": {
+      "lat": 52.4904258,
+      "lng": 13.3870541
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Salut Backwaren": {
+    "address": "Schlesische Str. 1",
+    "latLng": {
+      "lat": 52.5005919,
+      "lng": 13.4419141
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Café GeScHmacKsachE": {
+    "address": "Motzstraße 34",
+    "latLng": {
+      "lat": 52.4974621,
+      "lng": 13.3466837
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Tipsy Bear": {
+    "address": "Eberswalder Str. 21",
+    "latLng": {
+      "lat": 52.540937,
+      "lng": 13.4106912
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Cafe Neundrei": {
+    "address": "Monbijoupl. 2",
+    "latLng": {
+      "lat": 52.5231054,
+      "lng": 13.3998056
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Zeit für Brot": {
+    "address": "Alte Schönhauser Str. 4",
+    "latLng": {
+      "lat": 52.5280152,
+      "lng": 13.4086068
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Ulteamate Berlin": {
+    "address": "Kantstraße 40",
+    "latLng": {
+      "lat": 52.5065272,
+      "lng": 13.3133079
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Café Bell Chicco": {
+    "address": "Rosa-Luxemburg-Straße 16",
+    "latLng": {
+      "lat": 52.5247142,
+      "lng": 13.4104766
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Nata Lisboa": {
+    "address": "Pariser Str. 24",
+    "latLng": {
+      "lat": 52.4987479,
+      "lng": 13.316983
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "NOTHAFT CAFE": {
+    "address": "Schönhauser Allee 43A",
+    "latLng": {
+      "lat": 52.540311,
+      "lng": 13.4126148
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Rosengarten Kulturpavillon": {
+    "address": "Weinbergsweg 13",
+    "latLng": {
+      "lat": 52.5324776,
+      "lng": 13.4034001
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Birra - Italian Craft Beer": {
+    "address": "Prenzlauer Allee 198",
+    "latLng": {
+      "lat": 52.5386191,
+      "lng": 13.4234473
+    },
+    "categories": ["cafes/bars"]
+  },
+  "passenger coffee": {
+    "address": "Elsenstraße 38",
+    "latLng": {
+      "lat": 52.4874747,
+      "lng": 13.4516993
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Flying Roasters": {
+    "address": "Hochstraße 34",
+    "latLng": {
+      "lat": 52.543872,
+      "lng": 13.37705
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Spontan Coffee": {
+    "address": "Gotzkowskystraße 28",
+    "latLng": {
+      "lat": 52.5250885,
+      "lng": 13.3303343
+    },
+    "categories": ["cafes/bars"]
+  },
+  "ABC - Allans Breakfast Club & Wine Bar": {
+    "address": "Rykestraße 13",
+    "latLng": {
+      "lat": 52.5364792,
+      "lng": 13.4209021
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Schwarzes Cafe": {
+    "address": "Kantstraße 148",
+    "latLng": {
+      "lat": 52.5055292,
+      "lng": 13.3242208
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Celtic Cottage": {
+    "address": "Markelstraße 13",
+    "latLng": {
+      "lat": 52.4645239,
+      "lng": 13.3238667
+    },
+    "categories": ["cafes/bars"]
+  },
+  "rocket + basil": {
+    "address": "Lützowstraße 22",
+    "latLng": {
+      "lat": 52.5030596,
+      "lng": 13.3666316
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Bekarei - The Good Baking Company": {
+    "address": "Dunckerstraße 23",
+    "latLng": {
+      "lat": 52.54431719999999,
+      "lng": 13.4226478
+    },
+    "categories": ["cafes/bars", "sweets"]
+  },
+  "Bubble Bauch -Tea Art Café": {
+    "address": "Danziger Str. 59",
+    "latLng": {
+      "lat": 52.5397308,
+      "lng": 13.4222886
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Babuschka in der alten Fischräucherei": {
+    "address": "Behaimstraße 32",
+    "latLng": {
+      "lat": 52.5505741,
+      "lng": 13.4470112
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Jubel": {
+    "address": "Hufelandstraße 10",
+    "latLng": {
+      "lat": 52.532228,
+      "lng": 13.4305784
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Röstwerk by Humboldt Kaffeemanufaktur Berlin": {
+    "address": "Seelingstraße 32",
+    "latLng": {
+      "lat": 52.51557570000001,
+      "lng": 13.2918343
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Brotgarten GmbH in Charlottenburg": {
+    "address": "Seelingstraße 30",
+    "latLng": {
+      "lat": 52.5156076,
+      "lng": 13.2923042
+    },
+    "categories": ["cafes/bars"]
+  },
+  "Şengüloğlu Antep Baklava": {
+    "address": "Kottbusser Damm 32",
+    "latLng": {
+      "lat": 52.4889394,
+      "lng": 13.4242268
+    },
+    "categories": ["sweets"]
+  },
+  "Konditorei Rabien": {
+    "address": "Klingsorstraße 13",
+    "latLng": {
+      "lat": 52.4518052,
+      "lng": 13.330492
+    },
+    "categories": ["sweets"]
+  },
+  "Baklavaci Antepliogullari": {
+    "address": "Hermannstraße 64",
+    "latLng": {
+      "lat": 52.4754882,
+      "lng": 13.4268221
+    },
+    "categories": ["sweets"]
+  },
+  "Baklavaci Antepli Haciogullari (TATLICI AHMET USTA)": {
+    "address": "Schöneweider Str. 16",
+    "latLng": {
+      "lat": 52.4720547,
+      "lng": 13.4451029
+    },
+    "categories": ["sweets"]
+  },
+  "Waffle Brothers": {
+    "address": "Kantstraße 118-119",
+    "latLng": {
+      "lat": 52.506302,
+      "lng": 13.3097589
+    },
+    "categories": ["sweets"]
+  },
+  "Der Kuchenladen": {
+    "address": "Kantstraße 138",
+    "latLng": {
+      "lat": 52.5057974,
+      "lng": 13.31828
+    },
+    "categories": ["sweets"]
+  },
+  "CANAL Artisanal Ice cream & pastry": {
+    "address": "Rosenthaler Str. 40",
+    "latLng": {
+      "lat": 52.5242082,
+      "lng": 13.4020973
+    },
+    "categories": ["sweets"]
+  },
+  "Konditorei Damaskus": {
+    "address": "Sonnenallee 93",
+    "latLng": {
+      "lat": 52.4826134,
+      "lng": 13.4388355
+    },
+    "categories": ["sweets"]
+  },
+  "Alagha Konditorei حلويات الآغا": {
+    "address": "Sonnenallee 80",
+    "latLng": {
+      "lat": 52.4833027,
+      "lng": 13.4364265
+    },
+    "categories": ["sweets"]
+  },
+  "Duo Sicilian Ice Cream - Maybachufer": {
+    "address": "Maybachufer 3",
+    "latLng": {
+      "lat": 52.4953894,
+      "lng": 13.4216914
+    },
+    "categories": ["sweets"]
+  },
+  "Berat Bäckerei": {
+    "address": "Badstraße 45",
+    "latLng": {
+      "lat": 52.5528238,
+      "lng": 13.3787998
+    },
+    "categories": ["sweets"]
+  },
+  "Burak Künefe": {
+    "address": "Brunnenstraße 56 (U-Bahn Bernauer Str.) 13355",
+    "latLng": {
+      "lat": 52.5391779,
+      "lng": 13.3958704
+    },
+    "categories": ["sweets"]
+  },
+  "GioMecca Pastry": {
+    "address": "Erich-Weinert-Straße 3",
+    "latLng": {
+      "lat": 52.55208649999999,
+      "lng": 13.4151372
+    },
+    "categories": ["sweets"]
+  },
+  "Caffè e Gelato": {
+    "address": "Maaßenstraße 6",
+    "latLng": {
+      "lat": 52.49839919999999,
+      "lng": 13.3538407
+    },
+    "categories": ["sweets"]
+  },
+  "Chipi Chipi Bombón": {
+    "address": "Warschauer Str. 12",
+    "latLng": {
+      "lat": 52.5132387,
+      "lng": 13.4525667
+    },
+    "categories": ["sweets"]
+  },
+  "Ice cream culture - Berlin": {
+    "address": "Schnellerstraße 118",
+    "latLng": {
+      "lat": 52.4550256,
+      "lng": 13.5150729
+    },
+    "categories": ["sweets"]
+  },
+  "der Eisladen": {
+    "address": "Luisenstraße 14",
+    "latLng": {
+      "lat": 52.52329899999999,
+      "lng": 13.3793122
+    },
+    "categories": ["sweets"]
+  },
+  "Gimme Gelato GmbH": {
+    "address": "Wundtstraße 15",
+    "latLng": {
+      "lat": 52.51210099999999,
+      "lng": 13.2941161
+    },
+    "categories": ["sweets"]
+  },
+  "Spoonful Berlin (ehemals Eismanufaktur Berlin)": {
+    "address": "Maxstraße 11",
+    "latLng": {
+      "lat": 52.5500792,
+      "lng": 13.364024
+    },
+    "categories": ["sweets"]
+  },
+  "Cupcakeladen": {
+    "address": "Frankenstraße 15",
+    "latLng": {
+      "lat": 52.4932814,
+      "lng": 13.3527326
+    },
+    "categories": ["sweets"]
+  },
+  "Neuhaus Berlin": {
+    "address": "Friedrichstraße 63",
+    "latLng": {
+      "lat": 52.512134,
+      "lng": 13.390001
+    },
+    "categories": ["sweets"]
+  },
+  "Ritter Sport Colorful Chocolate World Berlin": {
+    "address": "Franz. Str. 24",
+    "latLng": {
+      "lat": 52.514723,
+      "lng": 13.3905063
+    },
+    "categories": ["sweets"]
+  },
+  "Süßfein Rykestraße": {
+    "address": "Rykestraße 50",
+    "latLng": {
+      "lat": 52.5355099,
+      "lng": 13.4194857
+    },
+    "categories": ["sweets"]
+  },
+  "vanille & marille Tempelhof": {
+    "address": "Friedrich-Wilhelm-Straße 22",
+    "latLng": {
+      "lat": 52.45859549999999,
+      "lng": 13.3813258
+    },
+    "categories": ["sweets"]
+  },
+  "Eis Da Dalt": {
+    "address": "Bölschestraße 94",
+    "latLng": {
+      "lat": 52.4531922,
+      "lng": 13.6247442
+    },
+    "categories": ["sweets"]
+  },
+  "Duo - Sicilian Ice Cream": {
+    "address": "Skalitzer Str. 82",
+    "latLng": {
+      "lat": 52.5006767,
+      "lng": 13.4388173
+    },
+    "categories": ["sweets"]
+  },
+  "OAK & ICE": {
+    "address": "Schönhauser Allee 52",
+    "latLng": {
+      "lat": 52.5428824,
+      "lng": 13.4126635
+    },
+    "categories": ["sweets"]
+  },
+  "Rausch Schokoladenhaus": {
+    "address": "Charlottenstraße 60",
+    "latLng": {
+      "lat": 52.51205299999999,
+      "lng": 13.3912058
+    },
+    "categories": ["sweets"]
+  },
+  "Eispatisserie Hokey Pokey Boutique": {
+    "address": "Stargarder Str. 73",
+    "latLng": {
+      "lat": 52.5469814,
+      "lng": 13.417435
+    },
+    "categories": ["sweets"]
+  },
+  "Salkim Baklava": {
+    "address": "Kottbusser Damm 7, 10967 (Kreuzberg Hauptstraße 16, 10827",
+    "latLng": {
+      "lat": 52.4941279,
+      "lng": 13.4210318
+    },
+    "categories": ["sweets"]
+  },
+  "Eispatisserie Hokey Pokey": {
+    "address": "Oderberger Str. 38",
+    "latLng": {
+      "lat": 52.53973269999999,
+      "lng": 13.4060977
+    },
+    "categories": ["sweets"]
+  },
+  "Paletas Berlin Office": {
+    "address": "Wühlischstraße 26",
+    "latLng": {
+      "lat": 52.5093511,
+      "lng": 13.4591813
+    },
+    "categories": ["sweets"]
+  },
+  "SchokoLadenEis Manufaktur": {
+    "address": "Kaskelstraße 15",
+    "latLng": {
+      "lat": 52.5049083,
+      "lng": 13.4775353
+    },
+    "categories": ["sweets"]
+  },
+  "Florida Eis green Café the ocean": {
+    "address": "Klosterstraße 15",
+    "latLng": {
+      "lat": 52.5305025,
+      "lng": 13.1960029
+    },
+    "categories": ["sweets"]
+  },
+  "Eismieze Berlin": {
+    "address": "Schlegelstraße 21",
+    "latLng": {
+      "lat": 52.5304326,
+      "lng": 13.3871112
+    },
+    "categories": ["sweets"]
+  },
+  "JONES ice cream": {
+    "address": "Goltzstraße 3",
+    "latLng": {
+      "lat": 52.4904841,
+      "lng": 13.3534528
+    },
+    "categories": ["sweets"]
+  },
+  "Rosa Canina": {
+    "address": "Pasteurstraße 32",
+    "latLng": {
+      "lat": 52.5323632,
+      "lng": 13.4357455
+    },
+    "categories": ["sweets"]
+  },
+  "The Juicery Berlin": {
+    "address": "Oderberger Str. 28",
+    "latLng": {
+      "lat": 52.5402193,
+      "lng": 13.405828
+    },
+    "categories": ["sweets"]
+  },
+  "BEAT81": {
+    "address": "Brunnenstraße 10",
+    "latLng": {
+      "lat": 52.5311832,
+      "lng": 13.4003117
+    },
+    "categories": ["fitness"]
+  },
+  "Stadtbad Mitte \"James Simon\"": {
+    "address": "Gartenstraße 5",
+    "latLng": {
+      "lat": 52.52946000000001,
+      "lng": 13.39289
+    },
+    "categories": ["fitness"]
+  },
+  "Flying Steps Academy": {
+    "address": "Lobeckstraße 30-35",
+    "latLng": {
+      "lat": 52.50301229999999,
+      "lng": 13.407874
+    },
+    "categories": ["fitness"]
+  },
+  "vea yoga STUDIO": {
+    "address": "Naunynstraße 38",
+    "latLng": {
+      "lat": 52.502759,
+      "lng": 13.4188459
+    },
+    "categories": ["fitness"]
+  },
+  "JUMP House Reinickendorf": {
+    "address": "Miraustraße 38",
+    "latLng": {
+      "lat": 52.58272950000001,
+      "lng": 13.3117665
+    },
+    "categories": ["fitness"]
+  },
+  "JUMP3000 GmbH - Parkour- und Trampolinpark": {
+    "address": "Landsberger Str. 217/218",
+    "latLng": {
+      "lat": 52.5066667,
+      "lng": 13.6225
+    },
+    "categories": ["fitness"]
+  },
+  "MyJump Berlin-Mitte": {
+    "address": "Caroline-Michaelis-Straße 8",
+    "latLng": {
+      "lat": 52.533024,
+      "lng": 13.3849723
+    },
+    "categories": ["fitness"]
+  },
+  "Kreuzretter Senefelderplatz": {
+    "address": "Schwedter Str. 2",
+    "latLng": {
+      "lat": 52.53310889999999,
+      "lng": 13.4116593
+    },
+    "categories": ["fitness"]
+  },
+  "Kreuzretter Berlin Charlottenburg": {
+    "address": "Bismarckstraße 67",
+    "latLng": {
+      "lat": 52.51126619999999,
+      "lng": 13.2979883
+    },
+    "categories": ["fitness"]
+  },
+  "Volkspark Friedrichshain": {
+    "address": "",
+    "latLng": {
+      "lat": 52.5280353,
+      "lng": 13.4363934
+    },
+    "categories": ["fitness"]
+  },
+  "Rocycle Mitte": {
+    "address": "Linienstraße 41",
+    "latLng": {
+      "lat": 52.5285497,
+      "lng": 13.4094801
+    },
+    "categories": ["fitness"]
+  },
+  "McFit": {
+    "address": "Alt-Moabit 96d",
+    "latLng": {
+      "lat": 52.52488890000001,
+      "lng": 13.3455771
+    },
+    "categories": ["fitness"]
+  },
+  "McFIT Charlottenburg": {
+    "address": "Tauentzienstraße 8",
+    "latLng": {
+      "lat": 52.5036892,
+      "lng": 13.3387944
+    },
+    "categories": ["fitness"]
+  },
+  "Bouldergarten": {
+    "address": "Thiemannstraße 1 Tor 4/2. HH",
+    "latLng": {
+      "lat": 52.47940759999999,
+      "lng": 13.4514319
+    },
+    "categories": ["fitness"]
+  },
+  "Freeletics Fitness Area": {
+    "address": "Monbijoustraße 3B",
+    "latLng": {
+      "lat": 52.52278769999999,
+      "lng": 13.3951181
+    },
+    "categories": ["fitness"]
+  },
+  "clever fit Berlin Charlottenburg": {
+    "address": "Joachimsthaler Str. 19",
+    "latLng": {
+      "lat": 52.5014397,
+      "lng": 13.3307793
+    },
+    "categories": ["fitness"]
+  },
+  "clever fit Berlin Tempelhof": {
+    "address": "Mariendorfer Damm 5",
+    "latLng": {
+      "lat": 52.4523772,
+      "lng": 13.3851744
+    },
+    "categories": ["fitness"]
+  },
+  "Magic Mountain (Climbing / Bouldering)": {
+    "address": "Böttgerstraße 20",
+    "latLng": {
+      "lat": 52.548763,
+      "lng": 13.381548
+    },
+    "categories": ["fitness"]
+  },
+  "ELBGYM Steglitz": {
+    "address": "Walther-Schreiber-Platz 1",
+    "latLng": {
+      "lat": 52.465267,
+      "lng": 13.3290011
+    },
+    "categories": ["fitness"]
+  },
+  "Yayla Sportschule": {
+    "address": "Forster Str. 4",
+    "latLng": {
+      "lat": 52.4957432,
+      "lng": 13.4335066
+    },
+    "categories": ["fitness"]
+  },
+  "Beat81 Cycle Studio": {
+    "address": "Libauer Str. 1",
+    "latLng": {
+      "lat": 52.5100472,
+      "lng": 13.4549519
+    },
+    "categories": ["fitness"]
+  },
+  "BEAT81 - HIIT Fitness Classes | Rosa Luxemburg Str.": {
+    "address": "Rosa-Luxemburg-Straße 17",
+    "latLng": {
+      "lat": 52.5250888,
+      "lng": 13.4101313
+    },
+    "categories": ["fitness"]
+  },
+  "Sommerbad Neukölln - Berliner Bäder": {
+    "address": "Columbiadamm 160",
+    "latLng": {
+      "lat": 52.4798698,
+      "lng": 13.4173746
+    },
+    "categories": ["fitness"]
+  },
+  "Corpus Dicio Gym": {
+    "address": "Wilmersdorfer Str. 46",
+    "latLng": {
+      "lat": 52.509249,
+      "lng": 13.304609
+    },
+    "categories": ["fitness"]
+  },
+  "SICURO DOJO": {
+    "address": "Bahnhofstraße 2A",
+    "latLng": {
+      "lat": 52.4533123,
+      "lng": 13.575139
+    },
+    "categories": ["fitness"]
+  },
+  "Evolution Martial Arts Berlin / Sportschule Bernd Grossmann": {
+    "address": "Mariendorfer Damm 72",
+    "latLng": {
+      "lat": 52.4462191,
+      "lng": 13.3849117
+    },
+    "categories": ["fitness"]
+  },
+  "BJJ Fightzone Checkmat Berlin": {
+    "address": "Coppistraße 17",
+    "latLng": {
+      "lat": 52.5072658,
+      "lng": 13.4823506
+    },
+    "categories": ["fitness"]
+  },
+  "BEAT81 Cycle Studio": {
+    "address": "Dircksenstraße 99",
+    "latLng": {
+      "lat": 52.5186721,
+      "lng": 13.4151868
+    },
+    "categories": ["fitness"]
+  },
+  "McFit gym Berlin Tempelhof": {
+    "address": "Schöneberger Str. 11-15",
+    "latLng": {
+      "lat": 52.4698116,
+      "lng": 13.3736818
+    },
+    "categories": ["fitness"]
+  },
+  "American Fitness": {
+    "address": "Hermannplatz 10",
+    "latLng": {
+      "lat": 52.48727,
+      "lng": 13.42438
+    },
+    "categories": ["fitness"]
+  },
+  "McFit gym Berlin Wedding": {
+    "address": "Forum, Seestraße 64",
+    "latLng": {
+      "lat": 52.5536499,
+      "lng": 13.3608474
+    },
+    "categories": ["fitness"]
+  },
+  "E1 Boxing Gym Berlin": {
+    "address": "Dircksenstraße 104 S-Bahn Bogen gegenüber Alexa",
+    "latLng": {
+      "lat": 52.5192527,
+      "lng": 13.4146551
+    },
+    "categories": ["fitness"]
+  },
+  "CrossFit Sheep Pack / Black Sheep Athletics": {
+    "address": "Am Tempelhofer Berg 6",
+    "latLng": {
+      "lat": 52.4888706,
+      "lng": 13.3874497
+    },
+    "categories": ["fitness"]
+  },
+  "CrossFit Aorta": {
+    "address": "Alboinstraße 11",
+    "latLng": {
+      "lat": 52.4684998,
+      "lng": 13.3720715
+    },
+    "categories": ["fitness"]
+  },
+  "EVOPE - Evolution of human Performance": {
+    "address": "Storkower Str. 105",
+    "latLng": {
+      "lat": 52.5365165,
+      "lng": 13.4510837
+    },
+    "categories": ["fitness"]
+  },
+  "Spitfire Academy Berlin GmbH": {
+    "address": "Bülowstraße 56/Hinterhof 2.OG",
+    "latLng": {
+      "lat": 52.4951491,
+      "lng": 13.3669328
+    },
+    "categories": ["fitness"]
+  },
+  "High5 Gym": {
+    "address": "Leipziger Str. 46/47",
+    "latLng": {
+      "lat": 52.5106322,
+      "lng": 13.3975817
+    },
+    "categories": ["fitness"]
+  },
+  "Poststadion": {
+    "address": "Lehrter Str. 59",
+    "latLng": {
+      "lat": 52.53022379999999,
+      "lng": 13.3595576
+    },
+    "categories": ["fitness"]
+  },
+  "Bright Site - Berlin Boulder Project": {
+    "address": "Wilhelm-Kabus-Straße 40",
+    "latLng": {
+      "lat": 52.4818532,
+      "lng": 13.3654925
+    },
+    "categories": ["fitness"]
+  },
+  "McFit gym Berlin Neukölln": {
+    "address": "Tempelhofer Weg 91-99",
+    "latLng": {
+      "lat": 52.4517694,
+      "lng": 13.4347313
+    },
+    "categories": ["fitness"]
+  },
+  "52°29'55.3\"N 13°26'38.5\"E": {
+    "address": "",
+    "latLng": {
+      "lat": 52.52000659999999,
+      "lng": 13.404954
+    },
+    "categories": ["fitness"]
+  },
+  "52°30'09.1\"N 13°27'34.3\"E": {
+    "address": "",
+    "latLng": {
+      "lat": 52.52000659999999,
+      "lng": 13.404954
+    },
+    "categories": ["fitness"]
+  },
+  "Element Yoga": {
+    "address": "Pfuelstraße 5",
+    "latLng": {
+      "lat": 52.5026972,
+      "lng": 13.4406357
+    },
+    "categories": ["fitness"]
+  },
+  "BJJ DOJO Berlin": {
+    "address": "Bergmannstraße 5/Haus 5",
+    "latLng": {
+      "lat": 52.4894901,
+      "lng": 13.388672
+    },
+    "categories": ["fitness"]
+  },
+  "Turngemeinde in Berlin (TiB)": {
+    "address": "Columbiadamm 111",
+    "latLng": {
+      "lat": 52.4829198,
+      "lng": 13.4077195
+    },
+    "categories": ["fitness"]
+  },
+  "Sportcenter Wittenau": {
+    "address": "Wittenauer Str. 82",
+    "latLng": {
+      "lat": 52.6049151,
+      "lng": 13.3388422
+    },
+    "categories": ["fitness"]
+  },
+  "Squash-Tennis-Nord": {
+    "address": "Treuenbrietzener Str. 36",
+    "latLng": {
+      "lat": 52.6025052,
+      "lng": 13.3678187
+    },
+    "categories": ["fitness"]
+  },
+  "Strandbad Jungfernheide": {
+    "address": "Freibad, Jungfernheideweg 60",
+    "latLng": {
+      "lat": 52.5438033,
+      "lng": 13.2745877
+    },
+    "categories": ["fitness"]
+  },
+  "Holmes Place Fitness - Steglitz": {
+    "address": "Schildhornstraße 1",
+    "latLng": {
+      "lat": 52.4623187,
+      "lng": 13.3241281
+    },
+    "categories": ["fitness"]
+  },
+  "Gewölbe-Sauna": {
+    "address": "Fröbelstraße 17",
+    "latLng": {
+      "lat": 52.5407728,
+      "lng": 13.4261154
+    },
+    "categories": ["fitness"]
+  },
+  "South Rock Kletterhalle": {
+    "address": "Trachenbergring 85",
+    "latLng": {
+      "lat": 52.4272035,
+      "lng": 13.3697619
+    },
+    "categories": ["fitness"]
+  },
+  "South Beach Berlin GmbH": {
+    "address": "Trachenbergring 85",
+    "latLng": {
+      "lat": 52.4272801,
+      "lng": 13.3700871
+    },
+    "categories": ["fitness"]
+  },
+  "Squash House Berlin": {
+    "address": "Vulkanstraße 3",
+    "latLng": {
+      "lat": 52.5241915,
+      "lng": 13.4860866
+    },
+    "categories": ["fitness"]
+  },
+  "StandUpClub Berlin – Funkhaus | SUP Verleih | SUP Schule": {
+    "address": "Nalepastraße 18 Nicht über die Kleingarten-Anlage erreichbar!",
+    "latLng": {
+      "lat": 52.47761569999999,
+      "lng": 13.4980732
+    },
+    "categories": ["fitness"]
+  },
+  "Havanna": {
+    "address": "Hauptstraße 30",
+    "latLng": {
+      "lat": 52.485115,
+      "lng": 13.353549
+    },
+    "categories": ["fitness"]
+  },
+  "Crunch Fit Berlin Schöneberg": {
+    "address": "Bessemerstraße 57-75",
+    "latLng": {
+      "lat": 52.4625332,
+      "lng": 13.3674535
+    },
+    "categories": ["fitness"]
+  },
+  "Beach 61 (Beachvolleyball)": {
+    "address": "Park am Gleisdreieck",
+    "latLng": {
+      "lat": 52.4945779,
+      "lng": 13.3767026
+    },
+    "categories": ["fitness"]
+  },
+  "Cumbancha \"LaFamilia\" -Salsa Tanzschule - Berlin": {
+    "address": "Möckernstrasse 68",
+    "latLng": {
+      "lat": 52.4907097,
+      "lng": 13.3774641
+    },
+    "categories": ["fitness"]
+  },
+  "Gracie Berlin | Brazilian Jiu-Jitsu Schule": {
+    "address": "Lobeckstraße 36",
+    "latLng": {
+      "lat": 52.50400990000001,
+      "lng": 13.4078654
+    },
+    "categories": ["fitness"]
+  },
+  "Badeschiff": {
+    "address": "Eichenstraße 4",
+    "latLng": {
+      "lat": 52.4978612,
+      "lng": 13.4537728
+    },
+    "categories": ["fitness"]
+  },
+  "SPRUNG RAUM Tempelhof GmbH": {
+    "address": "Malteserstraße 139-142",
+    "latLng": {
+      "lat": 52.4189111,
+      "lng": 13.3590942
+    },
+    "categories": ["fitness"]
+  },
+  "Hangar1": {
+    "address": "Columbiadamm 10",
+    "latLng": {
+      "lat": 52.4833244,
+      "lng": 13.398485
+    },
+    "categories": ["fitness"]
+  },
+  "Chimosa": {
+    "address": "Linienstraße 127",
+    "latLng": {
+      "lat": 52.52669100000001,
+      "lng": 13.3894577
+    },
+    "categories": ["fitness"]
+  },
+  "East61 Indoor Beachvolleyball": {
+    "address": "Wilhelm-Kabus-Straße 42",
+    "latLng": {
+      "lat": 52.4818448,
+      "lng": 13.3640401
+    },
+    "categories": ["fitness"]
+  },
+  "Indoor Swimming Pool Fischerinsel": {
+    "address": "Fischerinsel 11",
+    "latLng": {
+      "lat": 52.5124487,
+      "lng": 13.4044437
+    },
+    "categories": ["fitness"]
+  },
+  "Berlin Strength": {
+    "address": "Revaler Str. 99",
+    "latLng": {
+      "lat": 52.5075076,
+      "lng": 13.4554542
+    },
+    "categories": ["fitness"]
+  },
+  "Kanuliebe": {
+    "address": "Alt-Treptow, Insel der Jugend 6",
+    "latLng": {
+      "lat": 52.48678,
+      "lng": 13.4808001
+    },
+    "categories": ["fitness"]
+  },
+  "FitnessCenter aTB": {
+    "address": "Am Tempelhofer Berg 6",
+    "latLng": {
+      "lat": 52.4890181,
+      "lng": 13.3872264
+    },
+    "categories": ["fitness"]
+  },
+  "Fitness Company Berlin": {
+    "address": "Rüdersdorfer Str. 71",
+    "latLng": {
+      "lat": 52.5130345,
+      "lng": 13.4408367
+    },
+    "categories": ["fitness"]
+  },
+  "Berlin Gym - Verein der Kampfkünste e.V. (Mitte)": {
+    "address": "Torstraße 125",
+    "latLng": {
+      "lat": 52.5297381,
+      "lng": 13.400638
+    },
+    "categories": ["fitness"]
+  },
+  "Berlin Gym -Verein der Kampfkünste e.V. (Friedrichshain)": {
+    "address": "Samariterstraße 19-20",
+    "latLng": {
+      "lat": 52.5196334,
+      "lng": 13.4669711
+    },
+    "categories": ["fitness"]
+  },
+  "Sommerbad Kreuzberg - Prinzenbad - Berliner Bäder": {
+    "address": "Prinzenstraße 113-119",
+    "latLng": {
+      "lat": 52.4979166,
+      "lng": 13.4057239
+    },
+    "categories": ["fitness"]
+  },
+  "Fenriz Gym": {
+    "address": "Lobeckstraße 36",
+    "latLng": {
+      "lat": 52.5037617,
+      "lng": 13.4077196
+    },
+    "categories": ["fitness"]
+  },
+  "Basement Boulderstudio": {
+    "address": "Stresemannstraße 72",
+    "latLng": {
+      "lat": 52.5036269,
+      "lng": 13.3842346
+    },
+    "categories": ["fitness"]
+  },
+  "Ostbloc Boulderhalle": {
+    "address": "Hauptstraße 13",
+    "latLng": {
+      "lat": 52.4912363,
+      "lng": 13.4883836
+    },
+    "categories": ["fitness"]
+  },
+  "Südbloc Boulderhalle": {
+    "address": "Großbeerenstraße 4",
+    "latLng": {
+      "lat": 52.4399135,
+      "lng": 13.3796306
+    },
+    "categories": ["fitness"]
+  },
+  "BeachMitte": {
+    "address": "Caroline-Michaelis-Straße 8",
+    "latLng": {
+      "lat": 52.53383780000001,
+      "lng": 13.3844979
+    },
+    "categories": ["fitness"]
+  },
+  "Der Kegel Kletterturm": {
+    "address": "Revaler Str. 99",
+    "latLng": {
+      "lat": 52.5071382,
+      "lng": 13.4544647
+    },
+    "categories": ["fitness"]
+  },
+  "Berta Block": {
+    "address": "Mühlenstraße 62",
+    "latLng": {
+      "lat": 52.5636824,
+      "lng": 13.4099068
+    },
+    "categories": ["fitness"]
+  },
+  "MyJump Berlin Ost": {
+    "address": "Allee der Kosmonauten 30",
+    "latLng": {
+      "lat": 52.5250081,
+      "lng": 13.5280099
+    },
+    "categories": ["fitness"]
+  },
+  "first": {
+    "latLng": {
+      "lat": 52.509850391906944,
+      "lng": 13.399627307502488
+    },
+    "address": "Lobeckstraße 36, 10969 Berlin, Germany",
+    "categories": ["midpoints"]
+  },
+  "second": {
+    "latLng": {
+      "lat": 52.5108982152322,
+      "lng": 13.404425454185876
+    },
+    "address": "Krausenstraße 40, 10117 Berlin, Germany",
+    "categories": ["midpoints"]
   }
 }

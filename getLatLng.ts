@@ -8,6 +8,7 @@ dotenv.config();
 const API_KEY = process.env.API_KEY || '';
 
 import { LatLng } from '@googlemaps/google-maps-services-js';
+import { readFromDisk } from './helpers.js';
 
 export const getLatLng = async (address: string): Promise<{ lat: number; lng: number } | null> => {
   try {
@@ -27,10 +28,6 @@ export const getLatLng = async (address: string): Promise<{ lat: number; lng: nu
     console.error(`Error fetching lat/lng for address: ${address}`, error);
   }
   return null;
-};
-export const readFromDisk = (path: string) => {
-  const data = fs.readFileSync(path, { encoding: 'utf8' });
-  return JSON.parse(data);
 };
 
 const places = readFromDisk('places_with_lat_lng.json');

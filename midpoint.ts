@@ -125,45 +125,19 @@ async function getAddress(latLng: LatLngLiteral): Promise<string> {
 }
 
 async function getMidpointsAndAddresses(places: any) {
-  const categoryMidpoints: {
-    [key: string]: {
-      geoMidpoint: CategoryMidpoint;
-      minDistMidpoint: CategoryMidpoint;
-    };
-  } = {};
   const globalCoordinates = [];
 
-  for (const categoryName in places) {
-    const category = places[categoryName];
+  for (const name in places) {
+    const place = places[name];
 
-    const coordinates = [];
-    for (const placeName in category) {
-      const place = category[placeName];
-      if (!place.latLng) continue;
-      coordinates.push(place.latLng);
-      globalCoordinates.push(place.latLng);
-    }
-
-    const geoMidpoint = geographicMidpoint(coordinates);
-    const minDistMidpoint = await centerOfMinimumDistance(coordinates);
-
-    categoryMidpoints[categoryName] = {
-      geoMidpoint: {
-        ...geoMidpoint,
-        address: await getAddress(geoMidpoint),
-      },
-
-      minDistMidpoint: {
-        ...minDistMidpoint,
-        address: await getAddress(minDistMidpoint),
-      },
-    };
+    if (!place.latLng) continue;
+    globalCoordinates.push(place.latLng);
   }
 
   const globalGeoMidpoint = geographicMidpoint(globalCoordinates);
   const globalMinDistMidpoint = await centerOfMinimumDistance(globalCoordinates);
 
-  categoryMidpoints['Global'] = {
+  return {
     geoMidpoint: {
       ...globalGeoMidpoint,
       address: await getAddress(globalGeoMidpoint),
@@ -174,8 +148,6 @@ async function getMidpointsAndAddresses(places: any) {
       address: await getAddress(globalMinDistMidpoint),
     },
   };
-
-  return categoryMidpoints;
 }
 
 (async () => {
@@ -184,7 +156,7 @@ async function getMidpointsAndAddresses(places: any) {
     return JSON.parse(data);
   };
 
-  const places = readFromDisk('places_with_lat_lng.json');
+  const places = readFromDisk('places.json');
 
   const midpoints = await getMidpointsAndAddresses(places);
   console.log(midpoints);
