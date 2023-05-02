@@ -11,7 +11,6 @@
       "runtimeExecutable": "node",
       "skipFiles": ["<node_internals>/**", "node_modules/**"],
       "cwd": "${workspaceRoot}",
-      "internalConsoleOptions": "openOnSessionStart",
       "program": "${workspaceFolder}/index.ts",
       "runtimeArgs": ["--loader", "ts-node/esm"],
       "preLaunchTask": "tsc: build - tsconfig.json",

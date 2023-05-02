@@ -2725,7 +2725,7 @@
       "lat": 52.507969,
       "lng": 13.4675769
     },
-    "categories": ["cafes/bars"]
+    "categories": ["cafes/bars", "supermarkets"]
   },
   "Geicha Bubble Tea": {
     "address": "Reichenberger Str. 176",
@@ -4423,20 +4423,156 @@
     },
     "categories": ["fitness"]
   },
-  "first": {
+  "SPRK.global GmbH Lager": {
+    "address": "Ordensmeisterstraße 36",
+    "categories": ["supermarkets"],
     "latLng": {
-      "lat": 52.509850391906944,
-      "lng": 13.399627307502488
-    },
-    "address": "Lobeckstraße 36, 10969 Berlin, Germany",
-    "categories": ["midpoints"]
+      "lat": 52.4589419,
+      "lng": 13.3971476
+    }
   },
-  "second": {
+  "Kumpel & Keule Metzgerhandwerk": {
+    "address": "Eisenbahnstraße 42-43",
+    "categories": ["supermarkets"],
     "latLng": {
-      "lat": 52.5108982152322,
-      "lng": 13.404425454185876
-    },
-    "address": "Krausenstraße 40, 10117 Berlin, Germany",
-    "categories": ["midpoints"]
+      "lat": 52.5023892,
+      "lng": 13.431282
+    }
+  },
+  "Blutwurstmanufaktur GmbH": {
+    "address": "Karl-Marx-Platz 9-11",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.4739952,
+      "lng": 13.4419377
+    }
+  },
+  "Fleischerei Bauermeister": {
+    "address": "Danckelmannstraße 11",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.515532,
+      "lng": 13.2904781
+    }
+  },
+  "Intermarkt Stolitschniy": {
+    "address": "Landsberger Allee 116",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.5286737,
+      "lng": 13.459616
+    }
+  },
+  "LEDO Berlin - a branch of the LEMBERG food GmbH": {
+    "address": "Forckenbeckstraße 1",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.4793106,
+      "lng": 13.3099264
+    }
+  },
+  "Globetrotter Berlin": {
+    "address": "Schloßstraße 20",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.4607628,
+      "lng": 13.3237267
+    }
+  },
+  "CAMP4": {
+    "address": "Karl-Marx-Allee 32",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.5199846,
+      "lng": 13.4218058
+    }
+  },
+  "Vom Einfachen das Gute": {
+    "address": "Invalidenstraße 155",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.532294,
+      "lng": 13.3965637
+    }
+  },
+  "frostKauf - Ihr Tiefkühl-Discount": {
+    "address": "Weißenhöher Str. 91",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.50751469999999,
+      "lng": 13.560831
+    }
+  },
+  "Zora Supermarkt - Indian, Asian, African Grocery": {
+    "address": "Kottbusser Damm 93",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.4936167,
+      "lng": 13.4219861
+    }
+  },
+  "Mira Food Store, Mexikanische / Latino Lebensmittel, Indische, Asiatische": {
+    "address": "Sanderstraße 3",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.49207,
+      "lng": 13.4237
+    }
+  },
+  "Latino Point": {
+    "address": "Dircksenstraße 45",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.5236354,
+      "lng": 13.405419
+    }
+  },
+  "Asien Mexico Supermarkt Berlin": {
+    "address": "Karl-Marx-Straße 242",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.46748419999999,
+      "lng": 13.4418315
+    }
+  },
+  "Asia Market Lee GmbH": {
+    "address": "Dircksenstraße 101-103 In den S-Bahnbögen",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.5190773,
+      "lng": 13.4148664
+    }
+  },
+  "Fischladen Öz Trabzon Balikcisi": {
+    "address": "Adalbertstraße 4",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.50000000000001,
+      "lng": 13.41895
+    }
+  },
+  "Rogacki": {
+    "address": "Wilmersdorfer Str. 145/46",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.5129281,
+      "lng": 13.3053401
+    }
+  },
+  "FrischeParadies | Feinkostmarkt & Bistro Berlin Prenzlauer Berg": {
+    "address": "Hermann-Blankenstein-Straße 48",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.5216313,
+      "lng": 13.4685393
+    }
+  },
+  "REWE": {
+    "address": "Tempelhofer Weg 11",
+    "categories": ["supermarkets"],
+    "latLng": {
+      "lat": 52.4585139,
+      "lng": 13.4249056
+    }
   }
 }

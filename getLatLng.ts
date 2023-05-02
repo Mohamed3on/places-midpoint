@@ -30,21 +30,22 @@ export const getLatLng = async (address: string): Promise<{ lat: number; lng: nu
   return null;
 };
 
-const places = readFromDisk('places_with_lat_lng.json');
+const places = readFromDisk('places.json');
 
 // output the length of each key in the places
 
 // object to the console
 
 for (let key in places) {
-  for (let key2 in places[key]) {
-    const latLng = await getLatLng(`${key2} ${places[key][key2]?.address} berlin`);
-    if (latLng) {
-      console.log(`👀 ${key2} ${places[key][key2]?.address} berlin`, latLng);
-      places[key][key2].latLng = latLng;
-    } else {
-      console.error(`no lat/lng for ${key2} ${places[key][key2]?.address}`);
-    }
+  if (places[key].latLng) {
+    continue;
+  }
+  const latLng = await getLatLng(`${key} ${places[key]?.address} berlin`);
+  if (latLng) {
+    console.log(`👀 ${key} ${places[key]?.address} berlin`, latLng);
+    places[key].latLng = latLng;
+  } else {
+    console.error(`no lat/lng for ${key} ${places[key]?.address}`);
   }
 }
 

@@ -20,16 +20,16 @@ export const disableImagesAndFontRequests = async (page: Page): Promise<void> =>
 };
 
 const urls: string[] = [
-  'https://www.google.com/maps/@52.4646787,13.425419,14z/data=!4m3!11m2!2s1oSSrONb1Jhpnt-svN0qcbs9ZcBY!3e3',
-  'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!3m1!4b1!4m3!11m2!2s1vYVMJkyC8rwXV9OCHnWxOWhLyLg!3e3',
-  'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!4m3!11m2!2saHz41BFh8xiiItO6HLq44ecj06QKgA!3e3',
-  'https://www.google.com/maps/@52.4646447,13.3636184,12z/data=!4m3!11m2!2s1b5xeEtFRiXarfIlzMnBgxNOUiC4!3e3',
+  // 'https://www.google.com/maps/@52.4646787,13.425419,14z/data=!4m3!11m2!2s1oSSrONb1Jhpnt-svN0qcbs9ZcBY!3e3',
+  // 'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!3m1!4b1!4m3!11m2!2s1vYVMJkyC8rwXV9OCHnWxOWhLyLg!3e3',
+  // 'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!4m3!11m2!2saHz41BFh8xiiItO6HLq44ecj06QKgA!3e3',
+  // 'https://www.google.com/maps/@52.4646447,13.3636184,12z/data=!4m3!11m2!2s1b5xeEtFRiXarfIlzMnBgxNOUiC4!3e3',
+  'https://goo.gl/maps/KPdcuaL5GGxzaMYp6',
   // Add more URLs here
 ];
 
 export const scrollAllPlacesInAList = async (page: Page) => {
   console.log('🚀 scrolling all places in the list');
-  await page.waitForSelector('h3');
   const numberOfPlacesText = await page.$eval('.vkU5O', (el) => el.textContent);
   const numberOfPlaces = parseInt(numberOfPlacesText?.match(/\d+/g)?.[0] || '0', 10);
 
@@ -99,16 +99,16 @@ const saveToFile = (filename: string, data: object) => {
     userDataDir: path.join(__dirname, 'user_data'),
   });
   const page = await browser.newPage();
-  await disableImagesAndFontRequests(page);
+  // await disableImagesAndFontRequests(page);
 
-  type AllLists = Record<
+  type savedPlaces = Record<
     string,
-    Record<string, { address: string; latLng?: { lat: number; lng: number } }>
+    { address: string; latLng?: { lat: number; lng: number }; categories: string[] }
   >;
 
-  const partialFilePath = path.join(__dirname, 'places_partial.json');
-  const allLists: AllLists = (await fs.pathExists(partialFilePath))
-    ? await fs.readJson(partialFilePath)
+  const placesFilePath = path.join(__dirname, 'places.json');
+  const savedPlaces: savedPlaces = (await fs.pathExists(placesFilePath))
+    ? await fs.readJson(placesFilePath)
     : {};
 
   try {
@@ -123,17 +123,30 @@ const saveToFile = (filename: string, data: object) => {
         await page.waitForNavigation();
       }
 
-      await scrollAllPlacesInAList(page);
+      await page.waitForSelector('h3');
+
+      // await scrollAllPlacesInAList(page);
       const places = await getPlaceInfo(page);
       const listName = await getListName(page);
-      if (listName) {
-        allLists[listName] = places;
+
+      for (const placeName in places) {
+        if (!savedPlaces[placeName]) {
+          const { address } = places[placeName];
+          savedPlaces[placeName] = {
+            address: address,
+            categories: [listName!],
+          };
+        }
+        // else add the listname to categories
+        else {
+          savedPlaces[placeName].categories.push(listName!);
+        }
       }
     }
-    saveToFile('places.json', allLists);
+    saveToFile('places.json', savedPlaces);
   } catch (error) {
     console.error('An error occurred:', error);
-    saveToFile('places_partial.json', allLists);
+    saveToFile('places.json', savedPlaces);
   } finally {
     await browser.close();
   }
