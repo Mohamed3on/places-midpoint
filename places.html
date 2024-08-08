@@ -3,13 +3,13 @@
   <head>
     <title>Places Map</title>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmpiQfvgs7xnT9yAi9jG0LSf-47v44XZA&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key={replace_me}&callback=initMap"
       async
       defer
     ></script>
     <script>
       async function fetchPlaces() {
-        const response = await fetch('places_with_lat_lng.json');
+        const response = await fetch('places.json');
         const places = await response.json();
         return places;
       }
