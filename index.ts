@@ -7,6 +7,18 @@ import dotenv from 'dotenv';
 dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
+
+export type savedPlaces = Record<
+  string,
+  {
+    current?: boolean;
+    address?: string;
+    latLng?: { lat: number; lng: number };
+    categories: string[];
+  }
+>;
 
 export const disableImagesAndFontRequests = async (page: Page): Promise<void> => {
   await page.setRequestInterception(true);
@@ -20,25 +32,23 @@ export const disableImagesAndFontRequests = async (page: Page): Promise<void> =>
 };
 
 const urls: string[] = [
-  // 'https://www.google.com/maps/@52.4646787,13.425419,14z/data=!4m3!11m2!2s1oSSrONb1Jhpnt-svN0qcbs9ZcBY!3e3',
-  // 'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!3m1!4b1!4m3!11m2!2s1vYVMJkyC8rwXV9OCHnWxOWhLyLg!3e3',
-  // 'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!4m3!11m2!2saHz41BFh8xiiItO6HLq44ecj06QKgA!3e3',
-  // 'https://www.google.com/maps/@52.4646447,13.3636184,12z/data=!4m3!11m2!2s1b5xeEtFRiXarfIlzMnBgxNOUiC4!3e3',
+  'https://www.google.com/maps/@52.4646787,13.425419,14z/data=!4m3!11m2!2s1oSSrONb1Jhpnt-svN0qcbs9ZcBY!3e3',
+  'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!3m1!4b1!4m3!11m2!2s1vYVMJkyC8rwXV9OCHnWxOWhLyLg!3e3',
+  'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!4m3!11m2!2saHz41BFh8xiiItO6HLq44ecj06QKgA!3e3',
+  'https://www.google.com/maps/@52.4646447,13.3636184,12z/data=!4m3!11m2!2s1b5xeEtFRiXarfIlzMnBgxNOUiC4!3e3',
   'https://goo.gl/maps/KPdcuaL5GGxzaMYp6',
   // Add more URLs here
 ];
 
-export const scrollAllPlacesInAList = async (page: Page) => {
+export const scrollAllPlacesInAList = async (page: puppeteer.Page, numberOfPlaces: number) => {
   console.log('🚀 scrolling all places in the list');
-  const numberOfPlacesText = await page.$eval('.vkU5O', (el) => el.textContent);
-  const numberOfPlaces = parseInt(numberOfPlacesText?.match(/\d+/g)?.[0] || '0', 10);
 
-  let currentlyDisplayedPlaces = await page.$$('h3');
+  let currentlyDisplayedPlaces = await page.$$('.fontHeadlineSmall.rZF81c');
   let previousNumberOfPlaces = 0;
   let numberOfIterationsWithOutNewPlaces = 0;
   while (
     currentlyDisplayedPlaces.length < numberOfPlaces &&
-    numberOfIterationsWithOutNewPlaces < 5
+    numberOfIterationsWithOutNewPlaces < 10
   ) {
     // scroll to the last element to trigger the loading of more places
     await page.evaluate((element) => {
@@ -47,11 +57,16 @@ export const scrollAllPlacesInAList = async (page: Page) => {
       }
     }, currentlyDisplayedPlaces[currentlyDisplayedPlaces.length - 1]);
 
-    await page.waitForTimeout(1300);
+    await page.waitForFunction(
+      (previousCount) =>
+        document.querySelectorAll('.fontHeadlineSmall.rZF81c').length > previousCount,
+      {},
+      previousNumberOfPlaces
+    );
 
     previousNumberOfPlaces = currentlyDisplayedPlaces.length;
 
-    currentlyDisplayedPlaces = await page.$$('h3');
+    currentlyDisplayedPlaces = await page.$$('.fontHeadlineSmall.rZF81c');
 
     if (currentlyDisplayedPlaces.length === previousNumberOfPlaces) {
       numberOfIterationsWithOutNewPlaces++;
@@ -60,28 +75,16 @@ export const scrollAllPlacesInAList = async (page: Page) => {
     }
   }
 
-  console.log(`👀 ${currentlyDisplayedPlaces.length} places displayed`);
+  console.log('scrolled all places');
   return currentlyDisplayedPlaces;
 };
 
 const getPlaceInfo = async (page: Page) => {
   const names: string[] = (
-    await page.$$eval('.IMSio h3', (names) => names.map((name) => name.textContent))
+    await page.$$eval('.fontHeadlineSmall.rZF81c', (names) => names.map((name) => name.textContent))
   ).filter((name): name is string => name !== null);
 
-  const addresses: string[] = (
-    await page.$$eval('.IMSio .fKEVAc', (addresses) =>
-      addresses.map((address) => address.textContent)
-    )
-  ).filter((address): address is string => address !== null);
-
-  const places: Record<string, { address: string }> = {};
-  for (let i = 0; i < names.length; i++) {
-    places[names[i]] = {
-      address: addresses[i],
-    };
-  }
-  return places;
+  return names;
 };
 
 const getListName = async (page: Page) => {
@@ -93,26 +96,49 @@ const saveToFile = (filename: string, data: object) => {
   console.log(`✅ Data saved to ${filename}`);
 };
 
+const parseArgv = () => {
+  return yargs(hideBin(process.argv))
+    .option('urls', {
+      alias: 'u',
+      type: 'array',
+      description: 'List of URLs to scrape',
+    })
+    .option('output', {
+      alias: 'o',
+      type: 'string',
+      description: 'Output JSON file path',
+      default: 'places.json',
+    })
+    .help()
+    .alias('help', 'h')
+    .parseSync();
+};
+
+const argv = parseArgv();
+
 (async () => {
   const browser = await puppeteer.launch({
     headless: false,
+    executablePath: '/opt/homebrew/bin/chromium',
+    args: ['--disable-site-isolation-trials', '--lang=en-GB,en'],
     userDataDir: path.join(__dirname, 'user_data'),
   });
   const page = await browser.newPage();
-  // await disableImagesAndFontRequests(page);
+  await disableImagesAndFontRequests(page);
 
-  type savedPlaces = Record<
-    string,
-    { address: string; latLng?: { lat: number; lng: number }; categories: string[] }
-  >;
-
-  const placesFilePath = path.join(__dirname, 'places.json');
+  const placesFilePath = path.join(__dirname, argv.output);
   const savedPlaces: savedPlaces = (await fs.pathExists(placesFilePath))
     ? await fs.readJson(placesFilePath)
     : {};
 
+  // Set all places as not current at the beginning of the run
+  for (const placeName in savedPlaces) {
+    savedPlaces[placeName].current = false;
+  }
+
   try {
-    for (const url of urls) {
+    const urlsToScrape = (argv.urls as string[]) || urls;
+    for (const url of urlsToScrape) {
       await page.goto(url);
 
       if (page.url().includes('consent')) {
@@ -123,30 +149,50 @@ const saveToFile = (filename: string, data: object) => {
         await page.waitForNavigation();
       }
 
-      await page.waitForSelector('h3');
+      await page.waitForSelector('h1');
 
-      // await scrollAllPlacesInAList(page);
-      const places = await getPlaceInfo(page);
       const listName = await getListName(page);
+      console.log(`👀 ${listName}`);
 
-      for (const placeName in places) {
+      const numberOfPlacesText = await page.$eval('.fontBodyMedium h2', (el) => el.textContent);
+      const numberOfPlaces = parseInt(numberOfPlacesText?.match(/\d+/g)?.[0] || '0');
+      console.log('🚀 ~ numberOfPlaces:', numberOfPlaces);
+
+      await scrollAllPlacesInAList(page, numberOfPlaces);
+      const places = await getPlaceInfo(page);
+
+      for (const placeName of places) {
         if (!savedPlaces[placeName]) {
-          const { address } = places[placeName];
+          console.log(`👀 ${placeName} is new`);
+
           savedPlaces[placeName] = {
-            address: address,
             categories: [listName!],
+            current: true,
           };
-        }
-        // else add the listname to categories
-        else {
-          savedPlaces[placeName].categories.push(listName!);
+        } else {
+          savedPlaces[placeName].current = true;
+          if (!savedPlaces[placeName].categories.includes(listName!)) {
+            savedPlaces[placeName].categories.push(listName!);
+          }
         }
       }
     }
-    saveToFile('places.json', savedPlaces);
+
+    // Remove places that weren't seen in this run
+    const placesToRemove = Object.keys(savedPlaces).filter(
+      (placeName) => !savedPlaces[placeName].current
+    );
+
+    for (const placeName of placesToRemove) {
+      console.log(`🗑️ Removing ${placeName} as it wasn't seen in this run`);
+      delete savedPlaces[placeName];
+    }
+
+    saveToFile(argv.output, savedPlaces);
+    console.log(`✅ Removed ${placesToRemove.length} places that weren't seen in this run`);
   } catch (error) {
     console.error('An error occurred:', error);
-    saveToFile('places.json', savedPlaces);
+    saveToFile(argv.output, savedPlaces);
   } finally {
     await browser.close();
   }

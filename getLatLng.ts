@@ -10,11 +10,45 @@ const API_KEY = process.env.API_KEY || '';
 import { LatLng } from '@googlemaps/google-maps-services-js';
 import { readFromDisk } from './helpers.js';
 
-export const getLatLng = async (address: string): Promise<{ lat: number; lng: number } | null> => {
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
+
+const parseArgv = () => {
+  return yargs(hideBin(process.argv))
+    .option('input', {
+      alias: 'i',
+      type: 'string',
+      description: 'Input JSON file path',
+      default: 'places.json',
+    })
+    .option('output', {
+      alias: 'o',
+      type: 'string',
+      description: 'Output JSON file path (defaults to input file if not specified)',
+    })
+    .option('region', {
+      alias: 'r',
+      type: 'string',
+      description: 'Region to search in',
+      default: 'berlin',
+    })
+    .help()
+    .alias('help', 'h')
+    .parseSync();
+};
+
+const argv = parseArgv();
+
+const places = readFromDisk(argv.input);
+
+export const getLatLngAndAddress = async (
+  placeName: string,
+  region: string
+): Promise<{ address: string; latLng: { lat: number; lng: number } } | null> => {
   try {
     const response = await client.geocode({
       params: {
-        address,
+        address: `${placeName} ${region}`,
         key: API_KEY,
       },
     });
@@ -22,55 +56,33 @@ export const getLatLng = async (address: string): Promise<{ lat: number; lng: nu
     const results: GeocodeResult[] | undefined = response.data.results;
 
     if (results && results.length > 0) {
-      return results[0].geometry.location;
+      console.log(`👀 ${placeName}:`, results[0].formatted_address);
+      return {
+        address: results[0].formatted_address,
+        latLng: results[0].geometry.location,
+      };
     }
   } catch (error) {
-    console.error(`Error fetching lat/lng for address: ${address}`, error);
+    console.error(`Error fetching lat/lng for place: ${placeName}`);
   }
   return null;
 };
 
-const places = readFromDisk('places.json');
-
-// output the length of each key in the places
-
-// object to the console
-
-for (let key in places) {
-  if (places[key].latLng) {
-    continue;
-  }
-  const latLng = await getLatLng(`${key} ${places[key]?.address} berlin`);
-  if (latLng) {
-    console.log(`👀 ${key} ${places[key]?.address} berlin`, latLng);
-    places[key].latLng = latLng;
-  } else {
-    console.error(`no lat/lng for ${key} ${places[key]?.address}`);
-  }
-}
-
-fs.writeFileSync('places_with_lat_lng.json', JSON.stringify(places, null, 2));
-
-function convertDMSStringToLatLng(dmsString: string): LatLng | null {
-  const regex = /^(\d+)°(\d+)'(\d+(?:\.\d+)?)\"([NS])\s+(\d+)°(\d+)'(\d+(?:\.\d+)?)\"([EW])$/;
-  const match = dmsString.match(regex);
-
-  if (!match) {
-    return null;
+(async () => {
+  for (let placeName in places) {
+    if (places[placeName].latLng) {
+      continue;
+    }
+    const result = await getLatLngAndAddress(placeName, argv.region);
+    if (result) {
+      places[placeName].address = result.address;
+      places[placeName].latLng = result.latLng;
+    } else {
+      console.error(`No data found for ${placeName}`);
+    }
   }
 
-  const latD = parseInt(match[1], 10);
-  const latM = parseInt(match[2], 10);
-  const latS = parseFloat(match[3]);
-  const latDir = match[4];
-
-  const lngD = parseInt(match[5], 10);
-  const lngM = parseInt(match[6], 10);
-  const lngS = parseFloat(match[7]);
-  const lngDir = match[8];
-
-  const lat = (latD + latM / 60 + latS / 3600) * (latDir === 'N' ? 1 : -1);
-  const lng = (lngD + lngM / 60 + lngS / 3600) * (lngDir === 'E' ? 1 : -1);
-
-  return { lat, lng };
-}
+  const outputFile = argv.output || argv.input;
+  fs.writeFileSync(outputFile, JSON.stringify(places, null, 2));
+  console.log(`✅ Enriched data saved to ${outputFile}`);
+})();

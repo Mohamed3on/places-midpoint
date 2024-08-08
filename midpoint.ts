@@ -150,14 +150,40 @@ async function getMidpointsAndAddresses(places: any) {
   };
 }
 
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
+
+const parseArgv = () => {
+  return yargs(hideBin(process.argv))
+    .option('input', {
+      alias: 'i',
+      type: 'string',
+      description: 'Input JSON file path',
+      default: 'places.json',
+    })
+    .option('output', {
+      alias: 'o',
+      type: 'string',
+      description: 'Output JSON file path',
+      default: 'midpoints.json',
+    })
+    .help()
+    .alias('help', 'h')
+    .parseSync();
+};
+
+const argv = parseArgv();
+
 (async () => {
   const readFromDisk = (path: string) => {
     const data = fs.readFileSync(path, { encoding: 'utf8' });
     return JSON.parse(data);
   };
 
-  const places = readFromDisk('places.json');
+  const places = readFromDisk(argv.input);
 
   const midpoints = await getMidpointsAndAddresses(places);
   console.log(midpoints);
+
+  fs.writeFileSync(argv.output, JSON.stringify(midpoints, null, 2));
 })();
