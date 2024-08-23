@@ -46,10 +46,8 @@ export const scrollAllPlacesInAList = async (page: puppeteer.Page, numberOfPlace
   let currentlyDisplayedPlaces = await page.$$('.fontHeadlineSmall.rZF81c');
   let previousNumberOfPlaces = 0;
   let numberOfIterationsWithOutNewPlaces = 0;
-  while (
-    currentlyDisplayedPlaces.length < numberOfPlaces &&
-    numberOfIterationsWithOutNewPlaces < 10
-  ) {
+
+  while (currentlyDisplayedPlaces.length < numberOfPlaces) {
     // scroll to the last element to trigger the loading of more places
     await page.evaluate((element) => {
       if (element) {
@@ -57,25 +55,25 @@ export const scrollAllPlacesInAList = async (page: puppeteer.Page, numberOfPlace
       }
     }, currentlyDisplayedPlaces[currentlyDisplayedPlaces.length - 1]);
 
-    await page.waitForFunction(
-      (previousCount) =>
-        document.querySelectorAll('.fontHeadlineSmall.rZF81c').length > previousCount,
-      {},
-      previousNumberOfPlaces
-    );
+    await new Promise((r) => setTimeout(r, 500));
 
     previousNumberOfPlaces = currentlyDisplayedPlaces.length;
-
     currentlyDisplayedPlaces = await page.$$('.fontHeadlineSmall.rZF81c');
 
     if (currentlyDisplayedPlaces.length === previousNumberOfPlaces) {
       numberOfIterationsWithOutNewPlaces++;
+      if (numberOfIterationsWithOutNewPlaces >= 5) {
+        console.log('No new places loaded after 5 attempts, breaking the loop');
+        break;
+      }
     } else {
       numberOfIterationsWithOutNewPlaces = 0;
     }
+
+    console.log(`Loaded ${currentlyDisplayedPlaces.length} out of ${numberOfPlaces} places`);
   }
 
-  console.log('scrolled all places');
+  console.log('Finished scrolling all places');
   return currentlyDisplayedPlaces;
 };
 
@@ -121,7 +119,7 @@ const argv = parseArgv();
     headless: false,
     executablePath: '/opt/homebrew/bin/chromium',
     args: ['--disable-site-isolation-trials', '--lang=en-GB,en'],
-    userDataDir: path.join(__dirname, 'user_data'),
+    // userDataDir: path.join(__dirname, 'user_data'),
   });
   const page = await browser.newPage();
   await disableImagesAndFontRequests(page);

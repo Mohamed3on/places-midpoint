@@ -7,11 +7,11 @@ dotenv.config();
 
 const API_KEY = process.env.API_KEY || '';
 
-import { LatLng } from '@googlemaps/google-maps-services-js';
 import { readFromDisk } from './helpers.js';
 
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
+import pLimit from 'p-limit';
 
 const parseArgv = () => {
   return yargs(hideBin(process.argv))
@@ -39,7 +39,14 @@ const parseArgv = () => {
 
 const argv = parseArgv();
 
-const places = readFromDisk(argv.input);
+interface Place {
+  latLng?: { lat: number; lng: number };
+  address?: string;
+}
+
+const places: Record<string, Place> = readFromDisk(argv.input);
+
+const limit = pLimit(5); // Limit concurrent requests to 5
 
 export const getLatLngAndAddress = async (
   placeName: string,
@@ -69,17 +76,18 @@ export const getLatLngAndAddress = async (
 };
 
 (async () => {
-  for (let placeName in places) {
-    if (places[placeName].latLng) {
-      continue;
-    }
-    const result = await getLatLngAndAddress(placeName, argv.region);
-    if (result) {
-      places[placeName].address = result.address;
-      places[placeName].latLng = result.latLng;
-    } else {
-      console.error(`No data found for ${placeName}`);
-    }
+  const placesToUpdate = Object.entries(places).filter(([_, place]) => !place.latLng);
+
+  for (const [placeName, _] of placesToUpdate) {
+    await limit(async () => {
+      const result = await getLatLngAndAddress(placeName, argv.region);
+      if (result) {
+        places[placeName].address = result.address;
+        places[placeName].latLng = result.latLng;
+      } else {
+        console.error(`No data found for ${placeName}`);
+      }
+    });
   }
 
   const outputFile = argv.output || argv.input;
