@@ -17,6 +17,7 @@ export type savedPlaces = Record<
     address?: string;
     latLng?: { lat: number; lng: number };
     categories: string[];
+    permanentlyClosed?: boolean;
   }
 >;
 
@@ -78,11 +79,22 @@ export const scrollAllPlacesInAList = async (page: puppeteer.Page, numberOfPlace
 };
 
 const getPlaceInfo = async (page: Page) => {
-  const names: string[] = (
-    await page.$$eval('.fontHeadlineSmall.rZF81c', (names) => names.map((name) => name.textContent))
-  ).filter((name): name is string => name !== null);
+  const placeElements = await page.$$('.BsJqK.xgHk6');
+  const places = await Promise.all(
+    placeElements.map(async (element) => {
+      const name = await element.$eval(
+        '.fontHeadlineSmall.rZF81c',
+        (el) => el.textContent?.trim() || ''
+      );
+      const permanentlyClosed = await element
+        .$eval('.IIrLbb', (el) => el.textContent?.includes('Permanently closed') || false)
+        .catch(() => false);
 
-  return names;
+      return { name, permanentlyClosed };
+    })
+  );
+
+  return places;
 };
 
 const getListName = async (page: Page) => {
@@ -134,6 +146,8 @@ const argv = parseArgv();
     savedPlaces[placeName].current = false;
   }
 
+  const permanentlyClosedPlaces: Record<string, string[]> = {};
+
   try {
     const urlsToScrape = (argv.urls as string[]) || urls;
     for (const url of urlsToScrape) {
@@ -159,19 +173,28 @@ const argv = parseArgv();
       await scrollAllPlacesInAList(page, numberOfPlaces);
       const places = await getPlaceInfo(page);
 
-      for (const placeName of places) {
+      for (const { name: placeName, permanentlyClosed } of places) {
         if (!savedPlaces[placeName]) {
           console.log(`👀 ${placeName} is new`);
 
           savedPlaces[placeName] = {
             categories: [listName!],
             current: true,
+            permanentlyClosed,
           };
         } else {
           savedPlaces[placeName].current = true;
+          savedPlaces[placeName].permanentlyClosed = permanentlyClosed;
           if (!savedPlaces[placeName].categories.includes(listName!)) {
             savedPlaces[placeName].categories.push(listName!);
           }
+        }
+
+        if (permanentlyClosed) {
+          if (!permanentlyClosedPlaces[listName!]) {
+            permanentlyClosedPlaces[listName!] = [];
+          }
+          permanentlyClosedPlaces[listName!].push(placeName);
         }
       }
     }
@@ -187,7 +210,12 @@ const argv = parseArgv();
     }
 
     saveToFile(argv.output, savedPlaces);
-    console.log(`✅ Removed ${placesToRemove.length} places that weren't seen in this run`);
+
+    console.log('Permanently closed places:');
+    for (const [listName, places] of Object.entries(permanentlyClosedPlaces)) {
+      console.log(`${listName}:`);
+      places.forEach((place) => console.log(`  - ${place}`));
+    }
   } catch (error) {
     console.error('An error occurred:', error);
     saveToFile(argv.output, savedPlaces);
