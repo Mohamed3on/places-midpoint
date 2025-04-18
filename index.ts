@@ -33,12 +33,12 @@ export const disableImagesAndFontRequests = async (page: Page): Promise<void> =>
 };
 
 const urls: string[] = [
-  'https://www.google.com/maps/@52.4646787,13.425419,14z/data=!4m3!11m2!2s1oSSrONb1Jhpnt-svN0qcbs9ZcBY!3e3',
-  'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!3m1!4b1!4m3!11m2!2s1vYVMJkyC8rwXV9OCHnWxOWhLyLg!3e3',
-  'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!4m3!11m2!2saHz41BFh8xiiItO6HLq44ecj06QKgA!3e3',
-  'https://www.google.com/maps/@52.4646447,13.3636184,12z/data=!4m3!11m2!2s1b5xeEtFRiXarfIlzMnBgxNOUiC4!3e3',
-  'https://goo.gl/maps/KPdcuaL5GGxzaMYp6',
-  // Add more URLs here
+  // 'https://www.google.com/maps/@52.4646787,13.425419,14z/data=!4m3!11m2!2s1oSSrONb1Jhpnt-svN0qcbs9ZcBY!3e3',
+  // 'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!3m1!4b1!4m3!11m2!2s1vYVMJkyC8rwXV9OCHnWxOWhLyLg!3e3',
+  // 'https://www.google.com/maps/@52.4646751,13.425419,14z/data=!4m3!11m2!2saHz41BFh8xiiItO6HLq44ecj06QKgA!3e3',
+  // 'https://www.google.com/maps/@52.4646447,13.3636184,12z/data=!4m3!11m2!2s1b5xeEtFRiXarfIlzMnBgxNOUiC4!3e3',
+  // 'https://goo.gl/maps/KPdcuaL5GGxzaMYp6',
+  'https://maps.app.goo.gl/46JzN7qi1jqQpDVY6',
 ];
 
 export const scrollAllPlacesInAList = async (page: puppeteer.Page, numberOfPlaces: number) => {
@@ -151,7 +151,7 @@ const argv = parseArgv();
   try {
     const urlsToScrape = (argv.urls as string[]) || urls;
     for (const url of urlsToScrape) {
-      await page.goto(url);
+      await page.goto(url, { waitUntil: 'networkidle0' });
 
       if (page.url().includes('consent')) {
         const consentButton = await page.$(

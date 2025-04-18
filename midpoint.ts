@@ -104,12 +104,6 @@ function haversineDistance(p1: LatLngLiteral, p2: LatLngLiteral) {
   return EARTH_RADIUS * c;
 }
 
-interface CategoryMidpoint {
-  lat: number;
-  lng: number;
-  address: string;
-}
-
 async function getAddress(latLng: LatLngLiteral): Promise<string> {
   const response = await client.reverseGeocode({
     params: {

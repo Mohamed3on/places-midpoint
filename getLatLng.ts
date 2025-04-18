@@ -46,7 +46,7 @@ interface Place {
 
 const places: Record<string, Place> = readFromDisk(argv.input);
 
-const limit = pLimit(20); // Limit concurrent requests to 5
+const limit = pLimit(20); // Limit concurrent requests to 20
 
 export const getLatLngAndAddress = async (
   placeName: string,
