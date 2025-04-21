@@ -8,6 +8,7 @@ import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { Client, GeocodeResult, LatLngLiteral } from '@googlemaps/google-maps-services-js';
 import pLimit from 'p-limit';
+import { geometricMedianOnSphere } from './midpoint.js';
 
 // --- Setup ---
 dotenv.config();
@@ -188,52 +189,10 @@ async function centerOfMinimumDistance(coordinates: LatLngLiteral[]): Promise<La
   if (coordinates.length === 0) return { lat: 0, lng: 0 };
   if (coordinates.length === 1) return coordinates[0];
 
-  let currentPoint = geographicMidpoint(coordinates);
-  let minDist = coordinates.reduce((sum, p) => sum + haversineDistance(currentPoint, p), 0);
-  let stepSize = 1.0; // Initial step size in degrees latitude/longitude
-
-  for (let i = 0; i < 100; i++) {
-    // Limit iterations
-    let bestPoint = currentPoint;
-    let improved = false;
-
-    // Test points around the current point
-    const testDeltas = [
-      { lat: stepSize, lng: 0 },
-      { lat: -stepSize, lng: 0 },
-      { lat: 0, lng: stepSize },
-      { lat: 0, lng: -stepSize },
-      { lat: stepSize / Math.SQRT2, lng: stepSize / Math.SQRT2 },
-      { lat: stepSize / Math.SQRT2, lng: -stepSize / Math.SQRT2 },
-      { lat: -stepSize / Math.SQRT2, lng: stepSize / Math.SQRT2 },
-      { lat: -stepSize / Math.SQRT2, lng: -stepSize / Math.SQRT2 },
-    ];
-
-    for (const delta of testDeltas) {
-      const testPoint = { lat: currentPoint.lat + delta.lat, lng: currentPoint.lng + delta.lng };
-      // Basic boundary check (latitude)
-      if (testPoint.lat < -90 || testPoint.lat > 90) continue;
-      // Normalize longitude
-      testPoint.lng = ((testPoint.lng + 180) % 360) - 180;
-
-      const dist = coordinates.reduce((sum, p) => sum + haversineDistance(testPoint, p), 0);
-      if (dist < minDist) {
-        minDist = dist;
-        bestPoint = testPoint;
-        improved = true;
-      }
-    }
-
-    if (improved) {
-      currentPoint = bestPoint;
-    } else {
-      stepSize /= 2; // Reduce step size if no improvement
-    }
-
-    if (stepSize < 1e-6) break; // Stop if step size is too small
-  }
-  console.log(`📍 Calculated Center of Minimum Distance after iterations.`);
-  return currentPoint;
+  // Call the new geometric median function directly
+  console.log(`📍 Calculating Center of Minimum Distance using geometricMedianOnSphere...`);
+  const result = geometricMedianOnSphere(coordinates);
+  return result;
 }
 
 async function getReverseGeocodedAddress(latLng: LatLngLiteral): Promise<string> {
@@ -302,21 +261,24 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
 
       // Handle consent overlay
       if (page.url().includes('consent')) {
-        try {
-          const consentButton = await page.waitForSelector(
-            '[aria-label="Accept all"], [aria-label="Alle akzeptieren"]',
-            { timeout: 5000 }
-          );
-          if (consentButton) {
-            console.log('Clicking consent button...');
-            await consentButton.click();
-            await page.waitForNavigation({ waitUntil: 'networkidle0' });
+        // also if page text includes "Before you continue"
+        const pageText = await page.evaluate(() => document.body.textContent || '');
+        if (pageText.includes('Before you continue')) {
+          try {
+            const consentButton = await page.waitForSelector(
+              '[aria-label="Accept all"], [aria-label="Alle akzeptieren"]',
+              { timeout: 5000 }
+            );
+            if (consentButton) {
+              console.log('Clicking consent button...');
+              await consentButton.click();
+              await page.waitForNavigation({ waitUntil: 'networkidle0' });
+            }
+          } catch (e) {
+            console.log('Consent button not found or timed out.');
           }
-        } catch (e) {
-          console.log('Consent button not found or timed out.');
         }
       }
-
       await page.waitForSelector('h1', { timeout: 30000 }); // Wait for list title
 
       const listName = await getListName(page);
@@ -394,8 +356,7 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
             savedPlaces[placeName].latLng = result.latLng;
           } else {
             console.error(`Failed to geocode ${placeName}`);
-            // Optionally remove the place if geocoding fails? Or mark it?
-            // delete savedPlaces[placeName];
+            delete savedPlaces[placeName];
           }
         })
       );
