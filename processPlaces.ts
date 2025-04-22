@@ -16,7 +16,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const client = new Client({});
 const API_KEY = process.env.API_KEY || '';
-const EARTH_RADIUS = 6371e3; // Earth's radius in meters
 
 // --- Types ---
 export type SavedPlace = {
@@ -150,46 +149,10 @@ export const getLatLngAndAddress = async (
   return null;
 };
 
-// --- Midpoint Helpers (from midpoint.ts) ---
-function geographicMidpoint(coordinates: LatLngLiteral[]): LatLngLiteral {
-  if (coordinates.length === 0) return { lat: 0, lng: 0 };
-  let sumX = 0,
-    sumY = 0,
-    sumZ = 0;
-  for (const coord of coordinates) {
-    const latRad = (coord.lat * Math.PI) / 180;
-    const lngRad = (coord.lng * Math.PI) / 180;
-    sumX += Math.cos(latRad) * Math.cos(lngRad);
-    sumY += Math.cos(latRad) * Math.sin(lngRad);
-    sumZ += Math.sin(latRad);
-  }
-  const count = coordinates.length;
-  const avgX = sumX / count,
-    avgY = sumY / count,
-    avgZ = sumZ / count;
-  const lon = Math.atan2(avgY, avgX);
-  const hyp = Math.sqrt(avgX * avgX + avgY * avgY);
-  const lat = Math.atan2(avgZ, hyp);
-  return { lat: (lat * 180) / Math.PI, lng: (lon * 180) / Math.PI };
-}
-
-function haversineDistance(p1: LatLngLiteral, p2: LatLngLiteral): number {
-  const dLat = ((p2.lat - p1.lat) * Math.PI) / 180;
-  const dLng = ((p2.lng - p1.lng) * Math.PI) / 180;
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos((p1.lat * Math.PI) / 180) *
-      Math.cos((p2.lat * Math.PI) / 180) *
-      Math.sin(dLng / 2) ** 2;
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  return EARTH_RADIUS * c;
-}
-
-async function centerOfMinimumDistance(coordinates: LatLngLiteral[]): Promise<LatLngLiteral> {
+function centerOfMinimumDistance(coordinates: LatLngLiteral[]): LatLngLiteral {
   if (coordinates.length === 0) return { lat: 0, lng: 0 };
   if (coordinates.length === 1) return coordinates[0];
 
-  // Call the new geometric median function directly
   console.log(`📍 Calculating Center of Minimum Distance using geometricMedianOnSphere...`);
   const result = geometricMedianOnSphere(coordinates);
   return result;
@@ -398,27 +361,14 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
         `Calculating midpoints based on ${uniqueCoordinates.length} unique places with coordinates.`
       );
 
-      const geoMidpoint = geographicMidpoint(uniqueCoordinates);
-      const minDistMidpoint = await centerOfMinimumDistance(uniqueCoordinates); // This one can take time
-
-      const [geoAddress, minDistAddress] = await Promise.all([
-        getReverseGeocodedAddress(geoMidpoint),
-        getReverseGeocodedAddress(minDistMidpoint),
-      ]);
+      const minDistMidpoint = centerOfMinimumDistance(uniqueCoordinates);
+      const minDistAddress = await getReverseGeocodedAddress(minDistMidpoint);
 
       console.log('\n--- Midpoint Results ---');
-      console.log('📍 Geographic Midpoint:', { ...geoMidpoint, address: geoAddress });
       console.log('📍 Center of Minimum Distance:', {
         ...minDistMidpoint,
         address: minDistAddress,
       });
-
-      // Optional: Save midpoints to a separate file
-      // await fs.outputJson(path.resolve(__dirname, 'midpoints.json'), {
-      //     geoMidpoint: { ...geoMidpoint, address: geoAddress },
-      //     minDistMidpoint: { ...minDistMidpoint, address: minDistAddress }
-      // }, { spaces: 2 });
-      // console.log("✅ Midpoint data saved to midpoints.json");
     } else {
       console.log('No unique coordinates found to calculate midpoints.');
     }
