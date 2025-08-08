@@ -47,13 +47,36 @@ const parseArgv = () => {
       description: 'Region hint for geocoding',
       default: 'berlin',
     })
+    .option('parallel', {
+      alias: 'p',
+      type: 'boolean',
+      description: 'Enable parallel processing of URLs in separate tabs',
+      default: true,
+    })
+    .option('maxTabs', {
+      alias: 'm',
+      type: 'number',
+      description: 'Maximum number of concurrent tabs (only used with --parallel)',
+      default: 4,
+    })
+    .option('excludeClosed', {
+      alias: 'x',
+      type: 'boolean',
+      description: 'Exclude permanently closed places from midpoint calculation',
+      default: false,
+    })
     .help()
     .alias('help', 'h')
     .parseSync();
 };
 
 const argv = parseArgv();
-const DEFAULT_URLS: string[] = ['https://maps.app.goo.gl/46JzN7qi1jqQpDVY6']; // Add more default URLs if needed
+const DEFAULT_URLS: string[] = [
+  'https://maps.app.goo.gl/nP5uZ5NwZbqmhLDv5',
+  'https://maps.app.goo.gl/U3xkLFaf3cJeEmgw9',
+  'https://maps.app.goo.gl/RLF9GLmoizghFYgr5',
+  'https://maps.app.goo.gl/gdSA7CgMrQMyeC2y6',
+]; // Add more default URLs if needed
 
 // --- Puppeteer Helpers (from index.ts) ---
 export const disableImagesAndFontRequests = async (page: Page): Promise<void> => {
@@ -106,9 +129,47 @@ const getPlaceInfoFromPage = async (page: Page) => {
         '.fontHeadlineSmall.rZF81c',
         (el) => el.textContent?.trim() || ''
       );
-      const permanentlyClosed = await element
-        .$eval('.IIrLbb', (el) => el.textContent?.includes('Permanently closed') || false)
-        .catch(() => false); // Handle cases where the element might not exist
+
+      // Check for permanently closed status more precisely
+      let permanentlyClosed = false;
+      try {
+        // First try the specific selector for "Permanently closed" text
+        const closedElement = await element.$('.eXlrNe');
+        if (closedElement) {
+          const closedText = await closedElement.evaluate((el) => el.textContent?.trim() || '');
+          const lowerText = closedText.toLowerCase();
+          permanentlyClosed =
+            lowerText.includes('permanently closed') ||
+            lowerText.includes('dauerhaft geschlossen') ||
+            lowerText.includes('cerrado permanentemente');
+        }
+
+        // Fallback: check broader IIrLbb elements for the text
+        if (!permanentlyClosed) {
+          const statusElements = await element.$$('.IIrLbb');
+          for (const statusEl of statusElements) {
+            const statusText = await statusEl.evaluate((el) => el.textContent?.trim() || '');
+            const lowerText = statusText.toLowerCase();
+            if (
+              lowerText.includes('permanently closed') ||
+              lowerText.includes('dauerhaft geschlossen') ||
+              lowerText.includes('cerrado permanentemente')
+            ) {
+              permanentlyClosed = true;
+              break;
+            }
+          }
+        }
+      } catch (e) {
+        // Handle cases where elements might not exist
+        permanentlyClosed = false;
+      }
+
+      // Debug logging for permanently closed detection
+      if (permanentlyClosed) {
+        console.log(`[Tab] 🚫 Detected permanently closed place: ${name}`);
+      }
+
       return { name, permanentlyClosed };
     })
   );
@@ -117,6 +178,278 @@ const getPlaceInfoFromPage = async (page: Page) => {
 
 const getListName = async (page: Page) => {
   return await page.$eval('h1', (el) => el.textContent);
+};
+
+// --- Parallel Processing Function with Retry ---
+const processUrlInTabWithRetry = async (
+  browser: puppeteer.Browser,
+  url: string,
+  maxRetries: number = 2
+): Promise<{
+  savedPlaces: SavedPlaces;
+  permanentlyClosedPlaces: Record<string, string[]>;
+}> => {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      console.log(`[Tab] Attempt ${attempt}/${maxRetries} for ${url}`);
+      return await processUrlInTab(browser, url);
+    } catch (error) {
+      console.error(
+        `[Tab] Attempt ${attempt} failed for ${url}:`,
+        error instanceof Error ? error.message : String(error)
+      );
+      if (attempt === maxRetries) {
+        console.error(`[Tab] All ${maxRetries} attempts failed for ${url}, returning empty result`);
+        return { savedPlaces: {}, permanentlyClosedPlaces: {} };
+      }
+      // Wait before retry
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+    }
+  }
+  return { savedPlaces: {}, permanentlyClosedPlaces: {} };
+};
+
+// --- Helper Functions ---
+const isPageResponsive = async (page: Page): Promise<boolean> => {
+  if (page.isClosed()) return false;
+  try {
+    await page.evaluate(() => document.readyState);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
+const safeEvaluate = async <T>(page: Page, pageFunction: () => T, defaultValue: T): Promise<T> => {
+  try {
+    if (!(await isPageResponsive(page))) return defaultValue;
+    return await page.evaluate(pageFunction);
+  } catch (e) {
+    console.log(`[Tab] Safe evaluate failed:`, e instanceof Error ? e.message : String(e));
+    return defaultValue;
+  }
+};
+
+// --- Core Processing Function ---
+const processUrlInTab = async (
+  browser: puppeteer.Browser,
+  url: string
+): Promise<{
+  savedPlaces: SavedPlaces;
+  permanentlyClosedPlaces: Record<string, string[]>;
+}> => {
+  const page = await browser.newPage();
+  await disableImagesAndFontRequests(page);
+
+  const localSavedPlaces: SavedPlaces = {};
+  const localPermanentlyClosedPlaces: Record<string, string[]> = {};
+
+  try {
+    console.log(`[Tab] Navigating to ${url}`);
+    await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
+
+    // Add a small delay to let the page settle
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    // Check if page is still responsive
+    if (page.isClosed()) {
+      throw new Error('Page was closed during navigation');
+    }
+
+    // Handle consent overlay - check for "Before you continue" text first
+    const pageText = await safeEvaluate(page, () => document.body.textContent || '', '');
+
+    if (pageText.includes('Before you continue') || page.url().includes('consent')) {
+      console.log(`[Tab] Detected consent page for ${url}, attempting to accept...`);
+      try {
+        // Try multiple selector strategies for the accept button
+        const possibleSelectors = [
+          '[aria-label="Accept all"]',
+          '[aria-label="Alle akzeptieren"]',
+          '[data-value="accept"]',
+          '#L2AGLb', // Common Google consent button ID
+          'button[data-ved*="accept"]',
+          'button[jsname]', // Will check text content separately
+        ];
+
+        let buttonClicked = false;
+        for (const selector of possibleSelectors) {
+          try {
+            // Check if page is still responsive before trying selector
+            if (page.isClosed()) break;
+
+            const button = await page.waitForSelector(selector, { timeout: 2000 });
+            if (button) {
+              // For button[jsname], check if text contains accept/akzeptieren
+              if (selector === 'button[jsname]') {
+                try {
+                  const buttonText = await page.evaluate(
+                    (el) => el.textContent?.toLowerCase() || '',
+                    button
+                  );
+                  if (!buttonText.includes('accept') && !buttonText.includes('akzeptieren')) {
+                    continue; // Skip this button, doesn't contain the right text
+                  }
+                } catch (evalError) {
+                  console.log(
+                    `[Tab] Error evaluating button text, skipping:`,
+                    evalError instanceof Error ? evalError.message : String(evalError)
+                  );
+                  continue;
+                }
+              }
+              console.log(`[Tab] Found consent button with selector: ${selector}`);
+              await button.click();
+              buttonClicked = true;
+              break;
+            }
+          } catch (e) {
+            // Continue to next selector
+          }
+        }
+
+        if (!buttonClicked && !page.isClosed()) {
+          // Fallback: try to find any button containing "accept" text (case insensitive)
+          const acceptButton = await safeEvaluate(
+            page,
+            () => {
+              const buttons = Array.from(document.querySelectorAll('button'));
+              return buttons.find(
+                (button) =>
+                  button.textContent?.toLowerCase().includes('accept') ||
+                  button.textContent?.toLowerCase().includes('akzeptieren')
+              );
+            },
+            null
+          );
+
+          if (acceptButton && (await isPageResponsive(page))) {
+            try {
+              console.log(`[Tab] Found consent button via text search`);
+              await page.evaluate((btn) => btn.click(), acceptButton);
+              buttonClicked = true;
+            } catch (clickError) {
+              console.log(
+                `[Tab] Error clicking fallback button:`,
+                clickError instanceof Error ? clickError.message : String(clickError)
+              );
+            }
+          }
+        }
+
+        if (buttonClicked) {
+          console.log(`[Tab] Clicked consent button, waiting for page to settle...`);
+          try {
+            // Wait for either navigation or the page to stabilize
+            await Promise.race([
+              page.waitForNavigation({ waitUntil: 'networkidle0', timeout: 15000 }),
+              new Promise((resolve) => setTimeout(resolve, 5000)), // Fallback timeout
+            ]);
+
+            // Additional wait to ensure page is fully loaded
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+
+            // Check if page is still responsive before checking content
+            const newPageText = await safeEvaluate(page, () => document.body.textContent || '', '');
+            if (newPageText.includes('Before you continue')) {
+              console.log(`[Tab] Still on consent page, waiting longer...`);
+              await new Promise((resolve) => setTimeout(resolve, 3000));
+            }
+          } catch (e) {
+            console.log(
+              `[Tab] Navigation timeout or error, continuing anyway:`,
+              e instanceof Error ? e.message : String(e)
+            );
+            // Wait a bit longer and continue
+            await new Promise((resolve) => setTimeout(resolve, 3000));
+          }
+        } else {
+          console.log(`[Tab] Could not find consent button to click.`);
+        }
+      } catch (e) {
+        console.log(`[Tab] Error handling consent page:`, e);
+      }
+    }
+
+    // Wait for the main content to load, with retry logic
+    let listName: string | null = null;
+    let retryCount = 0;
+    const maxRetries = 3;
+
+    while (!listName && retryCount < maxRetries) {
+      try {
+        await page.waitForSelector('h1', { timeout: 15000 });
+        listName = await getListName(page);
+        if (!listName) {
+          console.log(`[Tab] Attempt ${retryCount + 1}: Could not find list name, retrying...`);
+          await new Promise((resolve) => setTimeout(resolve, 2000));
+        }
+      } catch (e) {
+        console.log(
+          `[Tab] Attempt ${retryCount + 1}: Error waiting for h1 element:`,
+          e instanceof Error ? e.message : String(e)
+        );
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+      }
+      retryCount++;
+    }
+
+    if (!listName) {
+      console.error(
+        `[Tab] Could not find list name for URL: ${url} after ${maxRetries} attempts. Skipping.`
+      );
+      return {
+        savedPlaces: localSavedPlaces,
+        permanentlyClosedPlaces: localPermanentlyClosedPlaces,
+      };
+    }
+    console.log(`[Tab] 👀 Processing list: ${listName}`);
+
+    // Check if page is responsive and get place count
+    let numberOfPlaces = 0;
+    try {
+      const numberOfPlacesText = await page.$eval('.fontBodyMedium h2', (el) => el.textContent);
+      numberOfPlaces = parseInt(numberOfPlacesText?.match(/\d+/g)?.[0] || '0');
+      console.log(`[Tab] List claims ${numberOfPlaces} places.`);
+    } catch (e) {
+      console.log(
+        `[Tab] Could not find place count element, assuming 0 places:`,
+        e instanceof Error ? e.message : String(e)
+      );
+    }
+
+    if (numberOfPlaces > 0) {
+      await scrollAllPlacesInAList(page, numberOfPlaces);
+      const placesFromPage = await getPlaceInfoFromPage(page);
+      console.log(`[Tab] Scraped ${placesFromPage.length} places from the page.`);
+
+      for (const { name: placeName, permanentlyClosed } of placesFromPage) {
+        if (!placeName) continue; // Skip if name is empty
+
+        console.log(`[Tab] ➕ Processing place: ${placeName}`);
+        localSavedPlaces[placeName] = {
+          categories: [listName],
+          current: true,
+          permanentlyClosed,
+        };
+
+        if (permanentlyClosed) {
+          if (!localPermanentlyClosedPlaces[listName]) localPermanentlyClosedPlaces[listName] = [];
+          if (!localPermanentlyClosedPlaces[listName].includes(placeName)) {
+            localPermanentlyClosedPlaces[listName].push(placeName);
+          }
+        }
+      }
+    } else {
+      console.log(`[Tab] Skipping scroll/scrape for ${listName} as it has 0 places.`);
+    }
+  } catch (error) {
+    console.error(`[Tab] Error processing URL ${url}:`, error);
+  } finally {
+    await page.close();
+  }
+
+  return { savedPlaces: localSavedPlaces, permanentlyClosedPlaces: localPermanentlyClosedPlaces };
 };
 
 // --- Geocoding Helpers (from getLatLng.ts) ---
@@ -207,83 +540,76 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
     executablePath: '/opt/homebrew/bin/chromium', // Adjust if needed
     args: ['--disable-site-isolation-trials', '--lang=en-GB,en'],
   });
-  const page = await browser.newPage();
-  await disableImagesAndFontRequests(page);
 
   const urlsToScrape = (argv.urls as string[])?.length ? (argv.urls as string[]) : DEFAULT_URLS;
-  console.log(`Scraping URLs: ${urlsToScrape.join(', ')}`);
+  const mode = argv.parallel && urlsToScrape.length > 1 ? 'parallel' : 'sequential';
+  console.log(`Scraping URLs (${mode}): ${urlsToScrape.join(', ')}`);
 
   const permanentlyClosedPlaces: Record<string, string[]> = {}; // Track closed places per list
 
   try {
     // --- 1. Scraping ---
-    console.log('\n--- Scraping Phase ---');
-    for (const url of urlsToScrape) {
-      console.log(`Navigating to ${url}`);
-      await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 }); // Increased timeout
+    const startTime = Date.now();
+    let results: Array<{
+      savedPlaces: SavedPlaces;
+      permanentlyClosedPlaces: Record<string, string[]>;
+    }> = [];
 
-      // Handle consent overlay
-      if (page.url().includes('consent')) {
-        // also if page text includes "Before you continue"
-        const pageText = await page.evaluate(() => document.body.textContent || '');
-        if (pageText.includes('Before you continue')) {
-          try {
-            const consentButton = await page.waitForSelector(
-              '[aria-label="Accept all"], [aria-label="Alle akzeptieren"]',
-              { timeout: 5000 }
-            );
-            if (consentButton) {
-              console.log('Clicking consent button...');
-              await consentButton.click();
-              await page.waitForNavigation({ waitUntil: 'networkidle0' });
+    if (argv.parallel && urlsToScrape.length > 1) {
+      console.log('\n--- Parallel Scraping Phase ---');
+      console.log(
+        `🚀 Processing ${urlsToScrape.length} URLs in parallel tabs (max ${argv.maxTabs} concurrent)...`
+      );
+
+      // Limit concurrent tabs to prevent overwhelming the system
+      const limit = pLimit(argv.maxTabs);
+      results = await Promise.all(
+        urlsToScrape.map((url) => limit(() => processUrlInTabWithRetry(browser, url)))
+      );
+    } else {
+      console.log('\n--- Sequential Scraping Phase ---');
+      console.log(`Processing ${urlsToScrape.length} URLs sequentially...`);
+
+      // Fallback to sequential processing
+      for (const url of urlsToScrape) {
+        const result = await processUrlInTabWithRetry(browser, url);
+        results.push(result);
+      }
+    }
+
+    const endTime = Date.now();
+    console.log(`✅ Scraping completed in ${(endTime - startTime) / 1000}s`);
+
+    // Merge results from all tabs
+    for (const { savedPlaces: tabPlaces, permanentlyClosedPlaces: tabClosedPlaces } of results) {
+      // Merge saved places
+      for (const [placeName, place] of Object.entries(tabPlaces)) {
+        if (!savedPlaces[placeName]) {
+          console.log(`➕ Adding new place: ${placeName}`);
+          savedPlaces[placeName] = { ...place, current: true };
+        } else {
+          console.log(`🔄 Updating existing place: ${placeName}`);
+          savedPlaces[placeName].current = true;
+          savedPlaces[placeName].permanentlyClosed = place.permanentlyClosed;
+          // Merge categories
+          for (const category of place.categories) {
+            if (!savedPlaces[placeName].categories.includes(category)) {
+              savedPlaces[placeName].categories.push(category);
             }
-          } catch (e) {
-            console.log('Consent button not found or timed out.');
           }
         }
       }
-      await page.waitForSelector('h1', { timeout: 30000 }); // Wait for list title
 
-      const listName = await getListName(page);
-      if (!listName) {
-        console.error(`Could not find list name for URL: ${url}. Skipping.`);
-        continue;
-      }
-      console.log(`👀 Processing list: ${listName}`);
-
-      const numberOfPlacesText = await page.$eval('.fontBodyMedium h2', (el) => el.textContent);
-      const numberOfPlaces = parseInt(numberOfPlacesText?.match(/\d+/g)?.[0] || '0');
-      console.log(`List claims ${numberOfPlaces} places.`);
-
-      if (numberOfPlaces > 0) {
-        await scrollAllPlacesInAList(page, numberOfPlaces);
-        const placesFromPage = await getPlaceInfoFromPage(page);
-        console.log(`Scraped ${placesFromPage.length} places from the page.`);
-
-        for (const { name: placeName, permanentlyClosed } of placesFromPage) {
-          if (!placeName) continue; // Skip if name is empty
-
-          if (!savedPlaces[placeName]) {
-            console.log(`➕ Adding new place: ${placeName}`);
-            savedPlaces[placeName] = { categories: [listName], current: true, permanentlyClosed };
-          } else {
-            console.log(`🔄 Updating existing place: ${placeName}`);
-            savedPlaces[placeName].current = true;
-            savedPlaces[placeName].permanentlyClosed = permanentlyClosed;
-            if (!savedPlaces[placeName].categories.includes(listName)) {
-              savedPlaces[placeName].categories.push(listName);
-            }
-          }
-
-          if (permanentlyClosed) {
-            if (!permanentlyClosedPlaces[listName]) permanentlyClosedPlaces[listName] = [];
-            if (!permanentlyClosedPlaces[listName].includes(placeName)) {
-              permanentlyClosedPlaces[listName].push(placeName);
-            }
+      // Merge permanently closed places
+      for (const [listName, places] of Object.entries(tabClosedPlaces)) {
+        if (!permanentlyClosedPlaces[listName]) {
+          permanentlyClosedPlaces[listName] = [];
+        }
+        for (const place of places) {
+          if (!permanentlyClosedPlaces[listName].includes(place)) {
+            permanentlyClosedPlaces[listName].push(place);
           }
         }
-      } else {
-        console.log(`Skipping scroll/scrape for ${listName} as it has 0 places.`);
       }
     }
 
@@ -343,7 +669,25 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
 
     // --- 4. Midpoint Calculation ---
     console.log('\n--- Midpoint Calculation Phase ---');
-    const coordinates = Object.values(savedPlaces)
+
+    // Filter places based on excludeClosed option
+    const placesToInclude = Object.values(savedPlaces).filter((place) => {
+      if (argv.excludeClosed && place.permanentlyClosed) {
+        return false; // Exclude permanently closed places
+      }
+      return true; // Include all other places
+    });
+
+    console.log(
+      `Including ${placesToInclude.length} places in midpoint calculation` +
+        (argv.excludeClosed
+          ? ` (excluding ${
+              Object.values(savedPlaces).filter((p) => p.permanentlyClosed).length
+            } permanently closed)`
+          : '')
+    );
+
+    const coordinates = placesToInclude
       .map((place) => place.latLng)
       .filter((latLng): latLng is LatLngLiteral => latLng !== undefined); // Type guard
 

@@ -7,14 +7,117 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Debug ProcessPlaces - Sequential",
+      "runtimeExecutable": "node",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceFolder}/processPlaces.ts",
+      "runtimeArgs": ["--loader", "ts-node/esm"],
+      "args": ["--parallel", "false", "--output", "debug-places.json", "--excludeClosed", "true"],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug ProcessPlaces - Parallel (2 tabs)",
+      "runtimeExecutable": "node",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceFolder}/processPlaces.ts",
+      "runtimeArgs": ["--loader", "ts-node/esm"],
+      "args": ["--parallel", "true", "--maxTabs", "2", "--output", "debug-places.json"],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug ProcessPlaces - Single URL",
+      "runtimeExecutable": "node",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceFolder}/processPlaces.ts",
+      "runtimeArgs": ["--loader", "ts-node/esm"],
+      "args": [
+        "--urls",
+        "https://maps.app.goo.gl/nP5uZ5NwZbqmhLDv5",
+        "--parallel",
+        "false",
+        "--output",
+        "debug-single.json"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug ProcessPlaces - Custom URLs Parallel",
+      "runtimeExecutable": "node",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceFolder}/processPlaces.ts",
+      "runtimeArgs": ["--loader", "ts-node/esm"],
+      "args": [
+        "--urls",
+        "https://maps.app.goo.gl/nP5uZ5NwZbqmhLDv5",
+        "https://maps.app.goo.gl/U3xkLFaf3cJeEmgw9",
+        "--parallel",
+        "true",
+        "--maxTabs",
+        "2",
+        "--output",
+        "debug-parallel.json"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug ProcessPlaces - Exclude Closed Places",
+      "runtimeExecutable": "node",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceFolder}/processPlaces.ts",
+      "runtimeArgs": ["--loader", "ts-node/esm"],
+      "args": [
+        "--parallel", "true",
+        "--maxTabs", "2",
+        "--output", "debug-exclude-closed.json",
+        "--excludeClosed", "true"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program (Legacy)",
       "runtimeExecutable": "node",
       "skipFiles": ["<node_internals>/**", "node_modules/**"],
       "cwd": "${workspaceRoot}",
       "program": "${workspaceFolder}/index.ts",
       "runtimeArgs": ["--loader", "ts-node/esm"],
       "preLaunchTask": "tsc: build - tsconfig.json",
-      "outFiles": ["${workspaceFolder}/out/**/*.js"]
+      "outFiles": ["${workspaceFolder}/out/**/*.js"],
+      "args": ["--urls", "https://maps.app.goo.gl/uB9dvu87MbB1Kr8R6"]
     }
   ]
 }
