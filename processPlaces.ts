@@ -11,9 +11,9 @@ import pLimit from 'p-limit';
 import { geometricMedianOnSphere } from './midpoint.js';
 
 // --- Setup ---
-dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+dotenv.config({ path: path.join(__dirname, '.env') });
 const client = new Client({});
 const API_KEY = process.env.API_KEY || '';
 
@@ -536,7 +536,7 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
   Object.values(savedPlaces).forEach((place) => (place.current = false));
 
   const browser = await puppeteer.launch({
-    headless: false, // Set to true for headless operation
+    headless: 'new',
     executablePath: '/opt/homebrew/bin/chromium', // Adjust if needed
     args: ['--disable-site-isolation-trials', '--lang=en-GB,en'],
   });
@@ -712,6 +712,7 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
       console.log('📍 Center of Minimum Distance:', {
         ...minDistMidpoint,
         address: minDistAddress,
+        googleMaps: `https://www.google.com/maps?q=${minDistMidpoint.lat},${minDistMidpoint.lng}`,
       });
     } else {
       console.log('No unique coordinates found to calculate midpoints.');

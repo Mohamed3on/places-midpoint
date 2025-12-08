@@ -95,10 +95,14 @@
       "program": "${workspaceFolder}/processPlaces.ts",
       "runtimeArgs": ["--loader", "ts-node/esm"],
       "args": [
-        "--parallel", "true",
-        "--maxTabs", "2",
-        "--output", "debug-exclude-closed.json",
-        "--excludeClosed", "true"
+        "--parallel",
+        "true",
+        "--maxTabs",
+        "2",
+        "--output",
+        "debug-exclude-closed.json",
+        "--excludeClosed",
+        "true"
       ],
       "env": {
         "NODE_ENV": "development"

@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "node --loader ts-node/esm index.ts",
-    "transform": "ts-node --esm transform.ts"
+    "transform": "ts-node --esm transform.ts",
+    "process": "npx tsx processPlaces.ts"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
