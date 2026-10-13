@@ -22,9 +22,10 @@ export type SavedPlace = {
   current?: boolean;
   address?: string;
   latLng?: { lat: number; lng: number };
-  url?: string; // opens the exact place in Google Maps
+  url?: string; // opens the exact place in Google Maps (its list if the place is gone)
   categories: string[];
   permanentlyClosed?: boolean;
+  gone?: boolean; // no longer exists on Google Maps
 };
 export type SavedPlaces = Record<string, SavedPlace>;
 
@@ -150,10 +151,12 @@ const getPlaceInfoFromPage = async (page: Page) => {
       permanentlyClosed: [...row.querySelectorAll('.eXlrNe, .IIrLbb')].some((el) =>
         /permanently closed|dauerhaft geschlossen|cerrado permanentemente/i.test(el.textContent || '')
       ),
+      gone: /place no longer exists/i.test(row.textContent || ''),
     }))
   );
-  for (const { name, permanentlyClosed } of places) {
+  for (const { name, permanentlyClosed, gone } of places) {
     if (permanentlyClosed) console.log(`[Tab] 🚫 Detected permanently closed place: ${name}`);
+    if (gone) console.log(`[Tab] 🫥 Detected place that no longer exists: ${name}`);
   }
   return places;
 };
@@ -449,7 +452,7 @@ const processUrlInTab = async (
       await Promise.all(pendingResponses);
       const located = listItems.length === placesFromPage.length;
       if (!located) console.log(`[Tab] List data has ${listItems.length} places, falling back to geocoding`);
-      for (const [i, { name: placeName, permanentlyClosed }] of placesFromPage.entries()) {
+      for (const [i, { name: placeName, permanentlyClosed, gone }] of placesFromPage.entries()) {
         if (!placeName) continue; // Skip if name is empty
 
         console.log(`[Tab] ➕ Processing place: ${placeName}`);
@@ -464,12 +467,15 @@ const processUrlInTab = async (
             // The row details' current address, else the one saved with the list
             address: (item.id && rowAddresses.get(item.id)) || item.address,
           }),
+          // A gone place's own page is blank, so link to its list, where it can be removed
+          ...(gone && { gone, url }),
         };
 
-        if (permanentlyClosed) {
+        if (permanentlyClosed || gone) {
+          const label = gone ? `${placeName} (no longer exists, #${i + 1} of ${placesFromPage.length})` : placeName;
           if (!localPermanentlyClosedPlaces[listName]) localPermanentlyClosedPlaces[listName] = [];
-          if (!localPermanentlyClosedPlaces[listName].includes(placeName)) {
-            localPermanentlyClosedPlaces[listName].push(placeName);
+          if (!localPermanentlyClosedPlaces[listName].includes(label)) {
+            localPermanentlyClosedPlaces[listName].push(label);
           }
         }
       }
@@ -624,6 +630,7 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
           console.log(`🔄 Updating existing place: ${placeName}`);
           savedPlaces[placeName].current = true;
           savedPlaces[placeName].permanentlyClosed = place.permanentlyClosed;
+          savedPlaces[placeName].gone = place.gone;
           // The list's own location beats an earlier geocoding guess
           if (place.latLng) {
             const { address, latLng, url } = place;
@@ -708,8 +715,8 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
 
     // Filter places based on excludeClosed option
     const placesToInclude = Object.values(savedPlaces).filter((place) => {
-      if (argv.excludeClosed && place.permanentlyClosed) {
-        return false; // Exclude permanently closed places
+      if (argv.excludeClosed && (place.permanentlyClosed || place.gone)) {
+        return false; // Exclude permanently closed places and ones that no longer exist
       }
       return true; // Include all other places
     });
@@ -718,8 +725,8 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
       `Including ${placesToInclude.length} places in midpoint calculation` +
         (argv.excludeClosed
           ? ` (excluding ${
-              Object.values(savedPlaces).filter((p) => p.permanentlyClosed).length
-            } permanently closed)`
+              Object.values(savedPlaces).filter((p) => p.permanentlyClosed || p.gone).length
+            } permanently closed or gone)`
           : '')
     );
 

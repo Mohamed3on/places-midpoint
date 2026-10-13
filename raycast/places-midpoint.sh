@@ -44,11 +44,18 @@ fi
 open "$link"
 echo "📍 Opened $link"
 
-# Open places that are now permanently closed, so they can be removed from the lists
+# Open places that are permanently closed or gone from Google, so they can be removed from the lists
+# (a gone place's link is its list, since its own page is blank)
 "$BUN" -e '
+  const opened = new Set();
   for (const [name, p] of Object.entries(await Bun.file(process.argv[1]).json()))
-    if (p.current && p.permanentlyClosed) {
-      console.log(`🚫 Permanently closed: ${name} (${p.categories.join(", ")})`);
-      Bun.spawn(["open", p.url ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name}, ${p.address ?? ""}`)}`]);
+    if (p.current && (p.permanentlyClosed || p.gone)) {
+      const lists = p.categories.join(", ");
+      console.log(p.gone ? `🫥 No longer on Google: ${name} (${lists}), remove it in the list` : `🚫 Permanently closed: ${name} (${lists})`);
+      const link = p.url ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name}, ${p.address ?? ""}`)}`;
+      if (!opened.has(link)) {
+        opened.add(link);
+        Bun.spawn(["open", link]);
+      }
     }
 ' "$region.json"
