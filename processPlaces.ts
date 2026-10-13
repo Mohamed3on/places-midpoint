@@ -23,6 +23,8 @@ export type SavedPlace = {
   address?: string;
   latLng?: { lat: number; lng: number };
   url?: string; // opens the exact place in Google Maps (its list if the place is gone)
+  rating?: number;
+  reviews?: number; // number of Google reviews behind the rating
   categories: string[];
   permanentlyClosed?: boolean;
   gone?: boolean; // no longer exists on Google Maps
@@ -193,14 +195,16 @@ const parseListItems = (node: unknown, items: ListItem[] = []) => {
   return items;
 };
 
-// Row details (fetched as rows come on screen) have each place's current address:
-// [_, _, [address lines], ..., [_, _, lat, lng], "0x…:0x…" id, name, ..., "street, city" at 39, ...]
-const parseRowAddresses = (node: unknown, addresses: Map<string, string>) => {
+// Row details (fetched as rows come on screen) have each place's current address and rating:
+// [_, _, [address lines], _, [..., rating at 7, review count at 8], ..., [_, _, lat, lng], "0x…:0x…" id, name,
+//  ..., "street, city" at 39, ...]
+type RowDetails = Pick<SavedPlace, 'address' | 'rating' | 'reviews'>;
+const parseRowDetails = (node: unknown, details: Map<string, RowDetails>) => {
   if (!Array.isArray(node)) return;
   if (typeof node[10] === 'string' && /^0x[0-9a-f]+:0x[0-9a-f]+$/.test(node[10]) && typeof node[39] === 'string') {
-    addresses.set(node[10], node[39]);
+    details.set(node[10], { address: node[39], rating: node[4]?.[7], reviews: node[4]?.[8] });
   }
-  node.forEach((child) => parseRowAddresses(child, addresses));
+  node.forEach((child) => parseRowDetails(child, details));
 };
 
 // --- Parallel Processing Function with Retry ---
@@ -269,7 +273,7 @@ const processUrlInTab = async (
 
   // Exact locations and addresses come with the page's own data, so places don't need geocoding
   let listItems: ListItem[] = [];
-  const rowAddresses = new Map<string, string>();
+  const rowDetails = new Map<string, RowDetails>();
   const pendingResponses: Promise<void>[] = [];
   page.on('response', (response) => {
     const responseUrl = response.url();
@@ -280,7 +284,7 @@ const processUrlInTab = async (
         .then((text) => {
           const data = parseMapsResponse(text);
           if (responseUrl.includes('/entitylist/getlist')) listItems = parseListItems(data);
-          else parseRowAddresses(data, rowAddresses);
+          else parseRowDetails(data, rowDetails);
         })
         .catch(() => {}) // e.g. the page navigated away mid-response
     );
@@ -457,6 +461,7 @@ const processUrlInTab = async (
 
         console.log(`[Tab] ➕ Processing place: ${placeName}`);
         const item = located ? listItems[i] : undefined;
+        const details = item?.id ? rowDetails.get(item.id) : undefined;
         localSavedPlaces[placeName] = {
           categories: [listName],
           current: true,
@@ -465,7 +470,9 @@ const processUrlInTab = async (
             latLng: item.latLng,
             url: item.url,
             // The row details' current address, else the one saved with the list
-            address: (item.id && rowAddresses.get(item.id)) || item.address,
+            address: details?.address || item.address,
+            rating: details?.rating,
+            reviews: details?.reviews,
           }),
           // A gone place's own page is blank, so link to its list, where it can be removed
           ...(gone && { gone, url }),
@@ -633,8 +640,8 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
           savedPlaces[placeName].gone = place.gone;
           // The list's own location beats an earlier geocoding guess
           if (place.latLng) {
-            const { address, latLng, url } = place;
-            Object.assign(savedPlaces[placeName], { address, latLng, url });
+            const { address, latLng, url, rating, reviews } = place;
+            Object.assign(savedPlaces[placeName], { address, latLng, url, rating, reviews });
           }
           // Merge categories
           for (const category of place.categories) {

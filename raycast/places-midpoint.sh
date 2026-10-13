@@ -59,3 +59,13 @@ echo "📍 Opened $link"
       }
     }
 ' "$region.json"
+
+# List the worst-rated places that are still open
+"$BUN" -e '
+  const rated = Object.entries(await Bun.file(process.argv[1]).json())
+    .filter(([, p]) => p.current && p.rating && !p.permanentlyClosed && !p.gone)
+    .sort(([, a], [, b]) => a.rating - b.rating);
+  console.log("\n👎 Worst rated:");
+  for (const [name, p] of rated.slice(0, 10))
+    console.log(`   ${p.rating.toFixed(1)}★ (${p.reviews.toLocaleString("en")}) ${name} (${p.categories.join(", ")})`);
+' "$region.json"
