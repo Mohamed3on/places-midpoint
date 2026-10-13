@@ -162,15 +162,25 @@ const getListName = async (page: Page) => {
   return await page.$eval('h1', (el) => el.textContent);
 };
 
+// Maps responses are JSON behind a ")]}'" guard; row details nest that in {"d": "..."} and end with /*""*/
+const parseMapsResponse = (text: string): unknown => {
+  const json = JSON.parse(text.replace(/^\)\]\}'/, '').replace(/\/\*""\*\/\s*$/, ''));
+  return typeof json?.d === 'string' ? parseMapsResponse(json.d) : json;
+};
+
+const toHex = (id: string) => `0x${BigInt.asUintN(64, BigInt(id)).toString(16)}`;
+
 // The list's own getlist data has every saved place's exact location and id, in the same order as the rows:
 // [_, [_, _, "name, address", _, address, [_, _, lat, lng], [id, cid as signed int64], ...], name, note, ...]
-const parseListItems = (node: unknown, items: Pick<SavedPlace, 'address' | 'latLng' | 'url'>[] = []) => {
+type ListItem = Pick<SavedPlace, 'address' | 'latLng' | 'url'> & { id?: string };
+const parseListItems = (node: unknown, items: ListItem[] = []) => {
   if (!Array.isArray(node)) return items;
   const location = node[1]?.[5];
   if (typeof node[2] === 'string' && Array.isArray(location) && typeof location[2] === 'number') {
-    const cid = node[1][6]?.[1];
+    const [id, cid] = node[1][6] ?? [];
     items.push({
-      address: node[1][4] || undefined, // often missing, unlike the location
+      id: id && cid ? `${toHex(id)}:${toHex(cid)}` : undefined,
+      address: node[1][4] || undefined, // missing for most places, unlike the location
       latLng: { lat: location[2], lng: location[3] },
       url: cid ? `https://www.google.com/maps?cid=${BigInt.asUintN(64, BigInt(cid))}` : undefined,
     });
@@ -178,6 +188,16 @@ const parseListItems = (node: unknown, items: Pick<SavedPlace, 'address' | 'latL
     node.forEach((child) => parseListItems(child, items));
   }
   return items;
+};
+
+// Row details (fetched as rows come on screen) have each place's current address:
+// [_, _, [address lines], ..., [_, _, lat, lng], "0x…:0x…" id, name, ..., "street, city" at 39, ...]
+const parseRowAddresses = (node: unknown, addresses: Map<string, string>) => {
+  if (!Array.isArray(node)) return;
+  if (typeof node[10] === 'string' && /^0x[0-9a-f]+:0x[0-9a-f]+$/.test(node[10]) && typeof node[39] === 'string') {
+    addresses.set(node[10], node[39]);
+  }
+  node.forEach((child) => parseRowAddresses(child, addresses));
 };
 
 // --- Parallel Processing Function with Retry ---
@@ -244,13 +264,23 @@ const processUrlInTab = async (
   const page = await context.newPage();
   await disableImagesAndFontRequests(page);
 
-  // Exact locations come with the list's own data, so places don't need geocoding
-  let listItems: ReturnType<typeof parseListItems> = [];
-  page.on('response', async (response) => {
-    if (!response.url().includes('/entitylist/getlist')) return;
-    try {
-      listItems = parseListItems(JSON.parse((await response.text()).replace(/^\)\]\}'/, '')));
-    } catch {} // e.g. the page navigated away mid-response
+  // Exact locations and addresses come with the page's own data, so places don't need geocoding
+  let listItems: ListItem[] = [];
+  const rowAddresses = new Map<string, string>();
+  const pendingResponses: Promise<void>[] = [];
+  page.on('response', (response) => {
+    const responseUrl = response.url();
+    if (!responseUrl.includes('/entitylist/getlist') && !responseUrl.includes('/search?tbm=map')) return;
+    pendingResponses.push(
+      response
+        .text()
+        .then((text) => {
+          const data = parseMapsResponse(text);
+          if (responseUrl.includes('/entitylist/getlist')) listItems = parseListItems(data);
+          else parseRowAddresses(data, rowAddresses);
+        })
+        .catch(() => {}) // e.g. the page navigated away mid-response
+    );
   });
 
   const localSavedPlaces: SavedPlaces = {};
@@ -416,17 +446,24 @@ const processUrlInTab = async (
       console.log(`[Tab] Scraped ${placesFromPage.length} places from the page.`);
 
       // Rows and list data share their order, so match them up when the counts agree
+      await Promise.all(pendingResponses);
       const located = listItems.length === placesFromPage.length;
       if (!located) console.log(`[Tab] List data has ${listItems.length} places, falling back to geocoding`);
       for (const [i, { name: placeName, permanentlyClosed }] of placesFromPage.entries()) {
         if (!placeName) continue; // Skip if name is empty
 
         console.log(`[Tab] ➕ Processing place: ${placeName}`);
+        const item = located ? listItems[i] : undefined;
         localSavedPlaces[placeName] = {
           categories: [listName],
           current: true,
           permanentlyClosed,
-          ...(located ? listItems[i] : {}),
+          ...(item && {
+            latLng: item.latLng,
+            url: item.url,
+            // The row details' current address, else the one saved with the list
+            address: (item.id && rowAddresses.get(item.id)) || item.address,
+          }),
         };
 
         if (permanentlyClosed) {
