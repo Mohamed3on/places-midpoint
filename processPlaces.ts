@@ -378,6 +378,8 @@ const processUrlInTab = async (
 
     while (!listName && retryCount < maxRetries) {
       try {
+        // After the consent redirect the list sometimes never loads (empty or missing title), so reload it
+        if (retryCount > 0) await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
         await page.waitForSelector('h1', { timeout: 15000 });
         listName = await getListName(page);
         if (!listName) {
