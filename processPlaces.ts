@@ -22,6 +22,7 @@ export type SavedPlace = {
   current?: boolean;
   address?: string;
   latLng?: { lat: number; lng: number };
+  url?: string; // opens the exact place in Google Maps
   categories: string[];
   permanentlyClosed?: boolean;
 };
@@ -161,6 +162,24 @@ const getListName = async (page: Page) => {
   return await page.$eval('h1', (el) => el.textContent);
 };
 
+// The list's own getlist data has every saved place's exact location and id, in the same order as the rows:
+// [_, [_, _, "name, address", _, address, [_, _, lat, lng], [id, cid as signed int64], ...], name, note, ...]
+const parseListItems = (node: unknown, items: Pick<SavedPlace, 'address' | 'latLng' | 'url'>[] = []) => {
+  if (!Array.isArray(node)) return items;
+  const location = node[1]?.[5];
+  if (typeof node[2] === 'string' && Array.isArray(location) && typeof location[2] === 'number') {
+    const cid = node[1][6]?.[1];
+    items.push({
+      address: node[1][4] || undefined, // often missing, unlike the location
+      latLng: { lat: location[2], lng: location[3] },
+      url: cid ? `https://www.google.com/maps?cid=${BigInt.asUintN(64, BigInt(cid))}` : undefined,
+    });
+  } else {
+    node.forEach((child) => parseListItems(child, items));
+  }
+  return items;
+};
+
 // --- Parallel Processing Function with Retry ---
 const processUrlInTabWithRetry = async (
   browser: puppeteer.Browser,
@@ -224,6 +243,15 @@ const processUrlInTab = async (
   const context = await browser.createIncognitoBrowserContext();
   const page = await context.newPage();
   await disableImagesAndFontRequests(page);
+
+  // Exact locations come with the list's own data, so places don't need geocoding
+  let listItems: ReturnType<typeof parseListItems> = [];
+  page.on('response', async (response) => {
+    if (!response.url().includes('/entitylist/getlist')) return;
+    try {
+      listItems = parseListItems(JSON.parse((await response.text()).replace(/^\)\]\}'/, '')));
+    } catch {} // e.g. the page navigated away mid-response
+  });
 
   const localSavedPlaces: SavedPlaces = {};
   const localPermanentlyClosedPlaces: Record<string, string[]> = {};
@@ -387,7 +415,10 @@ const processUrlInTab = async (
       const placesFromPage = await getPlaceInfoFromPage(page);
       console.log(`[Tab] Scraped ${placesFromPage.length} places from the page.`);
 
-      for (const { name: placeName, permanentlyClosed } of placesFromPage) {
+      // Rows and list data share their order, so match them up when the counts agree
+      const located = listItems.length === placesFromPage.length;
+      if (!located) console.log(`[Tab] List data has ${listItems.length} places, falling back to geocoding`);
+      for (const [i, { name: placeName, permanentlyClosed }] of placesFromPage.entries()) {
         if (!placeName) continue; // Skip if name is empty
 
         console.log(`[Tab] ➕ Processing place: ${placeName}`);
@@ -395,6 +426,7 @@ const processUrlInTab = async (
           categories: [listName],
           current: true,
           permanentlyClosed,
+          ...(located ? listItems[i] : {}),
         };
 
         if (permanentlyClosed) {
@@ -555,6 +587,11 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
           console.log(`🔄 Updating existing place: ${placeName}`);
           savedPlaces[placeName].current = true;
           savedPlaces[placeName].permanentlyClosed = place.permanentlyClosed;
+          // The list's own location beats an earlier geocoding guess
+          if (place.latLng) {
+            const { address, latLng, url } = place;
+            Object.assign(savedPlaces[placeName], { address, latLng, url });
+          }
           // Merge categories
           for (const category of place.categories) {
             if (!savedPlaces[placeName].categories.includes(category)) {
@@ -592,9 +629,7 @@ const savePlacesToDisk = async (filePath: string, data: SavedPlaces): Promise<vo
 
     // --- 2. Geocoding ---
     console.log('\n--- Geocoding Phase ---');
-    const placesToGeocode = Object.entries(savedPlaces).filter(
-      ([_, place]) => !place.latLng || !place.address
-    );
+    const placesToGeocode = Object.entries(savedPlaces).filter(([_, place]) => !place.latLng);
     console.log(`Found ${placesToGeocode.length} places needing geocoding.`);
 
     if (placesToGeocode.length > 0 && !API_KEY) {

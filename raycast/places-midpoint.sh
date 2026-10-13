@@ -49,6 +49,6 @@ echo "📍 Opened $link"
   for (const [name, p] of Object.entries(await Bun.file(process.argv[1]).json()))
     if (p.current && p.permanentlyClosed) {
       console.log(`🚫 Permanently closed: ${name} (${p.categories.join(", ")})`);
-      Bun.spawn(["open", `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name}, ${p.address ?? ""}`)}`]);
+      Bun.spawn(["open", p.url ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name}, ${p.address ?? ""}`)}`]);
     }
 ' "$region.json"
