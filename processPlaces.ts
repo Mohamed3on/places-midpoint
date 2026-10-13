@@ -101,7 +101,14 @@ export const scrollAllPlacesInAList = async (page: puppeteer.Page, numberOfPlace
       (element) => element?.scrollIntoView(),
       currentlyDisplayedPlaces[currentlyDisplayedPlaces.length - 1]
     );
-    await new Promise((r) => setTimeout(r, 500)); // Wait for potential loading
+    // Wait for more places to load, but no longer than needed
+    await page
+      .waitForFunction(
+        (n) => document.querySelectorAll('.fontHeadlineSmall.rZF81c').length > n,
+        { timeout: 500, polling: 50 },
+        currentlyDisplayedPlaces.length
+      )
+      .catch(() => {});
 
     previousNumberOfPlaces = currentlyDisplayedPlaces.length;
     currentlyDisplayedPlaces = await page.$$('.fontHeadlineSmall.rZF81c');
@@ -121,58 +128,32 @@ export const scrollAllPlacesInAList = async (page: puppeteer.Page, numberOfPlace
   return currentlyDisplayedPlaces;
 };
 
+// Rows are lazy-loaded: until a row has been on screen it shows only a (translated) name, without
+// rating or "Permanently closed", so bring each bare row into view until its details fill in
+const loadPlaceDetails = (page: Page) =>
+  page.evaluate(async () => {
+    const loaded = (row: Element) => (row as HTMLElement).innerText.trim().includes('\n');
+    for (const row of document.querySelectorAll('.BsJqK.xgHk6')) {
+      if (loaded(row)) continue;
+      row.scrollIntoView({ block: 'center' });
+      // Some rows never get details, so give up after 2s
+      for (let i = 0; i < 40 && !loaded(row); i++) await new Promise((r) => setTimeout(r, 50));
+    }
+  });
+
 const getPlaceInfoFromPage = async (page: Page) => {
-  const placeElements = await page.$$('.BsJqK.xgHk6');
-  const places = await Promise.all(
-    placeElements.map(async (element) => {
-      const name = await element.$eval(
-        '.fontHeadlineSmall.rZF81c',
-        (el) => el.textContent?.trim() || ''
-      );
-
-      // Check for permanently closed status more precisely
-      let permanentlyClosed = false;
-      try {
-        // First try the specific selector for "Permanently closed" text
-        const closedElement = await element.$('.eXlrNe');
-        if (closedElement) {
-          const closedText = await closedElement.evaluate((el) => el.textContent?.trim() || '');
-          const lowerText = closedText.toLowerCase();
-          permanentlyClosed =
-            lowerText.includes('permanently closed') ||
-            lowerText.includes('dauerhaft geschlossen') ||
-            lowerText.includes('cerrado permanentemente');
-        }
-
-        // Fallback: check broader IIrLbb elements for the text
-        if (!permanentlyClosed) {
-          const statusElements = await element.$$('.IIrLbb');
-          for (const statusEl of statusElements) {
-            const statusText = await statusEl.evaluate((el) => el.textContent?.trim() || '');
-            const lowerText = statusText.toLowerCase();
-            if (
-              lowerText.includes('permanently closed') ||
-              lowerText.includes('dauerhaft geschlossen') ||
-              lowerText.includes('cerrado permanentemente')
-            ) {
-              permanentlyClosed = true;
-              break;
-            }
-          }
-        }
-      } catch (e) {
-        // Handle cases where elements might not exist
-        permanentlyClosed = false;
-      }
-
-      // Debug logging for permanently closed detection
-      if (permanentlyClosed) {
-        console.log(`[Tab] 🚫 Detected permanently closed place: ${name}`);
-      }
-
-      return { name, permanentlyClosed };
-    })
+  // Read every row in one call instead of several round trips per place
+  const places = await page.evaluate(() =>
+    [...document.querySelectorAll('.BsJqK.xgHk6')].map((row) => ({
+      name: row.querySelector('.fontHeadlineSmall.rZF81c')?.textContent?.trim() || '',
+      permanentlyClosed: [...row.querySelectorAll('.eXlrNe, .IIrLbb')].some((el) =>
+        /permanently closed|dauerhaft geschlossen|cerrado permanentemente/i.test(el.textContent || '')
+      ),
+    }))
   );
+  for (const { name, permanentlyClosed } of places) {
+    if (permanentlyClosed) console.log(`[Tab] 🚫 Detected permanently closed place: ${name}`);
+  }
   return places;
 };
 
@@ -238,7 +219,10 @@ const processUrlInTab = async (
   savedPlaces: SavedPlaces;
   permanentlyClosedPlaces: Record<string, string[]>;
 }> => {
-  const page = await browser.newPage();
+  // Own context per list so each page is visible: hidden tabs don't render, which stalls lazy
+  // loading and clicks until the visible tab closes, so the lists would only run one at a time
+  const context = await browser.createIncognitoBrowserContext();
+  const page = await context.newPage();
   await disableImagesAndFontRequests(page);
 
   const localSavedPlaces: SavedPlaces = {};
@@ -247,9 +231,6 @@ const processUrlInTab = async (
   try {
     console.log(`[Tab] Navigating to ${url}`);
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
-
-    // Add a small delay to let the page settle
-    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     // Check if page is still responsive
     if (page.isClosed()) {
@@ -338,31 +319,8 @@ const processUrlInTab = async (
         }
 
         if (buttonClicked) {
-          console.log(`[Tab] Clicked consent button, waiting for page to settle...`);
-          try {
-            // Wait for either navigation or the page to stabilize
-            await Promise.race([
-              page.waitForNavigation({ waitUntil: 'networkidle0', timeout: 15000 }),
-              new Promise((resolve) => setTimeout(resolve, 5000)), // Fallback timeout
-            ]);
-
-            // Additional wait to ensure page is fully loaded
-            await new Promise((resolve) => setTimeout(resolve, 2000));
-
-            // Check if page is still responsive before checking content
-            const newPageText = await safeEvaluate(page, () => document.body.textContent || '', '');
-            if (newPageText.includes('Before you continue')) {
-              console.log(`[Tab] Still on consent page, waiting longer...`);
-              await new Promise((resolve) => setTimeout(resolve, 3000));
-            }
-          } catch (e) {
-            console.log(
-              `[Tab] Navigation timeout or error, continuing anyway:`,
-              e instanceof Error ? e.message : String(e)
-            );
-            // Wait a bit longer and continue
-            await new Promise((resolve) => setTimeout(resolve, 3000));
-          }
+          // No fixed wait: the list title wait below covers the redirect back to the list
+          console.log(`[Tab] Clicked consent button`);
         } else {
           console.log(`[Tab] Could not find consent button to click.`);
         }
@@ -380,7 +338,10 @@ const processUrlInTab = async (
       try {
         // After the consent redirect the list sometimes never loads (empty or missing title), so reload it
         if (retryCount > 0) await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
-        await page.waitForSelector('h1', { timeout: 15000 });
+        await page.waitForFunction(
+          () => !location.hostname.startsWith('consent.') && document.querySelector('h1')?.textContent?.trim(),
+          { timeout: 10000, polling: 100 }
+        );
         listName = await getListName(page);
         if (!listName) {
           console.log(`[Tab] Attempt ${retryCount + 1}: Could not find list name, retrying...`);
@@ -422,6 +383,7 @@ const processUrlInTab = async (
 
     if (numberOfPlaces > 0) {
       await scrollAllPlacesInAList(page, numberOfPlaces);
+      await loadPlaceDetails(page);
       const placesFromPage = await getPlaceInfoFromPage(page);
       console.log(`[Tab] Scraped ${placesFromPage.length} places from the page.`);
 
@@ -448,7 +410,7 @@ const processUrlInTab = async (
   } catch (error) {
     console.error(`[Tab] Error processing URL ${url}:`, error);
   } finally {
-    await page.close();
+    await context.close();
   }
 
   return { savedPlaces: localSavedPlaces, permanentlyClosedPlaces: localPermanentlyClosedPlaces };
